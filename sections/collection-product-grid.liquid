@@ -1,5 +1,5 @@
-<section class="product-grid grid" data-section-id="{{ section.id }}">
-  <div>
+<section data-section-id="{{ section.id }}">
+  <div  class="product-grid grid">
     {% for collection in collections %}
       <div>
         <img src="{{ collection.featured_image | img_url }}" alt="{{ collection.title }}">
@@ -7,7 +7,7 @@
       <div>{{ collection.title }}</div>
     {% endfor %}
   </div>
-  <div>
+  <div class="product-grid grid">
     {% for product in collection.products %}
       {% render 'collection-product-card', product: product %}
     {% endfor %}
