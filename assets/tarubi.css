@@ -55,7 +55,7 @@ a:link, a:visited, a:hover, a:active {
 }
 .product-card .product-card__image {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 1;
   overflow: hidden;
   display: grid;
   align-content: center;
