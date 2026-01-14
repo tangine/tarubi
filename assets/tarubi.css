@@ -50,6 +50,7 @@ a:link, a:visited, a:hover, a:active {
 .product-card {
   background: white;
   box-shadow: 0 0 4px 3px #ddd;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=tarubi.css.map */
