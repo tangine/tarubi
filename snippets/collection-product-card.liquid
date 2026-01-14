@@ -3,4 +3,5 @@
     <img src="{{ product.featured_image | img_url }}" alt="{{ product.featured_image_alt }}"/>
   </div>
   <div class="product-card__title">{{ product.title }}</div>
+  <div class="product-card__price">{{ product.price | money }}</div>
 </div>
