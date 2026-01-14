@@ -53,5 +53,9 @@ a:link, a:visited, a:hover, a:active {
   border-radius: 5px;
   overflow: hidden;
 }
+.product-card .product-card__image {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
 
 /*# sourceMappingURL=tarubi.css.map */

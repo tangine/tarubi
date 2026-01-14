@@ -63,4 +63,9 @@ a {
   box-shadow: 0 0 4px 3px #ddd;
   border-radius: 5px;
   overflow: hidden;
+
+  .product-card__image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
 }
