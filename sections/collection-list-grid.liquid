@@ -1,11 +1,11 @@
 <section data-section-id="{{ section.id }}">
   <div  class="product-grid grid">
     {% for collection in collections %}
-      <a href="{{ collection.url }}">
-        <div>
+      <a class="product-card" href="{{ collection.url }}">
+        <div class="product-card__image">
           <img src="{{ collection.featured_image | img_url }}" alt="{{ collection.title }}">
         </div>
-        <div>{{ collection.title }}</div>
+        <div class="product-card__title">{{ collection.title }}</div>
       </a>
 
     {% endfor %}
