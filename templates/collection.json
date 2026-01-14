@@ -19,10 +19,18 @@
       "type": "collection-product-grid",
       "name": "Product Grid",
       "settings": {}
+    },
+    "footer_3hwxq7": {
+      "type": "footer",
+      "name": "Footer",
+      "settings": {
+        "menu": "footer"
+      }
     }
   },
   "order": [
     "5057da81f34a",
-    "collection_product_grid_wUe8F9"
+    "collection_product_grid_wUe8F9",
+    "footer_3hwxq7"
   ]
 }
