@@ -47,4 +47,9 @@ a:link, a:visited, a:hover, a:active {
   flex-direction: column;
 }
 
+.product-card {
+  background: white;
+  box-shadow: 0 0 4px 3px #ddd;
+}
+
 /*# sourceMappingURL=tarubi.css.map */
