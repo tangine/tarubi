@@ -56,6 +56,16 @@ a:link, a:visited, a:hover, a:active {
 .product-card .product-card__image {
   width: 100%;
   aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.product-card .product-card__image img {
+  width: 100%;
+  object-fit: cover;
+  transition-duration: 0.5s;
+}
+.product-card .product-card__image img:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
 }
 
 /*# sourceMappingURL=tarubi.css.map */
