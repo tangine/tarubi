@@ -1,5 +1,4 @@
-<section class="header flex row" data-section-id="{{ section.id }}">
-  <div>头部</div>
+<section class="footer" data-section-id="{{ section.id }}">
   {% for link in linklists[section.settings.menu].links %}
     <div>
       <a href="{{ link.url }}">{{ link.title }}</a>
@@ -19,11 +18,6 @@
       "id": "menu",
       "label": "Menu",
       "default": "footer"
-    },
-    {
-      "type": "text",
-      "id": "copyright",
-      "label": "Copyright"
     }
   ],
   "blocks": [],
