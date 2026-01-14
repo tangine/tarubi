@@ -1,6 +1,16 @@
 [
   {
-    "name": "Footer Setting",
+    "name": "General Settings",
+    "settings": [
+      {
+        "id": "color_primary",
+        "label": "Primary Color",
+        "type": "color"
+      }
+    ]
+  },
+  {
+    "name": "Footer Settings",
     "settings": [
       {
         "id": "copyright",
