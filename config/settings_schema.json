@@ -1,6 +1,9 @@
 [
   {
-    "name": "General Settings"
+    "name": "General Settings",
+    "settings": [
+
+    ]
   },
   {
     "name": "Footer Setting",
