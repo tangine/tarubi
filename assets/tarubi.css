@@ -52,6 +52,20 @@ a:link, a:visited, a:hover, a:active {
   flex-direction: column;
 }
 
+.nav {
+  height: 100%;
+}
+.nav .nav-item {
+  height: 100%;
+  border-bottom: 2px solid transparent;
+}
+.nav .nav-item:hover {
+  border-color: red;
+}
+.nav .nav-item + .nav-item {
+  margin-left: 1em;
+}
+
 .product-card {
   display: flex;
   flex-direction: column;

@@ -1,11 +1,9 @@
 <section class="header flex row" data-section-id="{{ section.id }}">
-  {% for link in linklists[section.settings.menu].links %}
-    <div>
-      <a href="{{ link.url }}">{{ link.title }}</a>
-    </div>
-    <div class="">
-    </div>
-  {% endfor %}
+  <div class="nav">
+    {% for link in linklists[section.settings.menu].links %}
+      <a class="nav-item" href="{{ link.url }}">{{ link.title }}</a>
+    {% endfor %}
+  </div>
 </section>
 
 {% schema %}
