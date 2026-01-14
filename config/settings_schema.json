@@ -1,5 +1,16 @@
 [
   {
-
+    "name": "General Settings"
+  },
+  {
+    "name": "Footer Setting",
+    "settings": [
+      {
+        "id": "copyright",
+        "label": "Copyright",
+        "type": "text",
+        "default": "Copyright © by Tarubi Inc., All Rights Reserved."
+      }
+    ]
   }
 ]
