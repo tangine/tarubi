@@ -61,8 +61,8 @@ a:link, a:visited, a:hover, a:active {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0.5em 0;
-  border-bottom: 2px solid transparent;
+  padding: 0.25em 0;
+  border-bottom: 3px solid transparent;
 }
 .nav .nav-item:hover {
   border-color: red;
