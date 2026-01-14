@@ -1,6 +1,6 @@
 <section data-section-id="{{ section.id }}">
   <div>头部</div>
-  {% for link in linklists[section.settings.menu] %}
+  {% for link in linklists[section.settings.menu].links %}
     <div>
       <a href="{{ link.url }}">{{ link.title }}</a>
     </div>
