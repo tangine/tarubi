@@ -13,7 +13,7 @@ html, body {
 }
 
 a {
-  &link,
+  &:link,
   &:visited,
   &:hover,
   &:active {
