@@ -65,7 +65,9 @@ a {
 }
 
 .nav {
-  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   .nav-item {
     display: flex;
     flex-direction: row;
