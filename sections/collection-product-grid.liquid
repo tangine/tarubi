@@ -1,5 +1,4 @@
 <section class="header flex row" data-section-id="{{ section.id }}">
-  <div>头部</div>
   {% for product in collection.products %}
     {% render 'collection-product-card', product: product %}
   {% endfor %}
