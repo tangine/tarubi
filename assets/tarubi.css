@@ -48,6 +48,8 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
   background: white;
   box-shadow: 0 0 4px 3px #ddd;
   border-radius: 5px;
@@ -69,6 +71,9 @@ a:link, a:visited, a:hover, a:active {
 .product-card .product-card__image img:hover {
   transform: scale(1.1);
   transition-duration: 0.5s;
+}
+.product-card .product-card__price {
+  margin-top: auto;
 }
 
 /*# sourceMappingURL=tarubi.css.map */
