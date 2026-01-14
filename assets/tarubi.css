@@ -13,4 +13,20 @@ a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
+.header {
+  font-size: 1rem;
+  height: 3rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+.flex .row {
+  flex-direction: row;
+}
+.flex .column {
+  flex-direction: column;
+}
+
 /*# sourceMappingURL=tarubi.css.map */
