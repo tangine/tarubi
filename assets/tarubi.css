@@ -8,6 +8,18 @@ html, body {
   height: 100%;
 }
 
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
 a:link, a:visited, a:hover, a:active {
   color: inherit;
   text-decoration: none;
