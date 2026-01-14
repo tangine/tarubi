@@ -1,6 +1,6 @@
 <div class="product-card">
   <div class="product-card__image">
-    <img src="{{ product.featured_image }}" alt="{{ product.featured_image_alt }}"/>
+    <img src="{{ product.featured_image | img_url }}" alt="{{ product.featured_image_alt }}"/>
   </div>
   <div class="product-card__title">{{ product.title }}</div>
 </div>
