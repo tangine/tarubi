@@ -1,10 +1,11 @@
 <section class="product-grid grid" data-section-id="{{ section.id }}">
   <div>
     {% for collection in collections %}
-    <div>
-      <img src="{{ collection.featured_image | img_url }}" alt="{{ collection.title }}">
-    </div>
-    <div>{{ collection.title }}</div>
+      <div>
+        <img src="{{ collection.featured_image | img_url }}" alt="{{ collection.title }}">
+      </div>
+      <div>{{ collection.title }}</div>
+    {% endfor %}
   </div>
   <div>
     {% for product in collection.products %}
