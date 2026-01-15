@@ -99,7 +99,7 @@ a:link, a:visited, a:hover, a:active {
 .product-card {
   display: flex;
   flex-direction: column;
-  background: white;
+  background: var(--color-background);
   box-shadow: 0 0 4px 3px #ddd;
   border-radius: 5px;
   overflow: hidden;
