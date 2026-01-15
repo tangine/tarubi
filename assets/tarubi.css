@@ -102,4 +102,8 @@ a:link, a:visited, a:hover, a:active {
   margin-top: auto;
 }
 
+.product-description img {
+  width: 100%;
+}
+
 /*# sourceMappingURL=tarubi.css.map */
