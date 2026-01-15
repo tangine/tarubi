@@ -1,5 +1,23 @@
 :root {
+  --color-text: #000;
+  --color-background: #000;
 
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-text: black;
+    --color-background: white;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: white;
+    --color-background: black;
+  }
 }
 
 * {
