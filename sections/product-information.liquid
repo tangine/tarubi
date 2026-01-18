@@ -1,5 +1,8 @@
 <section class="product-information">
   {{ product.title }}
+  {% for variant in product.variants %}
+    {{ variant.title }}
+  {% endfor %}
 </section>
 
 {% schema %}
