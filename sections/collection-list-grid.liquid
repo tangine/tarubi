@@ -3,7 +3,7 @@
     {% for collection in collections %}
       <a class="product-card" href="{{ collection.url }}">
         <div class="product-card__image">
-          <img src="{{ collection.featured_image | img_url }}" alt="{{ collection.title }}">
+          <img src="{{ collection.featured_image | image_url }}" alt="{{ collection.title }}">
         </div>
         <div class="product-card__title">{{ collection.title }}</div>
       </a>
