@@ -1,8 +1,10 @@
 <section class="product-information">
   {{ product.title }}
-  {% for variant in product.variants %}
-    {{ variant.title }}
-  {% endfor %}
+  <ul>
+    {% for variant in product.variants %}
+      <li>{{ variant.title }}</li>
+    {% endfor %}
+  </ul>
 </section>
 
 {% schema %}
