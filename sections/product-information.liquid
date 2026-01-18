@@ -4,6 +4,9 @@
     {%- for variant in product.variants -%}
       <a href="{{ variant.url }}">
         <li>
+          <div>
+            <img src="{{ variant.featured_image }}" alt="{{ variant.title }}">
+          </div>
           <span>{{ variant.title }}</span>
           <span>{{ variant.url }}</span>
         </li>
