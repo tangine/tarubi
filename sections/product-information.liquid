@@ -2,10 +2,12 @@
   {{ product.title }}
   <ul>
     {%- for variant in product.variants -%}
-      <li>
-        <span>{{ variant.title }}</span>
-        <span>{{ variant.url }}</span>
-      </li>
+      <a href="{{ variant.url }}">
+        <li>
+          <span>{{ variant.title }}</span>
+          <span>{{ variant.url }}</span>
+        </li>
+      </a>
     {% endfor %}
   </ul>
 </section>
