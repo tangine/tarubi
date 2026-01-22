@@ -19,6 +19,8 @@
   {{ content_for_header }}
 </head>
 <body>
-{{ content_for_layout }}
+<main id="MainContent" data-template="{{ template }}">
+  {{ content_for_layout }}
+</main>
 </body>
 </html>
