@@ -106,6 +106,7 @@ a:link, a:visited, a:hover, a:active {
 }
 .product-card:hover {
   transform: translateY(-5px);
+  transition-duration: 0.5s;
 }
 .product-card .product-card__image {
   width: 100%;

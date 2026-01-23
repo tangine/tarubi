@@ -119,6 +119,7 @@ a {
 
   &:hover {
     transform: translateY(-5px);
+    transition-duration: 0.5s;
   }
 
   .product-card__image {
