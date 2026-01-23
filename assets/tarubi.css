@@ -108,11 +108,11 @@ a:link, a:visited, a:hover, a:active {
   width: 100%;
   aspect-ratio: 1;
   overflow: hidden;
-  display: grid;
   align-content: center;
 }
 .product-card .product-card__image img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   cursor: pointer;
   transition-duration: 0.5s;
