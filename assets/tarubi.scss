@@ -51,7 +51,7 @@ img {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(calc(100px + 10vw), 1fr));
-  gap: .75em;
+  gap: 1em;
 }
 
 a {
