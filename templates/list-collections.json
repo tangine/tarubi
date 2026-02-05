@@ -9,12 +9,6 @@
  */
 {
   "sections": {
-    "5057da81f34a": {
-      "type": "Header",
-      "settings": {
-        "menu": "main-menu"
-      }
-    },
     "collection_list_grid_r9abLK": {
       "type": "collection-list-grid",
       "name": "Product List",
@@ -22,7 +16,6 @@
     }
   },
   "order": [
-    "5057da81f34a",
     "collection_list_grid_r9abLK"
   ]
 }
