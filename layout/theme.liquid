@@ -19,10 +19,10 @@
   {{ content_for_header }}
 </head>
 <body>
-{% section 'header' %}
+{% sections 'header-group' %}
 <main id="MainContent" data-template="{{ template }}">
   {{ content_for_layout }}
 </main>
-{% section 'footer' %}
+{% sections 'footer' %}
 </body>
 </html>
