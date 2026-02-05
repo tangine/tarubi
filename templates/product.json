@@ -9,12 +9,6 @@
  */
 {
   "sections": {
-    "5057da81f34a": {
-      "type": "Header",
-      "settings": {
-        "menu": "main-menu"
-      }
-    },
     "product_information_Rqj3gN": {
       "type": "product-information",
       "name": "Product Information",
@@ -26,7 +20,6 @@
     }
   },
   "order": [
-    "5057da81f34a",
     "product_information_Rqj3gN",
     "1b7d68338701"
   ]

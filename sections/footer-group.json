@@ -13,7 +13,9 @@
   "sections": {
     "default_footer": {
       "type": "footer",
-      "settings": {}
+      "settings": {
+        "menu": "footer"
+      }
     }
   },
   "order": [
