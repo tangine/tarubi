@@ -9,12 +9,13 @@
  */
 {
   "sections": {
-    "5057da81f34a": {
-      "type": "Header",
+    "collection_list_grid_CTfK3p": {
+      "type": "collection-list-grid",
+      "name": "Product List",
       "settings": {}
     }
   },
   "order": [
-    "5057da81f34a"
+    "collection_list_grid_CTfK3p"
   ]
 }
