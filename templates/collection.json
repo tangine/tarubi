@@ -9,12 +9,6 @@
  */
 {
   "sections": {
-    "5057da81f34a": {
-      "type": "Header",
-      "settings": {
-        "menu": "main-menu"
-      }
-    },
     "collection_product_grid_wUe8F9": {
       "type": "collection-product-grid",
       "name": "Product Grid",
@@ -29,7 +23,6 @@
     }
   },
   "order": [
-    "5057da81f34a",
     "collection_product_grid_wUe8F9",
     "footer_3hwxq7"
   ]
