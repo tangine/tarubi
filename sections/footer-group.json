@@ -8,7 +8,7 @@
  * ------------------------------------------------------------
  */
 {
-  "name": "footer-group",
+  "name": "Footer",
   "type": "header",
   "sections": {
     "default_footer": {

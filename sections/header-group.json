@@ -8,7 +8,7 @@
  * ------------------------------------------------------------
  */
 {
-  "name": "header-group",
+  "name": "Header",
   "type": "header",
   "sections": {
     "default_header": {
