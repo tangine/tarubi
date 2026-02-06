@@ -9,7 +9,7 @@
   </div>
   {% if customer %}
     <script>
-      window.ShopifyCustomer = {
+      var ShopifyCustomer = {
         id: {{ customer.id }},
         email: {{ customer.email }},
       }
