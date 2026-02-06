@@ -7,6 +7,11 @@
   <div class="copyright">
     {{ settings.copyright }}
   </div>
+  {% if customer %}
+    <script>
+      window.ShopifyCustomer = {{ customer | json }}
+    </script>
+  {% endif %}
 </section>
 
 {% schema %}
