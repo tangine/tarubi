@@ -6,9 +6,11 @@
   </div>
   <div>
     {% for country in localization.available_countries %}
-      <span>{{ country.iso_code }}</span>
-      <span>{{ country.name }}</span>
-      <span>{{ country.currency.iso_code }}</span>
+      <div>
+        <span>{{ country.iso_code }}</span>
+        <span>{{ country.name }}</span>
+        <span>{{ country.currency.iso_code }}</span>
+      </div>
     {% endfor %}
   </div>
 </section>
