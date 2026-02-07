@@ -7,6 +7,17 @@
   <div class="copyright">
     {{ settings.copyright }}
   </div>
+  {% if customer %}
+    <script>
+      window.ShopifyCustomer = {
+        id: "{{ customer.id }}",
+        email: "{{ customer.email }}",
+        firstName: "{{ customer.first_name }}",
+        lastName: "{{ customer.last_name }}",
+      }
+
+    </script>
+  {% endif %}
 </section>
 
 {% schema %}
