@@ -1,6 +1,10 @@
 :root {
   --text-color: #000;
   --background-color: #000;
+  --tb-color-primary: #fff;
+  --tb-color-secondary: #000;
+  --tb-color-tertiary: #fff;
+  --tb-color-active: red;
   color: var(--text-color);
   background-color: var(--background-color);
 }
@@ -27,6 +31,36 @@ html, body {
   margin: 0;
   width: 100%;
   height: 100%;
+}
+
+button {
+  display: inline-flex;
+  line-height: 1;
+  background: cornflowerblue;
+  padding: 0.5em 1em;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  box-shadow: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+button:hover {
+  background: blueviolet;
+}
+
+input {
+  padding: 0.5em 1em;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  outline: none;
+}
+
+input:focus {
+  border-color: cornflowerblue;
 }
 
 img {
