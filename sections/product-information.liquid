@@ -1,19 +1,19 @@
 <section class="product-information">
   {{ product.title }}
-  <ul>
+  <div>
     {%- for variant in product.variants -%}
-      <a href="{{ variant.url }}">
-        <li>
+      <div data-href="{{ variant.url }}">
+        <div>
           <div>
             <img src="{{ variant.image }}" alt="{{ variant.title }}">
             <div>{{ variant.image }}</div>
           </div>
           <span>{{ variant.title }}</span>
           <span>{{ variant.url }}</span>
-        </li>
-      </a>
+        </div>
+      </div>
     {% endfor %}
-  </ul>
+  </div>
   <script type="module" src="{{ 'gaussian-splats-module.js' | asset_url }}" defer="defer"></script>
   <div id="gaussian-splats-container"
        data-gaussian-splats
