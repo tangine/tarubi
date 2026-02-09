@@ -4,7 +4,7 @@
       <a class="nav-item" href="{{ link.url }}">{{ link.title }}</a>
     {% endfor %}
   </div>
-  <div>
+  {% comment %} <div>
     {% for country in localization.available_countries %}
       <div>
         <span>{{ country.iso_code }}</span>
@@ -12,7 +12,7 @@
         <span>{{ country.currency.iso_code }}</span>
       </div>
     {% endfor %}
-  </div>
+  </div> {% endcomment %}
 </section>
 
 {% schema %}
