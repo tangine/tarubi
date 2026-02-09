@@ -13,6 +13,24 @@
       </a>
     {% endfor %}
   </ul>
+  <script src="{{ 'gaussian-splats-module.js' | asset_url }}" type="module" defer></script>
+  <div id="gaussian-splats-container"
+       data-gaussian-splats
+       data-config='{
+               "modelUrl": {{ product.metafields.custom.3dfile | asset_url }},
+               "modelPosition": "0,0,2",
+               "modelQuaternion": "1,0,0,-1.3",
+               "cameraPosition": "0,0,5",
+               "rotationSpeed": 0.01,
+               "backgroundColor": "0xffffff",
+               "desktopHeight": 600,
+               "mobileHeight": 480,
+               "debug": false
+             }'
+       style="position: relative; width: 100%; height: 480px; background: transparent; z-index: 0;">
+    <canvas id="splats-canvas" style="width: 100%; height: 100%;"></canvas>
+    <div style="position: absolute; top: 10px; left: 10px; color: white; font-size: 12px;">加载 3D 高斯泼溅点...</div>
+  </div>
 </section>
 
 {% schema %}
