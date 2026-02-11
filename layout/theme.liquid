@@ -25,7 +25,6 @@
       }
     }
     </script>
-  <script type="module" src="{{ 'gaussian-splats-module.js' | asset_url }}" defer="defer"></script>
 </head>
 <body>
 {% sections 'header-group' %}
@@ -33,5 +32,6 @@
   {{ content_for_layout }}
 </main>
 {% sections 'footer-group' %}
+  <script type="module" src="{{ 'gaussian-splats-module.js' | asset_url }}" defer="defer"></script>
 </body>
 </html>
