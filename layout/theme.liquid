@@ -16,7 +16,6 @@
   {% endif %}
   {{ 'tarubi.css' | asset_url | stylesheet_tag }}
 
-  {{ content_for_header }}
   <script type="importmap">
     {
       "imports":{
@@ -25,6 +24,9 @@
       }
     }
   </script>
+
+  {{ content_for_header }}
+  
 </head>
 <body>
 {% sections 'header-group' %}
