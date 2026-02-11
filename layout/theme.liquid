@@ -17,6 +17,15 @@
   {{ 'tarubi.css' | asset_url | stylesheet_tag }}
 
   {{ content_for_header }}
+  <script type="importmap">
+    {
+      "imports":{
+        "three":"https://cdnjs.cloudflare.com/ajax/libs/three.js/0.178.0/three.module.js",
+        "@sparkjsdev/spark":"https://sparkjs.dev/releases/spark/0.1.10/spark.module.js"
+      }
+    }
+    </script>
+  <script type="module" src="{{ 'gaussian-splats-module.js' | asset_url }}" defer="defer"></script>
 </head>
 <body>
 {% sections 'header-group' %}
