@@ -15,23 +15,24 @@
     {% endfor %}
   </ul>
   
-  <div id="gaussian-splats-container"
-       data-gaussian-splats
-       data-config='{
-               "modelUrl": "{{ product.metafields.custom.threejs }}",
-               "modelPosition": "0,0,2",
-               "modelQuaternion": "1,0,0,-1.3",
-               "cameraPosition": "0,0,5",
-               "rotationSpeed": 0.01,
-               "backgroundColor": "0xffffff",
-               "desktopHeight": 600,
-               "mobileHeight": 480,
-               "debug": false
+  <div id="gaussian-splats-container" data-gaussian-splats data-config='{
+                "modelUrl": "./assets/butterfly.spz",
+                "modelPosition": "-3,0,0",
+                "modelQuaternion": "1,0,0,0",
+                "cameraPosition": "0,0,5",
+                "rotationSpeed": 0.01,
+                "backgroundColor": "0xffffff",
+                "desktopHeight": 600,
+                "mobileHeight": 480,
+                "enableMouseControl": true,
+                "enableTouchControl": true,
+                 "rotationSensitivity": 0.005,
+                 "debug": true
              }'
-       style="position: relative; width: 100%; height: 480px; background: transparent; z-index: 0;">
-    <canvas id="splats-canvas" style="width: 100%; height: 100%;"></canvas>
-    <div style="position: absolute; top: 10px; left: 10px; color: white; font-size: 12px;">加载 3D 高斯泼溅点...</div>
-  </div>
+  style="position: relative; width: 100%; height: 480px; background: transparent; z-index: 1; pointer-events: auto;">
+  <canvas id="splats-canvas" style="width: 100%; height: 100%; pointer-events: auto;"></canvas>
+  <div style="position: absolute; top: 10px; left: 10px; color: white; font-size: 12px;">加载 3D 高斯泼溅点...</div>
+</div>
 </section>
 
 {% schema %}
