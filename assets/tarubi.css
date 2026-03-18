@@ -180,6 +180,7 @@ table {
   align-items: center;
   padding: 10px;
   border-radius: 4px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
   position: relative;
 }
 .product-grid .product-card .product-card__image {
