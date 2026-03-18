@@ -170,7 +170,7 @@ table {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(clamp(150px, 10vw, 300px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(clamp(150px, 15vw, 300px), 1fr));
   gap: 1em;
 }
 .product-grid .product-card {
