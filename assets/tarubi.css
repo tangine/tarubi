@@ -204,5 +204,9 @@ table {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
 }
+.product-grid .product-card .product-card__tags .product-card__tag {
+  width: 100%;
+  aspect-ratio: 1;
+}
 
 /*# sourceMappingURL=tarubi.css.map */
