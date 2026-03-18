@@ -199,6 +199,7 @@ table {
 }
 .product-grid .product-card .product-card__tags {
   position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
   display: grid;
@@ -207,6 +208,9 @@ table {
 .product-grid .product-card .product-card__tags .product-card__tag {
   width: 100%;
   aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=tarubi.css.map */
