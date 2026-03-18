@@ -205,7 +205,7 @@ table {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
 }
-.product-grid .product-card .product-card__tags .product-card__tag {
+.product-grid .product-card .product-card__tags .product-card__badge {
   width: 100%;
   aspect-ratio: 1;
   display: flex;
