@@ -197,5 +197,12 @@ table {
 .product-grid .product-card .product-card__image img:hover {
   transform: scale(1.05);
 }
+.product-grid .product-card .product-card__tags {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+}
 
 /*# sourceMappingURL=tarubi.css.map */
