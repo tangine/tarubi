@@ -2,11 +2,14 @@
   <div class="product-card__image">
     <img src="{{ product.featured_image | image_url }}" alt="{{ product.featured_image_alt }}"/>
   </div>
+  <div class="product-card__variant-select">
+    <div class="product-card__variant-option"></div>
+  </div>
   <div class="product-card__title">{{ product.title }}</div>
   <div class="product-card__price">{{ product.price | money }}</div>
 
   <div class="product-card__tags absolute">
-    <div class="product-card__badge product-card__badge-discount" style="background: red;">-15%</div>
-    <div class="product-card__badge" style="background: yellow;">TEST</div>
+    <div class="product-card__tag product-card__tag-discount" style="background: red;">-15%</div>
+    <div class="product-card__tag" style="background: yellow;">TEST</div>
   </div>
 </a>

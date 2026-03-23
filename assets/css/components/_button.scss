@@ -1,0 +1,17 @@
+@use "../base/_variables";
+
+.but {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: 1px solid transparent;
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}

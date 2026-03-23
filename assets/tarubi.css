@@ -203,9 +203,9 @@ table {
   top: 0;
   left: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
 }
-.product-grid .product-card .product-card__tags .product-card__badge {
+.product-grid .product-card .product-card__tags .product-card__tag {
   width: 100%;
   aspect-ratio: 1;
   display: flex;
