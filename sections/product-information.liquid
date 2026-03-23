@@ -2,19 +2,20 @@
   {{ product.title }}
   <ul>
     {%- for variant in product.variants -%}
-      <a href="{{ variant.url }}">
-        <li>
+      <li>
+        <a href="{{ variant.url }}">
           <div>
             <img src="{{ variant.image }}" alt="{{ variant.title }}">
             <div>{{ variant.image }}</div>
           </div>
           <span>{{ variant.title }}</span>
           <span>{{ variant.url }}</span>
-        </li>
-      </a>
+        </a>
+
+      </li>
     {% endfor %}
   </ul>
-  
+
   <div id="gaussian-splats-container" data-gaussian-splats data-config='{
                 "modelUrl": "./assets/butterfly.spz",
                 "modelPosition": "-3,0,0",
@@ -29,10 +30,10 @@
                  "rotationSensitivity": 0.005,
                  "debug": true
              }'
-  style="position: relative; width: 100%; height: 480px; background: transparent; z-index: 1; pointer-events: auto;">
-  <canvas id="splats-canvas" style="width: 100%; height: 100%; pointer-events: auto;"></canvas>
-  <div style="position: absolute; top: 10px; left: 10px; color: white; font-size: 12px;">加载 3D 高斯泼溅点...</div>
-</div>
+       style="position: relative; width: 100%; height: 480px; background: transparent; z-index: 1; pointer-events: auto;">
+    <canvas id="splats-canvas" style="width: 100%; height: 100%; pointer-events: auto;"></canvas>
+    <div style="position: absolute; top: 10px; left: 10px; color: white; font-size: 12px;">加载 3D 高斯泼溅点...</div>
+  </div>
 </section>
 
 {% schema %}

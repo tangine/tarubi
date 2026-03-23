@@ -1,5 +1,5 @@
-<section class="header flex row" data-section-id="{{ section.id }}">
-  <div class="nav">
+<section class="header" data-section-id="{{ section.id }}">
+  <div class="nav flex-row items-center gap-10">
     {% for link in linklists[section.settings.menu].links %}
       <a class="nav-item" href="{{ link.url }}">{{ link.title }}</a>
     {% endfor %}

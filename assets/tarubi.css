@@ -213,4 +213,14 @@ table {
   align-items: center;
 }
 
+.container-fluid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
 /*# sourceMappingURL=tarubi.css.map */
