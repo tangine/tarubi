@@ -223,4 +223,16 @@ table {
   gap: 10px;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
 /*# sourceMappingURL=tarubi.css.map */
