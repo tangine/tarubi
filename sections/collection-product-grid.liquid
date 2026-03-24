@@ -1,4 +1,4 @@
-<section data-section-id="{{ section.id }}" class="section container-fluid">
+<section id="{{ section.id }}" class="section container-fluid">
   <div class="product-grid grid">
     {% for product in collection.products %}
       {% render 'collection-product-card', product: product %}

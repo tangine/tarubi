@@ -1,4 +1,4 @@
-<section class="section header flex-row items-center container-fluid" data-section-id="{{ section.id }}" style="height: 48px;">
+<section class="section header flex-row items-center container-fluid" id="{{ section.id }}" style="height: 48px;">
   <div class="nav flex-row items-center gap-10">
     {% for link in linklists[section.settings.menu].links %}
       <a class="nav-item" href="{{ link.url }}">{{ link.title }}</a>
