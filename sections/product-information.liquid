@@ -1,16 +1,12 @@
 <section id="{{ section.id }}" class="section product-information">
   <div class="product-preview">
-    <div class="product-thumbnails">
-      <div class="produt-thumbnail">
-        <ul>
-          {%- for image in product.images -%}
-            <li>
-              <img src="{{ image }}" alt="">
-            </li>
-          {%-endfor-%}
-        </ul>
-      </div>
-    </div>
+    <ul class="product-thumbnails">
+      {%- for image in product.images -%}
+        <li class="produt-thumbnail">
+          <img src="{{ image }}" alt="">
+        </li>
+      {%-endfor-%}
+    </ul>
   </div>
   <div class="product-"></div>
   {% comment %}{{ product.title }}{% endcomment %}
