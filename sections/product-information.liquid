@@ -1,20 +1,34 @@
-<section class="product-information">
-  {{ product.title }}
-  <ul>
-    {%- for variant in product.variants -%}
-      <li>
-        <a href="{{ variant.url }}">
-          <div>
-            <img src="{{ variant.image }}" alt="{{ variant.title }}">
-            <div>{{ variant.image }}</div>
-          </div>
-          <span>{{ variant.title }}</span>
-          <span>{{ variant.url }}</span>
-        </a>
-
-      </li>
-    {% endfor %}
-  </ul>
+<section id="{{ section.id }}" class="section product-information">
+  <div class="product-preview">
+    <div class="product-thumbnails">
+      <div class="produt-thumbnail">
+        <ul>
+          {%- for image in product.images -%}
+            <li>
+              <img src="{{ image }}" alt="">
+            </li>
+          {%-endfor-%}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="product-"></div>
+  {% comment %}{{ product.title }}{% endcomment %}
+  {% comment %}<ul>{% endcomment %}
+    {% comment %}{%- for variant in product.variants -%}{% endcomment %}
+      {% comment %}<li>{% endcomment %}
+        {% comment %}<a href="{{ variant.url }}">{% endcomment %}
+          {% comment %}<div>{% endcomment %}
+            {% comment %}<img src="{{ variant.image }}" alt="{{ variant.title }}">{% endcomment %}
+            {% comment %}<div>{{ variant.image }}</div>{% endcomment %}
+          {% comment %}</div>{% endcomment %}
+          {% comment %}<span>{{ variant.title }}</span>{% endcomment %}
+          {% comment %}<span>{{ variant.url }}</span>{% endcomment %}
+        {% comment %}</a>{% endcomment %}
+{% comment %}{% endcomment %}
+      {% comment %}</li>{% endcomment %}
+    {% comment %}{% endfor %}{% endcomment %}
+  {% comment %}</ul>{% endcomment %}
 
   <div id="gaussian-splats-container" data-gaussian-splats data-config='{
                 "modelUrl": "./assets/butterfly.spz",
