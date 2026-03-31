@@ -3,7 +3,7 @@
     <ul class="product-thumbnails">
       {%- for image in product.images -%}
         <li class="product-thumbnail">
-          <img src="{{ image }}" alt="">
+          <img src="{{ image | asset_img_url }}" alt="">
         </li>
       {%-endfor-%}
     </ul>
