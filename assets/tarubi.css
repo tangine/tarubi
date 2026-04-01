@@ -469,8 +469,9 @@ table {
 }
 
 .product-thumbnail {
-  width: 100px;
+  width: 72px;
   aspect-ratio: 1;
+  cursor: pointer;
 }
 .product-thumbnail img {
   display: inline-block;
