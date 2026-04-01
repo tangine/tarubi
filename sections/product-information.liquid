@@ -31,9 +31,11 @@
     {% comment %}{% endfor %}{% endcomment %}
   {% comment %}</ul>{% endcomment %}
 
-  <div id="gaussian-splats-container" data-gaussian-splats data-config='{
-                "modelUrl": "./assets/butterfly.spz",
-                "modelPosition": "-3,0,0",
+  <div id="gaussian-splats-container"
+       data-gaussian-splats
+       data-config='{
+               "modelUrl": "{{ product.metafields.custom.threejs }}",
+               "modelPosition": "-3,0,0",
                 "modelQuaternion": "1,0,0,0",
                 "cameraPosition": "0,0,5",
                 "rotationSpeed": 0.01,
