@@ -1,4 +1,4 @@
-<section class="product-description">
+<section class="product-description {{ section.settings.container_type }}">
 <div>
   {{ product.description }}
 </div>
@@ -7,7 +7,27 @@
 {% schema %}
 {
   "name": "Product Description",
-  "settings": [],
+  "settings": [
+    {
+      "type": "header",
+      "content": "General"
+    },
+    {
+      "id": "container_type",
+      "label": "Container Type",
+      "type": "select",
+      "options": [
+        {
+          "value": "x-full",
+          "label": "Full width"
+        },
+        {
+          "value": "container-fluid",
+          "label": "fluid container"
+        }
+      ]
+    }
+  ],
   "blocks": [],
   "presets": [
     {

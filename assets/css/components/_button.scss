@@ -1,5 +1,6 @@
 @use "../base/variables";
 
+button,
 .btn {
   display: inline-flex;
   align-items: center;
@@ -14,4 +15,9 @@
   border-radius: var(--radius-base);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: desaturate(red, 10%);
+    background: desaturate(red, 30%);
+  }
 }
