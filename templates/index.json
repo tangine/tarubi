@@ -12,7 +12,9 @@
     "collection_list_grid_CTfK3p": {
       "type": "collection-list-grid",
       "name": "Product List",
-      "settings": {}
+      "settings": {
+        "container_type": "container-lg"
+      }
     }
   },
   "order": [
