@@ -17,5 +17,6 @@ $container-breakpoints: (
     width: 100%;
     max-width: $width;
     margin: 0 auto;
+    container-type: inline-size;
   }
 }

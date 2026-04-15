@@ -72,42 +72,49 @@ ul, li {
   width: 100%;
   max-width: 640px;
   margin: 0 auto;
+  container-type: inline-size;
 }
 
 .container-sm {
   width: 100%;
   max-width: 768px;
   margin: 0 auto;
+  container-type: inline-size;
 }
 
 .container-md {
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
+  container-type: inline-size;
 }
 
 .container-lg {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  container-type: inline-size;
 }
 
 .container-xl {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  container-type: inline-size;
 }
 
 .container-2xl {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
+  container-type: inline-size;
 }
 
 .container-3xl {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
+  container-type: inline-size;
 }
 
 .gap-10 {
