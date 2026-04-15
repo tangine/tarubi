@@ -14,7 +14,8 @@
     "default_footer": {
       "type": "footer",
       "settings": {
-        "menu": "footer"
+        "menu": "footer",
+        "container_type": "container-lg"
       }
     }
   },
