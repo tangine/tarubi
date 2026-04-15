@@ -12,13 +12,16 @@
     "collection_product_grid_wUe8F9": {
       "type": "collection-product-grid",
       "name": "Product Grid",
-      "settings": {}
+      "settings": {
+        "container_type": "container-md"
+      }
     },
     "footer_3hwxq7": {
       "type": "footer",
       "name": "Footer",
       "settings": {
-        "menu": "footer"
+        "menu": "footer",
+        "container_type": "container-fluid"
       }
     }
   },
