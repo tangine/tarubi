@@ -1,4 +1,4 @@
-<section id="{{ section.id }}" class="section container-fluid {{ section.class }} {{ section.extra_style }}">
+<section id="{{ section.id }}" class="section {{ section.settings.container_type }} {{ section.class }} {{ section.extra_style }}">
   {% for link in linklists[section.settings.menu].links %}
     <div>
       <a href="{{ link.url }}">{{ link.title }}</a>

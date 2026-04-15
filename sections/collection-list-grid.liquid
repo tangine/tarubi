@@ -1,4 +1,4 @@
-<section id="{{ section.id }}" class="section collection container-fluid">
+<section id="{{ section.id }}" class="section collection {{ section.settings.container_type }}">
   <div  class="product-grid grid">
     {% for collection in collections %}
       <a class="product-card" href="{{ collection.url }}">
