@@ -13,7 +13,7 @@
       "type": "collection-product-grid",
       "name": "Product Grid",
       "settings": {
-        "container_type": "container-md"
+        "container_type": "container-lg"
       }
     },
     "footer_3hwxq7": {
