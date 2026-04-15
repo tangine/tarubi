@@ -14,7 +14,8 @@
     "default_header": {
       "type": "header",
       "settings": {
-        "menu": "main-menu"
+        "menu": "main-menu",
+        "container_type": "container-md"
       }
     }
   },
