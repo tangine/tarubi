@@ -1,0 +1,21 @@
+.container-fluid {
+  width: 100%;
+}
+
+$container-breakpoints: (
+  'xs': 640px,     // 小桌面/平板横屏
+  'sm': 768px,     // 标准桌面
+  'md': 1024px,    // 大桌面
+  'lg': 1280px,    // 宽屏桌面
+  'xl': 1440px,    // 超宽屏
+  '2xl': 1600px,   // 2K屏幕
+  '3xl': 1920px    // 全高清
+);
+
+@each $name, $width in $container-breakpoints {
+  .container-#{$name} {
+    width: 100%;
+    max-width: $width;
+    margin: 0 auto;
+  }
+}
