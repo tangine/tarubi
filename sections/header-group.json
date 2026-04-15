@@ -15,7 +15,7 @@
       "type": "header",
       "settings": {
         "menu": "main-menu",
-        "container_type": "container-md"
+        "container_type": "container-fluid"
       }
     }
   },
