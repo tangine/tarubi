@@ -21,7 +21,7 @@
       "name": "Footer",
       "settings": {
         "menu": "footer",
-        "container_type": "container-fluid"
+        "container_type": "container-lg"
       }
     }
   },
