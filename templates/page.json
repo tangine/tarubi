@@ -11,7 +11,9 @@
   "sections": {
     "74616d2d8914": {
       "type": "page",
-      "settings": {}
+      "settings": {
+        "container_type": "container-lg"
+      }
     }
   },
   "order": [
