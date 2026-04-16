@@ -1,4 +1,5 @@
 .container-fluid {
+  container-type: initial;
   width: 100%;
 }
 
@@ -14,9 +15,9 @@ $container-breakpoints: (
 
 @each $name, $width in $container-breakpoints {
   .container-#{$name} {
+    container-type: inline-size;
     width: 100%;
     max-width: $width;
     margin: 0 auto;
-    container-type: inline-size;
   }
 }
