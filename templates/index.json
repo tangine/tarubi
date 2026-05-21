@@ -15,9 +15,17 @@
       "settings": {
         "container_type": "container-lg"
       }
+    },
+    "carousel_CXEFwj": {
+      "type": "carousel",
+      "name": "Carousel",
+      "settings": {
+        "container_type": "container-fluid"
+      }
     }
   },
   "order": [
-    "collection_list_grid_CTfK3p"
+    "collection_list_grid_CTfK3p",
+    "carousel_CXEFwj"
   ]
 }
