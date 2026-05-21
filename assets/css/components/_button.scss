@@ -20,4 +20,8 @@ button,
     color: desaturate(red, 10%);
     background: desaturate(red, 30%);
   }
+
+  &.active {
+    background: desaturate(red, 30%);
+  }
 }

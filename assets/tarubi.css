@@ -540,6 +540,10 @@ button:hover,
   color: rgb(242.25, 12.75, 12.75);
   background: rgb(216.75, 38.25, 38.25);
 }
+button.active,
+.btn.active {
+  background: rgb(216.75, 38.25, 38.25);
+}
 
 h1 {
   font-size: 2em;
