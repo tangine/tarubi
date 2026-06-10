@@ -1,6 +1,8 @@
 <section id="{{ section.id }}" class="section carousel {{ section.settings.container_type }}" style="aspect-ratio: 16 /9">
   <div class="slide_wrapper">
-    {{ section.blocks.size }}
+    {% for block in section.blocks %}
+      {{ block.type }}
+    {% endfor %}
   </div>
   <div class="slide_paginagion"></div>
 <script>
@@ -77,10 +79,16 @@
   ],
   "blocks": [
     {
-      "type": "carousel_item",
-      "name": "Item 1",
+      "type": "image_slide",
+      "name": "Image Slide",
       "settings": [
-        ]
+      ]
+    },
+    {
+      "type": "video_slide",
+      "name": "Video Slide",
+      "settings": [
+      ]
     }
   ],
   "presets": [
