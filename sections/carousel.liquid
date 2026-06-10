@@ -2,7 +2,7 @@
   <div class="slide_wrapper" style="aspect-ratio: {{ section.settings.aspect_ratio }}">
     {% for block in section.blocks %}
       <div class="slide">
-        <img src="{{ block.settings.bg_image }}" alt="">
+        <img src="{{ block.settings.bg_image | img_url }}" alt="">
       </div>
     {% endfor %}
   </div>
