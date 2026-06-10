@@ -19,8 +19,12 @@
     "carousel_CXEFwj": {
       "type": "carousel",
       "blocks": {
-        "video_slide_V7LwiP": {
-          "type": "video_slide",
+        "image_slide_FxfqVC": {
+          "type": "image_slide",
+          "settings": {}
+        },
+        "image_slide_Jbcc8j": {
+          "type": "image_slide",
           "settings": {}
         },
         "image_slide_8THQnT": {
@@ -31,7 +35,8 @@
         }
       },
       "block_order": [
-        "video_slide_V7LwiP",
+        "image_slide_FxfqVC",
+        "image_slide_Jbcc8j",
         "image_slide_8THQnT"
       ],
       "name": "Carousel",
