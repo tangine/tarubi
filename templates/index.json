@@ -18,6 +18,20 @@
     },
     "carousel_CXEFwj": {
       "type": "carousel",
+      "blocks": {
+        "carousel_item_cfcHFP": {
+          "type": "carousel_item",
+          "settings": {}
+        },
+        "carousel_item_8PdUHU": {
+          "type": "carousel_item",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "carousel_item_cfcHFP",
+        "carousel_item_8PdUHU"
+      ],
       "name": "Carousel",
       "settings": {
         "container_type": "container-xs"
