@@ -25,7 +25,9 @@
         },
         "image_slide_8THQnT": {
           "type": "image_slide",
-          "settings": {}
+          "settings": {
+            "bg_image": "shopify://shop_images/hk10.png"
+          }
         }
       },
       "block_order": [
@@ -34,7 +36,10 @@
       ],
       "name": "Carousel",
       "settings": {
-        "container_type": "container-xs"
+        "container_type": "container-xs",
+        "aspect_ratio": "16 / 9",
+        "autoplay": true,
+        "autorotate_speed": 5
       }
     }
   },
