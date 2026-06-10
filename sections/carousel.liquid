@@ -1,8 +1,13 @@
 <section id="{{ section.id }}" class="section carousel {{ section.settings.container_type }}" style="aspect-ratio: 16 /9">
+  <div class="slide_wrapper"></div>
+  <div class="slide_paginagion"></div>
 <script>
   (function () {
     window.addEventListener('load', function () {
       console.log("section id: ","{{ section.id }}")
+      const slideshow = document.getElementById("{{ section.id }}");
+      console.log(slideshow);
+      // const slideWrapper = slideshow.querySelector("");
     })
   })()
 </script>
