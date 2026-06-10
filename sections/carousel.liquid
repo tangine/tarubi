@@ -1,11 +1,14 @@
 <section id="{{ section.id }}" class="section carousel relative {{ section.settings.container_type }}" style="aspect-ratio: 16 /9">
-  <div class="slide_wrapper"></div>
+  <div class="slide_wrapper">
+    {{ section.blocks.size }}
+    {% comment %}{% if section.blocks.size >= 1 %}{% endcomment %}
+      {% comment %}{% endcomment %}
+    {% comment %}{% endif %}{% endcomment %}
+  </div>
   <div class="slide_paginagion"></div>
 <script>
   (function () {
     window.addEventListener('load', function () {
-
-      console.log("section id: ","{{ section.id }}")
       const slideshow = document.getElementById("{{ section.id }}");
       const slideWrapper = slideshow.querySelector(".slide_wrapper");
       const slides = slideWrapper.querySelectorAll(".slide");

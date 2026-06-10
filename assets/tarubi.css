@@ -128,32 +128,28 @@ ul, li {
 
 /* 主轴方向 */
 .flex-row {
-  display: flex;
   flex-direction: row;
 }
 
-.flex-row-reverse {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
 .flex-col {
-  display: flex;
   flex-direction: column;
 }
 
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
 .flex-col-reverse {
-  display: flex;
   flex-direction: column-reverse;
 }
 
 /* 主轴对齐 */
 .justify-start {
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .justify-end {
-  justify-content: flex-end;
+  justify-content: flext-end;
 }
 
 .justify-center {
@@ -193,24 +189,7 @@ ul, li {
   align-items: stretch;
 }
 
-/* 折叠 */
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-.flex-nowrap {
-  flex-wrap: nowrap;
-}
-
-.flex-wrap-reverse {
-  flex-wrap: wrap-reverse;
-}
-
 /* 子元素副轴对齐 */
-.self-auto {
-  align-self: auto;
-}
-
 .self-start {
   align-self: flex-start;
 }
@@ -223,12 +202,25 @@ ul, li {
   align-self: center;
 }
 
+.self-baseline {
+  align-self: baseline;
+}
+
 .self-stretch {
   align-self: stretch;
 }
 
-.self-baseline {
-  align-self: baseline;
+/* 折叠 */
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
 }
 
 /* ==========================================================================
