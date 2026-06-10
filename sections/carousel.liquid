@@ -29,7 +29,7 @@
         if(Boolean("{{ section.settings.autoplay }}") === true) {
           timer = setInterval(() => {
             toggleActive(activeIndex + 1);
-          }, Number("{{ section.settings.autorotate_speed }}"))
+          }, Number("{{ section.settings.autorotate_speed }}") * 1000)
         }
       }
 
