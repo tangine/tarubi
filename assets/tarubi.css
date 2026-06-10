@@ -128,18 +128,22 @@ ul, li {
 
 /* 主轴方向 */
 .flex-row {
+  display: flex;
   flex-direction: row;
 }
 
 .flex-col {
+  display: flex;
   flex-direction: column;
 }
 
 .flex-row-reverse {
+  display: flex;
   flex-direction: row-reverse;
 }
 
 .flex-col-reverse {
+  display: flex;
   flex-direction: column-reverse;
 }
 

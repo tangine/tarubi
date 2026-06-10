@@ -5,6 +5,7 @@
 /* 主轴方向 */
 @each $key, $value in (row: row, col: column, row-reverse: row-reverse, col-reverse: column-reverse) {
   .flex-#{$key} {
+    display: flex;
     flex-direction: $value;
   }
 }
