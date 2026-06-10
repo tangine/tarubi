@@ -1,34 +1,15 @@
-<section id="{{ section.id }}" class="section carousel relative {{ section.settings.container_type }}" style="aspect-ratio: 16 /9">
+<section id="{{ section.id }}" class="section carousel {{ section.settings.container_type }}" style="aspect-ratio: 16 /9">
   <div class="slide_wrapper">
     {{ section.blocks.size }}
-    test
-    {% comment %}{% if section.blocks.size >= 1 %}{% endcomment %}
-      {% comment %}{% endcomment %}
-    {% comment %}{% endif %}{% endcomment %}
   </div>
   <div class="slide_paginagion"></div>
 <script>
   (function () {
     window.addEventListener('load', function () {
+      console.log("section id: ","{{ section.id }}")
       const slideshow = document.getElementById("{{ section.id }}");
-      const slideWrapper = slideshow.querySelector(".slide_wrapper");
-      const slides = slideWrapper.querySelectorAll(".slide");
-      let activeIndex = -1;
-      let timer = null;
-
-      function toggleActive(index) {
-        if(activeIndex === index) {
-          return;
-        }
-        clearInterval(timer);
-        activeIndex = (index + slides.length ) % slides.length;
-
-        timer = setInterval(() => {
-          toggleActive(activeIndex + 1);
-        }, Number("{{ section.settings.number_timer }}"))
-      }
-
-      toggleActive(0);
+      console.log(slideshow);
+      // const slideWrapper = slideshow.querySelector("");
     })
   })()
 </script>
@@ -77,10 +58,6 @@
           "label": "Max 1920px"
         }
       ]
-    },
-    {
-      "type": "number",
-      "id": "number_timer"
     }
   ],
   "blocks": [
