@@ -1,5 +1,11 @@
 <section id="{{ section.id }}" class="section carousel {{ section.settings.container_type }}" style="aspect-ratio: 16 /9">
-
+<script>
+  (function () {
+    window.addEventListener('load', function () {
+      console.log("section id: ","{{ section.id }}")
+    })
+  })()
+</script>
 </section>
 
 {% schema %}
