@@ -25,7 +25,9 @@
         },
         "image_slide_Jbcc8j": {
           "type": "image_slide",
-          "settings": {}
+          "settings": {
+            "bg_image": "shopify://shop_images/woman-poses-in-dark-room.jpg"
+          }
         },
         "image_slide_8THQnT": {
           "type": "image_slide",
