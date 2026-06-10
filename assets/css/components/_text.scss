@@ -1,0 +1,29 @@
+@each $align in left, star, center, right, end, justify {
+  .text-#{$align} {
+    text-align: $align;
+  }
+}
+
+@each $case in uppercase, lowercase, capitalize {
+  .#{$case} {
+    text-transform: $case;
+  }
+}
+
+@each $style in italic {
+  .#{$style} {
+    font-style: italic;
+  }
+}
+
+@each $decoration in underline, overline, line-through {
+  .#{$decoration} {
+    text-decoration: $decoration;
+  }
+}
+
+@each $indent in 1, 2, 4, 8 {
+  .indent-#{$indent} {
+    text-indent: #{$indent}em;
+  }
+}
