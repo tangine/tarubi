@@ -21,7 +21,9 @@
       "blocks": {
         "image_slide_FxfqVC": {
           "type": "image_slide",
-          "settings": {}
+          "settings": {
+            "bg_image": "shopify://shop_images/landscape-of-green-rolling-hills-and-mountain-peaks.jpg"
+          }
         },
         "image_slide_Jbcc8j": {
           "type": "image_slide",
@@ -32,7 +34,7 @@
         "image_slide_8THQnT": {
           "type": "image_slide",
           "settings": {
-            "bg_image": "shopify://shop_images/hk10.png"
+            "bg_image": "shopify://shop_images/setting-up-tent.jpg"
           }
         }
       },
