@@ -26,6 +26,8 @@
         clearInterval(timer);
         activeIndex = (index + slides.length ) % slides.length;
 
+        slideWrapper.style.transform = `translateX(-${activeIndex * 100})%)`;
+
         console.log("activeIndex", activeIndex);
 
         if(Boolean("{{ section.settings.autoplay }}") === true) {
