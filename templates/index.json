@@ -9,13 +9,6 @@
  */
 {
   "sections": {
-    "collection_list_grid_CTfK3p": {
-      "type": "collection-list-grid",
-      "name": "Product List",
-      "settings": {
-        "container_type": "container-lg"
-      }
-    },
     "carousel_CXEFwj": {
       "type": "carousel",
       "blocks": {
@@ -50,10 +43,17 @@
         "autoplay": true,
         "autorotate_speed": 5
       }
+    },
+    "collection_list_grid_CTfK3p": {
+      "type": "collection-list-grid",
+      "name": "Product List",
+      "settings": {
+        "container_type": "container-lg"
+      }
     }
   },
   "order": [
-    "collection_list_grid_CTfK3p",
-    "carousel_CXEFwj"
+    "carousel_CXEFwj",
+    "collection_list_grid_CTfK3p"
   ]
 }
