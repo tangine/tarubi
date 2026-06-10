@@ -13,6 +13,9 @@
       const slides = slideWrapper.querySelectorAll(".slide");
       let activeIndex = -1;
       let timer = null;
+      const autoplay = "{{ section.settings.autoplay }}"
+
+      console.log("Autoplay: ", typeof autoplay);
 
       function toggleActive(index) {
         if(activeIndex === index) {
@@ -21,9 +24,13 @@
         clearInterval(timer);
         activeIndex = (index + slides.length ) % slides.length;
 
-        timer = setInterval(() => {
-          toggleActive(activeIndex + 1);
-        }, Number("{{ section.settings.number_timer }}"))
+        console.log("activeIndex", activeIndex);
+
+        if("{{ section.settings.autoplay }}" === true) {
+          timer = setInterval(() => {
+            toggleActive(activeIndex + 1);
+          }, Number("{{ section.settings.number_timer }}"))
+        }
       }
 
       toggleActive(0);
@@ -81,6 +88,12 @@
       "id": "autoplay",
       "label": "Autoplay",
       "default": true
+    },
+    {
+      "type": "range",
+      "id": "number_timer",
+      "label": "Number Timer",
+      "default": 5
     }
   ],
   "blocks": [
