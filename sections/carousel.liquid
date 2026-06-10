@@ -29,7 +29,7 @@
         if("{{ section.settings.autoplay }}" === true) {
           timer = setInterval(() => {
             toggleActive(activeIndex + 1);
-          }, Number("{{ section.settings.number_timer }}"))
+          }, Number("{{ section.settings.autorotate_speed }}"))
         }
       }
 
@@ -84,6 +84,12 @@
       ]
     },
     {
+      "type": "select",
+      "id": "aspect-ratio",
+      "label": "Aspect Ratio",
+      "default": "16 / 9"
+    },
+    {
       "type": "checkbox",
       "id": "autoplay",
       "label": "Autoplay",
@@ -91,10 +97,11 @@
     },
     {
       "type": "range",
-      "id": "number_timer",
+      "id": "autorotate_speed",
       "label": "Number Timer",
-      "min": 1,
-      "max": 60,
+      "info": "Work when auto-rotate",
+      "min": 2,
+      "max": 10,
       "unit": "s",
       "step": 1,
       "default": 5
