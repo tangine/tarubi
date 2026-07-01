@@ -23,10 +23,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "Microsoft YaHei", "Open Sans", sans-serif;
-}
-
 main {
   display: block;
 }
@@ -86,7 +82,7 @@ textarea {
 }
 
 :root {
-  font-family: "Microsoft YaHei UI", sans-serif;
+  font-family: "Source Han Sans", "Microsoft YaHei UI", Arial, sans-serif;
 }
 
 .container-fluid {
