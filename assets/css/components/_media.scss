@@ -1,0 +1,8 @@
+@each $media in (img, video) {
+  @each $class in (cover, cotain, fill) {
+    #{$media}.#{$class} {
+      object-fit: #{$class};
+    }
+  }
+}
+

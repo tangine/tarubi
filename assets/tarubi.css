@@ -657,6 +657,30 @@ h3 {
   object-fit: cover;
 }
 
+img.cover {
+  object-fit: cover;
+}
+
+img.cotain {
+  object-fit: cotain;
+}
+
+img.fill {
+  object-fit: fill;
+}
+
+video.cover {
+  object-fit: cover;
+}
+
+video.cotain {
+  object-fit: cotain;
+}
+
+video.fill {
+  object-fit: fill;
+}
+
 .product-thumbnail {
   width: 72px;
   aspect-ratio: 1;
@@ -667,6 +691,10 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+:root {
+  font-family: "Source Han Sans", "Microsoft YaHei UI", Arial, sans-serif;
 }
 
 /*# sourceMappingURL=tarubi.css.map */
