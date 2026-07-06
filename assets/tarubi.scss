@@ -1,18 +1,26 @@
-@use "css/base/_variables";
-@use "css/base/_reset";
-@use "css/base/_font";
-@use "css/layout/container";
-@use "css/layout/gap";
-@use "css/layout/_flex";
-@use "css/utils/spacing";
-@use "css/pages/collections";
-@use "css/components/button";
-@use "css/components/head";
-@use "css/components/text";
-@use "css/components/slideshow";
-@use "css/components/_media";
-@use "css/pages/product";
+@use "css_variables";
+@use "css_reset";
+@use "css_font";
+@use "css_container";
+@use "css_gap";
+@use "css_flex";
+@use "css_spacing";
+@use "css_collections";
+@use "css_button";
+@use "css_head";
+@use "css_text";
+@use "css_slideshow";
+@use "css_media";
+@use "css_product";
 
 :root {
   font-family: "Source Han Sans", "Microsoft YaHei UI", Arial, sans-serif;
+}
+
+body {
+  padding: 0 10px;
+}
+
+.clickable {
+  cursor: pointer;
 }

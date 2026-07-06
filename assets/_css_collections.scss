@@ -1,7 +1,8 @@
 .product-grid {
   display: grid;
+  container-type: inline-size;
   grid-template-columns: repeat(auto-fill, minmax(clamp(150px, 24cqw, 400px), 1fr));
-  gap: 1em;
+  gap: 10px;
 
   .product-card {
     width: 100%;

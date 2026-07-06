@@ -82,7 +82,15 @@ textarea {
 }
 
 :root {
-  font-family: "Source Han Sans", "Microsoft YaHei UI", Arial, sans-serif;
+  font-family: "Source Han Sans", Helvetica, "Microsoft YaHei UI", Arial, sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.lighter {
+  font-weight: lighter;
 }
 
 .container-fluid {
@@ -481,8 +489,9 @@ textarea {
 
 .product-grid {
   display: grid;
+  container-type: inline-size;
   grid-template-columns: repeat(auto-fill, minmax(clamp(150px, 24cqw, 400px), 1fr));
-  gap: 1em;
+  gap: 10px;
 }
 .product-grid .product-card {
   width: 100%;
@@ -691,6 +700,14 @@ video.fill {
 
 :root {
   font-family: "Source Han Sans", "Microsoft YaHei UI", Arial, sans-serif;
+}
+
+body {
+  padding: 0 10px;
+}
+
+.clickable {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=tarubi.css.map */
