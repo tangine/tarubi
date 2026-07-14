@@ -6,7 +6,7 @@
         "id": "primary_color",
         "label": "Primary Color",
         "type": "color",
-        "default": "#000000"
+        "default": "#ffffff"
       },
       {
         "id": "secondary_color",
