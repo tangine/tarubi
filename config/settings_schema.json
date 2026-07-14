@@ -3,8 +3,18 @@
     "name": "General Settings",
     "settings": [
       {
-        "id": "color_primary",
+        "id": "primary_color",
         "label": "Primary Color",
+        "type": "color"
+      },
+      {
+        "id": "secondary_color",
+        "label": "Secondary Color",
+        "type": "color"
+      },
+      {
+        "id": "tertiary_color",
+        "label": "Tertiary Color",
         "type": "color"
       }
     ]
