@@ -12,19 +12,19 @@
         "id": "primary_color",
         "label": "Primary Color",
         "type": "color",
-        "default": "white"
+        "default": "#111111"
       },
       {
         "id": "secondary_color",
         "label": "Secondary Color",
         "type": "color",
-        "default": "red"
+        "default": "#0000ff"
       },
       {
         "id": "tertiary_color",
         "label": "Tertiary Color",
         "type": "color",
-        "default": "yellow"
+        "default": "#0ff0ff"
       }
     ]
   },
