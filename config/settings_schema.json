@@ -3,28 +3,20 @@
     "name": "Theme Color Settings",
     "settings": [
       {
-        "id": "theme_color",
-        "label": "Theme Color",
-        "type": "color",
-        "default": "#2150a2"
-      },
-      {
         "id": "primary_color",
         "label": "Primary Color",
         "type": "color",
-        "default": "white"
+        "default": "#000000"
       },
       {
         "id": "secondary_color",
         "label": "Secondary Color",
-        "type": "color",
-        "default": "red"
+        "type": "color"
       },
       {
         "id": "tertiary_color",
         "label": "Tertiary Color",
-        "type": "color",
-        "default": "yellow"
+        "type": "color"
       }
     ]
   },
