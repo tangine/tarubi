@@ -39,7 +39,7 @@
       "name": "Carousel",
       "settings": {
         "container_type": "container-fluid",
-        "aspect_ratio": "16 / 9",
+        "aspect_ratio": "3",
         "autoplay": true,
         "autorotate_speed": 5
       }
