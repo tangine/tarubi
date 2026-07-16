@@ -53,6 +53,6 @@ $font-weight: (
 
 @each $tag, $weight in $font-weight {
   .text-#{$tag} {
-  font-size: $weight;
+  font-weight: $weight;
   }
 }
