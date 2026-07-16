@@ -18,7 +18,7 @@
         "alignment": "justify-end",
         "height": "large",
         "container_type": "container-lg",
-        "font_size": "text-3xl"
+        "font_size": "text-base"
       }
     }
   },
