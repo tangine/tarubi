@@ -18,7 +18,8 @@
         "alignment": "justify-end",
         "height": "large",
         "container_type": "container-lg",
-        "font_size": "text-base"
+        "font_size": "text-base",
+        "font_weight": "text-black"
       }
     }
   },
