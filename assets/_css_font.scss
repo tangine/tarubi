@@ -1,5 +1,6 @@
 :root {
   font-family: "Source Han Sans", Helvetica, "Microsoft YaHei UI", Arial, sans-serif;
+  font-size: 16px;
 }
 
 
@@ -9,4 +10,25 @@
 
 .lighter {
   font-weight: lighter;
+}
+
+.container-fluid {
+  container-type: initial;
+  width: 100%;
+}
+
+$text-breakpoints: (
+  'xs': 0.75rem,
+  'sm': 0.875rem,
+  'base': 1rem,
+  'lg': 1.125rem,
+  'xl': 1.25rem,
+  '2xl': 1.5rem,
+  '3xl': 1.875rem
+);
+
+@each $tag, $size in $text-breakpoints {
+  .text-#{$tag} {
+    font-size: $size;
+  }
 }
