@@ -151,6 +151,42 @@ textarea {
   font-size: 8rem;
 }
 
+.text-thin {
+  font-size: "100";
+}
+
+.text-extralight {
+  font-size: "200";
+}
+
+.text-light {
+  font-size: "300";
+}
+
+.text-normal {
+  font-size: "400";
+}
+
+.text-medium {
+  font-size: "500";
+}
+
+.text-semibold {
+  font-size: "600";
+}
+
+.text-bold {
+  font-size: "700";
+}
+
+.text-extrabold {
+  font-size: "800";
+}
+
+.text-black {
+  font-size: "900";
+}
+
 .container-fluid {
   container-type: initial;
   width: 100%;
