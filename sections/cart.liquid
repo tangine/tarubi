@@ -3,6 +3,7 @@
   <div>
     {% for item in cart.items %}
       <div class="cart-product-item">
+        <div>{{ item | json }}</div>
         <div class="cart-product__media">
           <img src="{{ item.image  }}" alt="" />
         </div>
