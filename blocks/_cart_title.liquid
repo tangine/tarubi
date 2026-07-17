@@ -1,5 +1,5 @@
 <div class="cart-title">
-  <h1 class="{{ block_settings.type_preset | default: 'h2' }}">
+  <h1 class="{{ block.settings.alignment }}">
     {%- if cart.empty? or force_empty -%}
       {{ 'content.your_cart_is_empty' | t }}
     {%- else -%}
