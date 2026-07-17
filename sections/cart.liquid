@@ -2,7 +2,16 @@
   {% content_for 'blocks' %}
   <div>
     {% for item in cart.items %}
-      {{ item | json }}
+      <div class="cart-product-item">
+        <div class="cart-product__media">
+          <img src="{{ item.image }}" alt="">
+        </div>
+        <div class="cart-product__info">
+          <div class="cart-product__title">{{ item.product_title }}</div>
+          <div class="cart-product__variant">{{ item.variant_title }}</div>
+          <div class="cart-product__quantity">{{ item.variant_title }}</div>
+        </div>
+      </div>
     {% endfor %}
   </div>
 </div>
