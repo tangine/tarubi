@@ -50,10 +50,16 @@
       "settings": {
         "container_type": "container-lg"
       }
+    },
+    "cart_CmQDt8": {
+      "type": "cart",
+      "name": "t:names.cart",
+      "settings": {}
     }
   },
   "order": [
     "carousel_chqC4g",
-    "collection_list_grid_CTfK3p"
+    "collection_list_grid_CTfK3p",
+    "cart_CmQDt8"
   ]
 }
