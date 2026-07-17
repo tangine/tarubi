@@ -1,9 +1,9 @@
 <div class="cart-title">
   <h1 class="{{ block.settings.alignment }}">
     {%- if cart.empty? or force_empty -%}
-      {{ 'content.your_cart_is_empty' | t }}
+      {{ 'content.your_cart_is_empty' }}
     {%- else -%}
-      {{ 'content.cart_title' | t }}
+      {{ 'content.cart_title' }}
       {% comment %}{%- if block_settings.show_count -%}{% render 'cart-bubble' %}{%- endif -%}{% endcomment %}
     {%- endif -%}
   </h1>
