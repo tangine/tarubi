@@ -2,7 +2,7 @@
   {% content_for 'blocks' %}
   <div>
     {% for item in cart.items %}
-      {{ item | jsonify }}
+      {{ item | json }}
     {% endfor %}
   </div>
 </div>
