@@ -12,7 +12,28 @@
 {% schema %}
 {
   "name": "t:names.cart_title",
-  "settings": [],
+  "settings": [
+    {
+      "type":"select",
+      "id": "alignment",
+      "label": "t:settings.alignment",
+      "default": "text-center",
+      "options": [
+        {
+          "value": "text-left",
+          "text": "t:options.left"
+        },
+        {
+          "value": "text-center",
+          "text": "t:options.center"
+        },
+        {
+          "value": "text-right",
+          "text": "t:options.right"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "t:names.cart_title"
