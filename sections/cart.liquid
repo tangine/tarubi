@@ -1,5 +1,10 @@
 <div class="cart">
   {% content_for 'blocks' %}
+  <div>
+    {% for item in cart.items %}
+      {{ item.title }}
+    {% endfor %}
+  </div>
 </div>
 
 {% schema %}
