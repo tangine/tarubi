@@ -3,7 +3,7 @@
     {%- if cart.empty? or force_empty -%}
       {{ 'content.your_cart_is_empty' | t }}
     {%- else -%}
-      {{ 'content.cart_title' }}
+      {{ 'content.cart_title' | t }}
       {% comment %}{%- if block_settings.show_count -%}{% render 'cart-bubble' %}{%- endif -%}{% endcomment %}
     {%- endif -%}
   </h1>
