@@ -3,13 +3,12 @@
   <div>
     {% for item in cart.items %}
       <div class="cart-product-item">
-        <div>{{ item | json }}</div>
-        <div class="cart-product__media">
-          <img src="{{ item.image  }}" alt="" />
-        </div>
+        <a class="cart-product__media" href="{{ item.url }}">
+          <img src="{{ item.image | image_url  }}" alt="" />
+        </a>
         <div class="cart-product__info">
           <div class="cart-product__title">{{ item.title }}</div>
-          <div class="cart-product__title">{{ item.product_title }}</div>
+          <div class="cart-product__title">{{ item.product.title }}</div>
           <div class="cart-product__variant">{{ item.variant_title }}</div>
           <div class="cart-product__price">{{ item.price }}</div>
           <div class="cart-product__quantity">{{ item.quantity }}</div>
