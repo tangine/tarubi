@@ -17,7 +17,8 @@
             {% endfor %}
             {% comment %}{{ item.variant | json }}{% endcomment %}
           </div>
-          <div class="cart-product__price">{{ item.price | money }}</div>
+          <div class="cart-product__unit_price">{{ item.price | money }}</div>
+          <div class="cart-product__total_price">{{ item.final_line_price | money }}</div>
           <div class="cart-product__quantity">{{ item.quantity }}</div>
         </div>
       </div>
