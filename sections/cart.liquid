@@ -10,9 +10,13 @@
           <div class="cart-product__title">{{ item.title }}</div>
           <div class="cart-product__title">{{ item.product.title }}</div>
           <div class="cart-product__variants">
-            {% comment %}{% for variant in item.variant %}{% endcomment %}
-            {% comment %}{% endfor %}{% endcomment %}
-            {{ item.variant | json }}
+            {% for variant in item.variant.options %}
+              {% if forloop.index != 1 %}
+                ,
+              {% endif %}
+              {{ variant }}
+            {% endfor %}
+            {% comment %}{{ item.variant | json }}{% endcomment %}
           </div>
           <div class="cart-product__price">{{ item.price }}</div>
           <div class="cart-product__quantity">{{ item.quantity }}</div>
