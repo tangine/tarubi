@@ -7,7 +7,6 @@
           <img src="{{ item.image | image_url  }}" alt="" />
         </a>
         <div class="cart-product__info">
-          <div class="cart-product__title">{{ item.title }}</div>
           <div class="cart-product__title">{{ item.product.title }}</div>
           <div class="cart-product__variants">
             {% for option in item.options_with_values %}
