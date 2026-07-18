@@ -1,7 +1,7 @@
 {% doc %}
 {% enddoc %}
 
-<section class="related-products">
+<section id="{{ section.id }}" class="related-products">
   {{ recommendations.performed }}
   {{ recommendations.products_count }}
   {% comment %}{% for recommendation in recommendations.products %}{% endcomment %}
