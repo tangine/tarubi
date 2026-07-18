@@ -1,3 +1,10 @@
+{% style %}
+  .header {
+    padding-top: {{ section.settings.padding_top }}
+    padding-bottom: {{ section.settings.padding_bottom }}
+  }
+{% endstyle %}
+
 <section class="section header flex-row items-center
 {{ section.settings.container_type }}
 {{ section.settings.font_weight }}
