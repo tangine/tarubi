@@ -19,7 +19,9 @@
         "height": "large",
         "container_type": "container-lg",
         "font_size": "text-lg",
-        "font_weight": "text-medium"
+        "font_weight": "text-medium",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
