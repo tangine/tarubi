@@ -1,5 +1,10 @@
-<section>
+{% doc %}
+{% enddoc %}
 
+<section>
+  {% for product in recommendations.products %}
+    {% render 'product-card', product: product %}
+  {% endfor %}
 </section>
 
 {% schema %}
