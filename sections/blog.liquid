@@ -1,0 +1,24 @@
+<section id="{{ section.id }}" class="blog">
+  {% paginate blog.articels by 6 %}
+
+  {% endpaginate %}
+</section>
+
+{% schema %}
+{
+  "name": "t:names.blog",
+  "settings": [
+    {
+      "type": "range",
+      "id": "page_size",
+      "label": "page_size"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "t:names.blog"
+    }
+  ]
+}
+{% endschema %}
