@@ -69,6 +69,6 @@ textarea {
   overflow: auto;
 }
 
-[aria-disabled] {
+[aria-disabled]:not([aria-disabled="false"]) {
   cursor: not-allowed;
 }
