@@ -32,9 +32,10 @@
     "name": "t:names.social_media_links",
     "settings": [
       {
-        "type": "url",
+        "type": "text",
         "id": "facebook_url",
-        "label": "t:options.facebook"
+        "label": "t:options.facebook",
+        "placeholder": "https://www.facebook.com/shopify"
       }
     ]
   },
