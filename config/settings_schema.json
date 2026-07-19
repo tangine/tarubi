@@ -29,6 +29,16 @@
     ]
   },
   {
+    "name": "t:names.social_media_links",
+    "settings": [
+      {
+        "type": "url",
+        "id": "facebook_url",
+        "label": "t:options.facebook"
+      }
+    ]
+  },
+  {
     "name": "Footer Settings",
     "settings": [
       {
