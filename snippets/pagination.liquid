@@ -2,7 +2,7 @@
   <ul>
     {% for part in paginate.parts %}
       <li>
-        <a href="">{{ part.title }}</a>
+        <a href="{{ part.url }}">{{ part.title }}</a>
       </li>
     {% endfor %}
   </ul>
