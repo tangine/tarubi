@@ -34,9 +34,13 @@
    <div>
     {% for country in localization.available_countries %}
       <div>
-        <span>{{ country.iso_code }}</span>
-        <span>{{ country.name }}</span>
-        <span>{{ country.currency.iso_code }}</span>
+        {% comment %}<span>{{ country.iso_code }}</span>{% endcomment %}
+        {% comment %}<span>{{ country.name }}</span>{% endcomment %}
+        {% comment %}<span>{{ country.currency.iso_code }}</span>{% endcomment %}
+        {% comment %}<span>{{ localization.country.currency.symbol -}}</span>{% endcomment %}
+        {{- localization.country.name }} |
+        {{ localization.country.currency.iso_code }}
+        {{ localization.country.currency.symbol -}}
       </div>
     {% endfor %}
   </div>
