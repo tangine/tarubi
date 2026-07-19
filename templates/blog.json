@@ -9,51 +9,15 @@
  */
 {
   "sections": {
-    "carousel_chqC4g": {
-      "type": "carousel",
-      "blocks": {
-        "image_slide_i6J3Mb": {
-          "type": "image_slide",
-          "settings": {
-            "bg_image": "shopify://shop_images/theme_cover_image.jpg"
-          }
-        },
-        "image_slide_j9nzzm": {
-          "type": "image_slide",
-          "settings": {
-            "bg_image": "shopify://shop_images/landscape-of-green-rolling-hills-and-mountain-peaks.jpg"
-          }
-        },
-        "image_slide_q3zqqq": {
-          "type": "image_slide",
-          "settings": {
-            "bg_image": "shopify://shop_images/setting-up-tent.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "image_slide_i6J3Mb",
-        "image_slide_j9nzzm",
-        "image_slide_q3zqqq"
-      ],
-      "name": "t:names.carousel",
+    "blog_jQW4i6": {
+      "type": "blog",
+      "name": "t:names.blog",
       "settings": {
-        "container_type": "container-fluid",
-        "aspect_ratio": "3",
-        "autoplay": true,
-        "autorotate_speed": 6
-      }
-    },
-    "collection_list_grid_CTfK3p": {
-      "type": "collection-list-grid",
-      "name": "Product List",
-      "settings": {
-        "container_type": "container-lg"
+        "page_size": 10
       }
     }
   },
   "order": [
-    "carousel_chqC4g",
-    "collection_list_grid_CTfK3p"
+    "blog_jQW4i6"
   ]
 }
