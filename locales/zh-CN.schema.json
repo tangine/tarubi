@@ -510,6 +510,7 @@
     "show_alignment": "显示对齐方式",
     "show_count": "显示计数",
     "show_date": "日期",
+    "show_image": "显示图片",
     "show_inventory_quantity": "显示低库存数量",
     "show_pickup_availability": "显示取货服务信息",
     "show_search": "显示搜索",
