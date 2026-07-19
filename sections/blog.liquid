@@ -3,7 +3,12 @@
   <div class="blog-articles">
     {% paginate blog.articles by 16 %}
       {%  for article in blog.articles  %}
-        {% render 'article-card', article: article, show_image: true, show_date: true, show_author: true %}
+        {% render 'article-card',
+          article: article,
+          show_image: section.settings.show_image,
+          show_author: section.settings.show_author,
+          show_date: section.settings.show_date
+        %}
       {% endfor %}
     {% endpaginate %}
   </div>
