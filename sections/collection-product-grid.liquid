@@ -1,8 +1,8 @@
 <section id="{{ section.id }}" class="section {{ section.settings.container_type }}">
   <div class="product-grid grid">
-    {% for product in collection.products %}
-      {% render 'product-card', product: product %}
-    {% endfor %}
+    {% paginate products by section.settings.page_size %}
+
+    {% endpaginate %}
   </div>
 </section>
 
@@ -10,6 +10,15 @@
 {
   "name": "Product Grid",
   "settings": [
+    {
+      "type": "range",
+      "id": "page_size",
+      "label": "Page Size",
+      "default": 20,
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
     {
       "type": "select",
       "id": "container_type",
