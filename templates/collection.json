@@ -13,6 +13,7 @@
       "type": "collection-product-grid",
       "name": "Product Grid",
       "settings": {
+        "page_size": 5,
         "container_type": "container-lg"
       }
     },
