@@ -1,9 +1,17 @@
 <div class="pagination">
   <ul>
+    {% if paginate.previous %}
+      <a href="{{ paginate.previous.url }}">left</a>
+    {% endif %}
+
     {% for part in paginate.parts %}
       <li>
         <a href="{{ part.url }}">{{ part.title }}</a>
       </li>
     {% endfor %}
+
+    {% if paginate.next %}
+      <a href="{{ paginate.next.url }}">right</a>
+    {% endif %}
   </ul>
 </div>
