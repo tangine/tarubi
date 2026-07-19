@@ -8,7 +8,11 @@
 
     {% for part in paginate.parts %}
       <li class="pagination__item">
-        <a href="{{ part.url }}">{{ part.title }}</a>
+        {%- if part.is_link -%}
+          <a href="{{ part.url }}">{{ part.title }}</a>
+        {% else %}
+          <a aria-disabled="true" role="link">{{ part.title }}</a>
+        {% endif %}
       </li>
     {% endfor %}
 
