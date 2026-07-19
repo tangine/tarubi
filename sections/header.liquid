@@ -31,19 +31,19 @@
       </span>
     </div>
   </div>
-   <div>
-    {% for country in localization.available_countries %}
-      <div>
-        {% comment %}<span>{{ country.iso_code }}</span>{% endcomment %}
-        {% comment %}<span>{{ country.name }}</span>{% endcomment %}
-        {% comment %}<span>{{ country.currency.iso_code }}</span>{% endcomment %}
-        {% comment %}<span>{{ localization.country.currency.symbol -}}</span>{% endcomment %}
-        {{- localization.country.name }} |
-        {{ localization.country.currency.iso_code }}
-        {{ localization.country.currency.symbol -}}
-      </div>
-    {% endfor %}
-  </div>
+   {% comment %}<div>{% endcomment %}
+    {% comment %}{% for country in localization.available_countries %}{% endcomment %}
+      {% comment %}<div>{% endcomment %}
+        {% comment %}{% comment %}<span>{{ country.iso_code }}</span>{% endcomment %}{% endcomment %}
+        {% comment %}{% comment %}<span>{{ country.name }}</span>{% endcomment %}{% endcomment %}
+        {% comment %}{% comment %}<span>{{ country.currency.iso_code }}</span>{% endcomment %}{% endcomment %}
+        {% comment %}{% comment %}<span>{{ localization.country.currency.symbol -}}</span>{% endcomment %}{% endcomment %}
+        {% comment %}{{- localization.country.name }} |{% endcomment %}
+        {% comment %}{{ localization.country.currency.iso_code }}{% endcomment %}
+        {% comment %}{{ localization.country.currency.symbol -}}{% endcomment %}
+      {% comment %}</div>{% endcomment %}
+    {% comment %}{% endfor %}{% endcomment %}
+  {% comment %}</div>{% endcomment %}
 </section>
 
 {% schema %}
