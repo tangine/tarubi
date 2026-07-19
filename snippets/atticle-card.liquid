@@ -6,14 +6,30 @@ Renders media block contents (used in _media and _media-without-appearance block
 
 @param {article} [block] - The block article
 @param {show_date}
-@param
+@param {show_image}
+@param {show_author}
+@param {show_excerpt}
+@param {show_tags}
 {%- enddoc -%}
 
 
 <div class="article-card">
+  {% if show_image %}
+    <div class="article-card__image">
+      <img src="{{ article.image.src | image_url }}" alt="">
+    </div>
+  {% endif %}
   <div class="article-card__title">{{ article.title }}</div>
-  <div class="article-card__excerpt">{{ article.excerpt }}</div>
-  <div class="article-card__author">{{ article.author }}</div>
   <div class="article-card__tags">{{ article.tags }}</div>
-  <div class="article-card__date">{{ article.published_at | time_tag: format: 'month_day_year' }}</div>
+  {% if show_tags %}
+    <div class="article-card__excerpt">{{ article.excerpt | strip_html | truncatewords: 30 }}</div>
+  {% endif %}
+  <div>
+    {% if show_date %}
+      <span class="article-card__author">{{ article.author }}</span>
+    {% endif %}
+    {% if show_author %}
+      <span class="article-card__date">{{ article.published_at | time_tag: format: 'date' }}</span>
+    {% endif %}
+  </div>
 </div>
