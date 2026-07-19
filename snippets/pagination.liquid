@@ -1,17 +1,25 @@
-<div class="pagination">
-  <ul>
+<nav class="pagination">
+  <ul class="pagination__list">
     {% if paginate.previous %}
-      <a href="{{ paginate.previous.url }}">left</a>
+      <li class="pagination__item pagination__item_previous">
+        <a href="{{ paginate.previous.url }}">left</a>
+      </li>
     {% endif %}
 
     {% for part in paginate.parts %}
-      <li>
+      <li class="pagination__item">
         <a href="{{ part.url }}">{{ part.title }}</a>
       </li>
     {% endfor %}
 
     {% if paginate.next %}
-      <a href="{{ paginate.next.url }}">right</a>
+      <li class="pagination__item pagination__item_next">
+        <a href="{{ paginate.next.url }}">right</a>
+      </li>
     {% endif %}
   </ul>
-</div>
+</nav>
+
+{% stylesheet %}
+.pagination .pagination__list{display:flex;flex-direction:row;justify-content:center;}
+{% endstylesheet %}
