@@ -1,0 +1,19 @@
+{%- doc -%}
+Renders media block contents (used in _media and _media-without-appearance blocks)
+
+@param {object} [block] - The block object
+@param {boolean} [unset_image_tag] - if true, ignores the image focal point in the image
+
+@param {article} [block] - The block article
+@param {show_date}
+@param
+{%- enddoc -%}
+
+
+<div class="article-card">
+  <div class="article-card__title">{{ article.title }}</div>
+  <div class="article-card__excerpt">{{ article.excerpt }}</div>
+  <div class="article-card__author">{{ article.author }}</div>
+  <div class="article-card__tags">{{ article.tags }}</div>
+  <div class="article-card__date">{{ article.published_at | time_tag: format: 'month_day_year' }}</div>
+</div>
