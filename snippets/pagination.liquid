@@ -1,1 +1,9 @@
-<div></div>
+<div class="pagination">
+  <ul>
+    {% for part in paginate.parts %}
+      <li>
+        <a href="">{{ part.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
