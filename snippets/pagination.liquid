@@ -2,7 +2,9 @@
   <ul class="pagination__list">
     {% if paginate.previous %}
       <li class="pagination__item pagination__item_previous">
-        <a href="{{ paginate.previous.url }}">left</a>
+        <a href="{{ paginate.previous.url }}">
+          <i class="bi bi-chevron-left"></i>
+        </a>
       </li>
     {% endif %}
 
@@ -18,7 +20,9 @@
 
     {% if paginate.next %}
       <li class="pagination__item pagination__item_next">
-        <a href="{{ paginate.next.url }}">right</a>
+        <a href="{{ paginate.next.url }}">
+          <i class="bi bi-chevron-right"></i>
+        </a>
       </li>
     {% endif %}
   </ul>
