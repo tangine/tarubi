@@ -16,17 +16,17 @@
   {% endif %}
   {{ 'tarubi.css' | asset_url | stylesheet_tag }}
 
-  <script type="importmap">
-    {
-      "imports":{
-        "three":"https://cdnjs.cloudflare.com/ajax/libs/three.js/0.178.0/three.module.js",
-        "@sparkjsdev/spark":"https://sparkjs.dev/releases/spark/0.1.10/spark.module.js"
-      }
+  <style>
+    @font-face {
+      font-family: 'Icon Fonts';
+      font-style: normal;
+      font-weight: normal;
+      src: url("{{ 'bootstrap-icons.woff2' | asset_url }}");
     }
-  </script>
+  </style>
 
   {{ content_for_header }}
-  
+
 </head>
 <body>
 {% sections 'header-group' %}
