@@ -69,3 +69,6 @@ textarea {
   overflow: auto;
 }
 
+[aria-disabled] {
+  cursor: not-allowed;
+}
