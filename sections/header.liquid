@@ -8,11 +8,10 @@
 {%- liquid
   # 1. 获取全局页面宽度
   assign global_width = settings.global_width | append: 'px'
-
+  assign section_max_width = global_width
   # 2. 根据分区设置决定最终宽度
   if section.settings.section_width == 'default'
     # 使用全局宽度
-    assign section_max_width = global_width
   elsif section.settings.section_width == 'full'
     # 全屏宽度，不设限制或设为100%
     assign section_max_width = '100%'
