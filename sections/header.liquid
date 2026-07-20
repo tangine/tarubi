@@ -5,28 +5,12 @@
   }
 {% endstyle %}
 
-{%- liquid
-  # 1. 获取全局页面宽度
-  assign global_width = settings.global_width | append: 'px'
-  assign section_max_width = global_width
-  # 2. 根据分区设置决定最终宽度
-  if section.settings.section_width == 'default'
-    # 使用全局宽度
-  elsif section.settings.section_width == 'full'
-    # 全屏宽度，不设限制或设为100%
-    assign section_max_width = '100%'
-  elsif section.settings.section_width == 'custom'
-    # 使用自定义宽度
-    assign custom_width = section.settings.custom_width | append: 'px'
-    assign section_max_width = custom_width
-  endif
--%}
-
 
 <section class="section header flex-row items-center
+{{ section.settings.container_type }}
 {{ section.settings.font_weight }}
 {{ section.settings.font_size }}"
-         id="{{ section.id }}" style="max-width: {{ section_max_width }}" data-test="{{ settings.global_width }}">
+         id="{{ section.id }}">
   <div class="nav flex-row items-center gap-10">
     {% for link in linklists[section.settings.menu].links %}
       <a class="nav-item" href="{{ link.url }}">{{ link.title }}</a>
@@ -51,16 +35,16 @@
   "settings": [
     {
       "type": "select",
-      "id": "section_width",
+      "id": "container_type",
       "label": "t:settings.section_width",
       "default": "default",
       "options": [
         {
-          "value": "full",
+          "value": "w-full",
           "label": "t:options.full"
         },
         {
-          "value": "default",
+          "value": "tarubi-container",
           "label": "t:options.default"
         }
       ]
