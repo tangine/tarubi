@@ -26,7 +26,7 @@
 <section class="section header flex-row items-center
 {{ section.settings.font_weight }}
 {{ section.settings.font_size }}"
-         id="{{ section.id }}" style="max-width: {{ section_max_width }}">
+         id="{{ section.id }}" style="max-width: {{ section_max_width }}" data-test="{{ settings.global_width }}">
   <div class="nav flex-row items-center gap-10">
     {% for link in linklists[section.settings.menu].links %}
       <a class="nav-item" href="{{ link.url }}">{{ link.title }}</a>
