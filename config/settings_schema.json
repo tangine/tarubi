@@ -29,7 +29,7 @@
     ]
   },
   {
-    "name": "",
+    "name": "t:settings.layout",
     "settings": [
       {
         "type": "select",
