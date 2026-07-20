@@ -1,7 +1,20 @@
 <section>
-  <div>
-    {{ search.results | json }}
-  </div>
+  {% paginate search.results by 12 %}
+    <ul>
+      {% for item in search.results %}
+        <li>
+          {%- case item.object_type -%}
+            {%- when 'product' -%}
+              {% render 'product-card', product: item %}
+            {%- when 'article' -%}
+              {% render 'article-card', article: item %}
+            {%- when 'page' -%}
+              {% render 'product-card', page: item %}
+          {%- endcase -%}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endpaginate %}
 </section>
 
 {% schema %}
