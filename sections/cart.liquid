@@ -1,6 +1,6 @@
 <div class="cart">
   {% content_for 'blocks' %}
-  <div class="cart-items">
+  <div class="cart-items {{ section.settings.container_type }}">
     {% for item in cart.items %}
       <div id="cart-item-{{ item.index | plus: 1 }}" class="cart-item">
         <a class="cart-item__media" href="{{ item.url }}">
@@ -28,7 +28,24 @@
 {% schema %}
 {
   "name": "t:names.cart",
-  "settings": [],
+  "settings": [
+    {
+      "type": "select",
+      "id": "container_type",
+      "label": "t:settings.section_width",
+      "default": "tarubi-container",
+      "options": [
+        {
+          "value": "w-full",
+          "label": "t:options.full"
+        },
+        {
+          "value": "tarubi-container",
+          "label": "t:options.default"
+        }
+      ]
+    }
+  ],
   "blocks": [
     {
       "type": "@theme"
