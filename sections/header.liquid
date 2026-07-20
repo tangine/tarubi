@@ -1,227 +1,68 @@
-{% style %}
-  .header {
-    padding-top: {{ section.settings.padding_top }}px;
-    padding-bottom: {{ section.settings.padding_bottom }}px;
+[
+  {
+    "name": "Theme Color Settings",
+    "settings": [
+      {
+        "id": "theme_color",
+        "label": "Theme Color",
+        "type": "color",
+        "default": "#2150a2"
+      },
+      {
+        "id": "primary_color",
+        "label": "Primary Color",
+        "type": "color",
+        "default": "#111111"
+      },
+      {
+        "id": "secondary_color",
+        "label": "Secondary Color",
+        "type": "color",
+        "default": "#0000ff"
+      },
+      {
+        "id": "tertiary_color",
+        "label": "Tertiary Color",
+        "type": "color",
+        "default": "#0ff0ff"
+      }
+    ]
+  },
+  {
+    "name": "t:settings.layout",
+    "settings": [
+      {
+        "type": "range",
+        "id": "page_width",
+        "label": "t:settings.page_width",
+        "default": 1200,
+        "min": 576,
+        "max": 4096,
+        "step": 1,
+        "unit": "px"
+      }
+    ]
+  },
+  {
+    "name": "t:names.social_media_links",
+    "settings": [
+      {
+        "type": "text",
+        "id": "facebook_url",
+        "label": "t:options.facebook",
+        "placeholder": "https://www.facebook.com/shopify"
+      }
+    ]
+  },
+  {
+    "name": "Footer Settings",
+    "settings": [
+      {
+        "id": "copyright",
+        "label": "Copyright",
+        "type": "text",
+        "default": "Copyright © by Tarubi Inc., All Rights Reserved."
+      }
+    ]
   }
-{% endstyle %}
-
-{%- liquid
-  # 1. 获取全局页面宽度
-  assign global_width = settings.page_width | append: 'px'
-
-  # 2. 根据分区设置决定最终宽度
-  if section.settings.section_width == 'default'
-    # 使用全局宽度
-    assign section_max_width = global_width
-  elsif section.settings.section_width == 'full'
-    # 全屏宽度，不设限制或设为100%
-    assign section_max_width = '100%'
-  elsif section.settings.section_width == 'custom'
-    # 使用自定义宽度
-    assign custom_width = section.settings.custom_width | append: 'px'
-    assign section_max_width = custom_width
-  endif
--%}
-
-
-<section class="section header flex-row items-center
-{{ section.settings.font_weight }}
-{{ section.settings.font_size }}"
-         id="{{ section.id }}" style="max-width: {{ section_max_width }}">
-  <div class="nav flex-row items-center gap-10">
-    {% for link in linklists[section.settings.menu].links %}
-      <a class="nav-item" href="{{ link.url }}">{{ link.title }}</a>
-    {% endfor %}
-  </div>
-  <div class="right ml-auto flex-row items-center gap-10">
-    <div class="clickable">
-      <i class="bi bi-search"></i>
-    </div>
-    <div class="clickable">
-      <a class="bi bi-person" href="/account" ></a>
-    </div>
-    <div class="clickable">
-      <a class="bi bi-bag" href="/cart"></a>
-    </div>
-  </div>
-</section>
-
-{% schema %}
-{
-  "name": "t:names.header",
-  "settings": [
-    {
-      "type": "select",
-      "id": "container_type",
-      "label": "t:settings.section_width",
-      "default": "default",
-      "options": [
-        {
-          "value": "w-full",
-          "label": "t:options.full"
-        },
-        {
-          "value": "default",
-          "label": "t:options.default"
-        }
-      ]
-    },
-    {
-      "type": "link_list",
-      "id": "menu",
-      "label": "t:names.menu",
-      "default": "main-menu"
-    },
-    {
-      "type": "select",
-      "id": "alignment",
-      "label": "t:settings.alignment",
-      "default": "justify-start",
-      "options": [
-        {
-          "value": "justify-start",
-          "label": "t:options.left"
-        },
-        {
-          "value": "justify-center",
-          "label": "t:options.center"
-        },
-        {
-          "value": "justify-end",
-          "label": "t:options.right"
-        }
-      ]
-    },
-    {
-      "type": "select",
-      "id": "height",
-      "label": "t:settings.height",
-      "default": "medium",
-      "options": [
-        {
-          "value": "small",
-          "label": "small"
-        },
-        {
-          "value": "medium",
-          "label": "medium"
-        },
-        {
-          "value": "large",
-          "label": "large"
-        }
-      ]
-    },
-    {
-      "type": "select",
-      "id": "font_size",
-      "label": "t:settings.font_size",
-      "default": "text-base",
-      "options": [
-        {
-          "value": "text-xs",
-          "label": "XS"
-        },
-        {
-          "value": "text-sm",
-          "label": "SM"
-        },
-        {
-          "value": "text-base",
-          "label": "Normal"
-        },
-        {
-          "value": "text-lg",
-          "label": "LG"
-        },
-        {
-          "value": "text-xl",
-          "label": "XL"
-        },
-        {
-          "value": "text-2xl",
-          "label": "2XL"
-        },
-        {
-          "value": "text-3xl",
-          "label": "3XL"
-        }
-      ]
-    },
-    {
-      "type": "select",
-      "id": "font_weight",
-      "label": "t:settings.font_weight",
-      "default": "text-normal",
-      "options": [
-        {
-          "value": "text-thin",
-          "label": "100"
-        },
-        {
-          "value": "text-extralight",
-          "label": "200"
-        },
-        {
-          "value": "text-light",
-          "label": "300"
-        },
-        {
-          "value": "text-normal",
-          "label": "400"
-        },
-        {
-          "value": "text-medium",
-          "label": "500"
-        },
-        {
-          "value": "text-semibold",
-          "label": "600"
-        },
-        {
-          "value": "text-bold",
-          "label": "700"
-        },
-        {
-          "value": "text-extrabold",
-          "label": "800"
-        },
-        {
-          "value": "text-black",
-          "label": "900"
-        }
-      ]
-    },
-    {
-      "type": "header",
-      "content": "填充"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 36,
-      "step": 4,
-      "unit": "px",
-      "label": "顶部",
-      "default": 20
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 36,
-      "step": 4,
-      "unit": "px",
-      "label": "底部",
-      "default": 20
-    }
-  ],
-  "blocks": [],
-  "presets": [
-    {
-      "name": "t:names.header"
-    }
-  ]
-}
-{% endschema %}
+]
