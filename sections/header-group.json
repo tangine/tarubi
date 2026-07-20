@@ -14,10 +14,10 @@
     "default_header": {
       "type": "header",
       "settings": {
+        "container_type": "default",
         "menu": "main-menu",
         "alignment": "justify-end",
         "height": "large",
-        "container_type": "container-lg",
         "font_size": "text-lg",
         "font_weight": "text-medium",
         "padding_top": 24,
