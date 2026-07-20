@@ -14,7 +14,7 @@
     "default_header": {
       "type": "header",
       "settings": {
-        "container_type": "default",
+        "container_type": "tarubi-container",
         "menu": "main-menu",
         "alignment": "justify-end",
         "height": "large",
