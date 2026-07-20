@@ -2,6 +2,7 @@
 {% enddoc %}
 
 <div class="page-card" data-available="{{ page.available }}" data-page-id="{{ page.id }}">
+  <div>{{ page.title }}</div>
   <div>{{ page.content }}</div>
   <div>
     <span class="page-card__date">{{ page.published_at | time_tag: format: 'date' }}</span>
