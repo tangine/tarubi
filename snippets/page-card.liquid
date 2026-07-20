@@ -1,0 +1,19 @@
+{% doc %}
+{% enddoc %}
+
+<div class="page-card" data-available="{{ page.available }}" data-page-id="{{ page.id }}">
+  <div>{{ page.content }}</div>
+  <div>
+    <span class="page-card__date">{{ page.published_at | time_tag: format: 'date' }}</span>
+    <span class="page-card__author">{{ page.author }}</span>
+  </div>
+</div>
+
+{% stylesheet %}
+  .page-card{cursor:pointer;}
+  .page-card__media{width: 100%; aspect-ratio:1;overflow:hidden;}
+  .page-card__media img{width: 100%; height:100%;object-fit:contain;transition:all 0.3s ease-in-out}
+  .page-card__media img:hover{transform:scale(1.1);}
+  .page-card .page-card__price{display:flex;flex-direction:row;}
+  .page-card .page-card__price .price-regular{text-decoration:line-through;}
+{% endstylesheet %}
