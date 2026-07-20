@@ -1,15 +1,7 @@
 <section id="{{ section.id }}" class="section collection {{ section.settings.container_type }}">
-  <div  class="product-grid grid">
+  <div  class="product-grid collection-grid grid">
     {% for collection in collections %}
-      {% comment %}<a class="product-card" href="{{ collection.url }}">{% endcomment %}
-        {% comment %}<div class="product-card__image">{% endcomment %}
-          {% comment %}<img src="{{ collection.featured_image | image_url }}" alt="{{ collection.title }}">{% endcomment %}
-        {% comment %}</div>{% endcomment %}
-        {% comment %}<div class="product-card__title">{{ collection.title }}</div>{% endcomment %}
-      {% comment %}</a>{% endcomment %}
-
       {% render 'collection-card', collection: collection %}
-
     {% endfor %}
   </div>
 </section>
@@ -43,3 +35,7 @@
   ]
 }
 {% endschema %}
+
+{% stylesheet %}
+.collection-card{display:grid; gap:10px;}
+{% endstylesheet %}
