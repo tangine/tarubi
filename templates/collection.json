@@ -9,14 +9,6 @@
  */
 {
   "sections": {
-    "collection_product_grid_wUe8F9": {
-      "type": "collection-product-grid",
-      "name": "Product Grid",
-      "settings": {
-        "page_size": 5,
-        "container_type": "container-lg"
-      }
-    },
     "footer_3hwxq7": {
       "type": "footer",
       "name": "Footer",
@@ -24,10 +16,18 @@
         "menu": "footer",
         "container_type": "container-lg"
       }
+    },
+    "collection_product_grid_Yrk9p8": {
+      "type": "collection-product-grid",
+      "name": "Product Grid",
+      "settings": {
+        "page_size": 12,
+        "container_type": "container-fluid"
+      }
     }
   },
   "order": [
-    "collection_product_grid_wUe8F9",
+    "collection_product_grid_Yrk9p8",
     "footer_3hwxq7"
   ]
 }
