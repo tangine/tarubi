@@ -7,12 +7,12 @@
   .nav-item:hover{color:var(--color-primary);text-decoration: underline;}
 {% endstyle %}
 
-{% if section.settings.visible %}
-  <section class="section header flex-row items-center
+{% comment %}{% if section.settings.visible %}{% endcomment %}
+<section id="{{ section.id }}" class="section-wrapper" style="border-bottom: 1px solid var(--color-primary); ">
+  <div class="header flex-row items-center
 {{ section.settings.container_type }}
 {{ section.settings.font_weight }}
 {{ section.settings.font_size }}"
-           id="{{ section.id }}"
            style = "background: {{ section.settings.background }}"
   >
     <div class="nav flex-row items-center gap-10">
@@ -31,8 +31,9 @@
         <a class="bi bi-bag" href="/cart"></a>
       </div>
     </div>
-  </section>
-{% endif %}
+  </div>
+</section>
+{% comment %}{% endif %}{% endcomment %}
 
 {% schema %}
 {
