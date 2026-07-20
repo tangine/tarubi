@@ -16,7 +16,7 @@ Renders media block contents (used in _media and _media-without-appearance block
 <div class="article-card">
   {% if show_image %}
     <div class="article-card__image">
-      <img src="{{ article.image.src | image_url }}" alt="">
+      <img src="{{ article.image.src | image_url }}" alt="{{  article.image.alt }}">
     </div>
   {% endif %}
   <div class="article-card__title">{{ article.title }}</div>
