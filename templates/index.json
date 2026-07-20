@@ -48,7 +48,7 @@
       "type": "collection-list-grid",
       "name": "Product List",
       "settings": {
-        "container_type": "container-lg"
+        "container_type": "tarubi-container"
       }
     }
   },

@@ -15,7 +15,7 @@
       "type": "footer",
       "settings": {
         "menu": "footer",
-        "container_type": "container-lg"
+        "container_type": "tarubi-container"
       }
     }
   },
