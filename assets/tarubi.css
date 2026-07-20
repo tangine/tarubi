@@ -800,10 +800,6 @@ video.fill {
   font-family: "Source Han Sans", "Microsoft YaHei UI", Arial, sans-serif;
 }
 
-body {
-  padding: 0 10px;
-}
-
 .clickable {
   cursor: pointer;
 }
