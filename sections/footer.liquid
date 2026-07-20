@@ -1,28 +1,36 @@
-<section id="{{ section.id }}" class="section {{ section.settings.container_type }} {{ section.class }} {{ section.extra_style }}">
-  {% for link in linklists[section.settings.menu].links %}
-    <div>
-      <a href="{{ link.url }}">{{ link.title }}</a>
+{% if section.settings.visible %}
+  <section id="{{ section.id }}" class="section {{ section.settings.container_type }} {{ section.class }} {{ section.extra_style }}">
+    {% for link in linklists[section.settings.menu].links %}
+      <div>
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      </div>
+    {% endfor %}
+    <div class="copyright">
+      {{ settings.copyright }}
     </div>
-  {% endfor %}
-  <div class="copyright">
-    {{ settings.copyright }}
-  </div>
-  {% if customer %}
-    <script>
-      window.ShopifyCustomer = {
-        id: "{{ customer.id }}",
-        email: "{{ customer.email }}",
-        firstName: "{{ customer.first_name }}",
-        lastName: "{{ customer.last_name }}",
-      }
-    </script>
-  {% endif %}
-</section>
+    {% if customer %}
+      <script>
+        window.ShopifyCustomer = {
+          id: "{{ customer.id }}",
+          email: "{{ customer.email }}",
+          firstName: "{{ customer.first_name }}",
+          lastName: "{{ customer.last_name }}",
+        }
+      </script>
+    {% endif %}
+  </section>
+{% endif %}
 
 {% schema %}
 {
   "name": "Footer",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "default": true,
+      "label": "t:settings.visibility"
+    },
     {
       "type": "link_list",
       "id": "menu",
