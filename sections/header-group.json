@@ -21,8 +21,8 @@
         "height": "large",
         "font_size": "text-lg",
         "font_weight": "text-medium",
-        "padding_top": 24,
-        "padding_bottom": 24
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     }
   },
