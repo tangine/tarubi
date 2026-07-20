@@ -14,7 +14,7 @@
     "default_header": {
       "type": "header",
       "settings": {
-        "visible": true,
+        "visible": false,
         "container_type": "tarubi-container",
         "background": "#ffffff",
         "menu": "main-menu",
