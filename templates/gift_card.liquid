@@ -6,16 +6,6 @@
   {%- render 'stylesheets' -%}
   {{ 'template-giftcard.css' | asset_url | stylesheet_tag }}
 
-  <script type="importmap">
-    {
-      "imports": {
-        "@theme/component": "{{ 'component.js' | asset_url }}",
-          "@theme/utilities": "{{ 'utilities.js' | asset_url }}",
-          "@theme/qr-code-generator": "{{ 'qr-code-generator.js' | asset_url }}"
-        }
-      }
-  </script>
-
   <script
     src="{{ 'qr-code-image.js' | asset_url }}"
     type="module"

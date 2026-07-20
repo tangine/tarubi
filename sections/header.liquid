@@ -5,35 +5,43 @@
   }
 {% endstyle %}
 
-<section class="section header flex-row items-center
+{% if section.settings.visible %}
+  <section class="section header flex-row items-center
 {{ section.settings.container_type }}
 {{ section.settings.font_weight }}
 {{ section.settings.font_size }}"
-         id="{{ section.id }}"
-         style = "background: {{ section.settings.background }}"
->
-  <div class="nav flex-row items-center gap-10">
-    {% for link in linklists[section.settings.menu].links %}
-      <a class="nav-item" href="{{ link.url }}">{{ link.title }}</a>
-    {% endfor %}
-  </div>
-  <div class="right ml-auto flex-row items-center gap-10">
-    <div class="clickable">
-      <i class="bi bi-search"></i>
+           id="{{ section.id }}"
+           style = "background: {{ section.settings.background }}"
+  >
+    <div class="nav flex-row items-center gap-10">
+      {% for link in linklists[section.settings.menu].links %}
+        <a class="nav-item" href="{{ link.url }}">{{ link.title }}</a>
+      {% endfor %}
     </div>
-    <div class="clickable">
-      <a class="bi bi-person" href="/account" ></a>
+    <div class="right ml-auto flex-row items-center gap-10">
+      <div class="clickable">
+        <i class="bi bi-search"></i>
+      </div>
+      <div class="clickable">
+        <a class="bi bi-person" href="/account" ></a>
+      </div>
+      <div class="clickable">
+        <a class="bi bi-bag" href="/cart"></a>
+      </div>
     </div>
-    <div class="clickable">
-      <a class="bi bi-bag" href="/cart"></a>
-    </div>
-  </div>
-</section>
+  </section>
+{% endif %}
 
 {% schema %}
 {
   "name": "t:names.header",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "visible",
+      "default": true,
+      "label": "t:settings.visibility"
+    },
     {
       "type": "select",
       "id": "container_type",
