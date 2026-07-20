@@ -1,11 +1,33 @@
 <section id="{{ section.id }}" class="section-wrapper">
-  <div></div>
+  <div class="{{ section.settings.container_type }}">
+    <div class="article__title">{{ article.title }}</div>
+    <div class="article__date">{{ article.publish_at | time_tag : format: 'date' }}</div>
+    <div class="article__author">{{ article.author }}</div>
+    <div class="article__content">{{ article.content }}</div>
+  </div>
 </section>
 
 {% schema %}
 {
   "name": "t:names.blog_post",
-  "settings":[],
+  "settings":[
+    {
+      "type": "select",
+      "id": "container_type",
+      "label": "t:settings.section_width",
+      "default": "tarubi-container",
+      "options": [
+        {
+          "value": "w-full",
+          "label": "t:options.full"
+        },
+        {
+          "value": "tarubi-container",
+          "label": "t:options.default"
+        }
+      ]
+    },
+  ],
   "blocks": [],
   "presets": [
     {
