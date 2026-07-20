@@ -32,10 +32,13 @@
     "name": "t:settings.layout",
     "settings": [
       {
-        "type": "number",
+        "type": "range",
         "id": "page_width",
         "label": "t:settings.page_width",
         "default": 1200,
+        "min": 576,
+        "max": 4096,
+        "step": 1,
         "unit": "px"
       }
     ]
