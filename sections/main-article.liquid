@@ -1,9 +1,13 @@
 <section id="{{ section.id }}" class="section-wrapper">
   <div class="{{ section.settings.container_type }}">
-    <div class="article__title">{{ article.title }}</div>
-    <div class="article__date">{{ article.publish_at | time_tag : format: 'date' }}</div>
-    <div class="article__author">{{ article.author }}</div>
-    <div class="article__content">{{ article.content }}</div>
+    <article class="article">
+      <div class="article__title">{{ article.title }}</div>
+      <div class="article__date">{{ article.publish_at | time_tag : format: 'date' }}</div>
+      <div class="article__author">{{ article.author }}</div>
+      <div class="article__content">{{ article.content }}</div>
+    </article>
+    <div class="comment">
+    </div>
   </div>
 </section>
 
