@@ -1,4 +1,4 @@
-<section>
+<section class="{{ section.settings.container_type }}">
   {% paginate search.results by 12 %}
     <ul>
       {% for item in search.results %}
@@ -20,7 +20,24 @@
 {% schema %}
 {
   "name": "t:names.search",
-  "settings": [],
+  "settings": [
+    {
+      "type": "select",
+      "id": "container_type",
+      "label": "t:settings.section_width",
+      "default": "tarubi-container",
+      "options": [
+        {
+          "value": "w-full",
+          "label": "t:options.full"
+        },
+        {
+          "value": "tarubi-container",
+          "label": "t:options.default"
+        }
+      ]
+    }
+  ],
   "blocks": [],
   "presets": [
     {
