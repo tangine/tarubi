@@ -9,25 +9,16 @@
  */
 {
   "sections": {
-    "footer_3hwxq7": {
-      "type": "footer",
-      "name": "Footer",
-      "settings": {
-        "menu": "footer",
-        "container_type": "container-lg"
-      }
-    },
     "collection_product_grid_Yrk9p8": {
       "type": "collection-product-grid",
       "name": "Product Grid",
       "settings": {
         "page_size": 12,
-        "container_type": "container-fluid"
+        "container_type": "container-xl"
       }
     }
   },
   "order": [
-    "collection_product_grid_Yrk9p8",
-    "footer_3hwxq7"
+    "collection_product_grid_Yrk9p8"
   ]
 }
