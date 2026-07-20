@@ -33,7 +33,7 @@
     "settings": [
       {
         "type": "number",
-        "id": "page_width",
+        "id": "global_width",
         "label": "t:settings.page_width",
         "default": 1200,
         "placeholder": "请输入宽度值，单位px"
