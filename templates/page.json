@@ -12,7 +12,7 @@
     "74616d2d8914": {
       "type": "page",
       "settings": {
-        "container_type": "container-lg"
+        "container_type": "tarubi-container"
       }
     }
   },
