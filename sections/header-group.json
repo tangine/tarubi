@@ -15,6 +15,7 @@
       "type": "header",
       "settings": {
         "container_type": "tarubi-container",
+        "background": "#ff00ff",
         "menu": "main-menu",
         "alignment": "justify-end",
         "height": "large",
