@@ -1,6 +1,6 @@
 <section class="{{ section.settings.container_type }}">
   {% paginate search.results by 12 %}
-    <ul>
+    <ul style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
       {% for item in search.results %}
         <li>
           {%- case item.object_type -%}
