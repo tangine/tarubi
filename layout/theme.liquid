@@ -19,7 +19,8 @@
   {{ 'tarubi.css' | asset_url | stylesheet_tag }}
   {% style %}
     .tarubi-container {
-      max-width: {{ settings.global_width }}px
+      max-width: {{ settings.global_width }}px;
+      margin: 0 auto;
     }
   {% endstyle %}
 
