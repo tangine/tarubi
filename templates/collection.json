@@ -14,7 +14,7 @@
       "name": "Product Grid",
       "settings": {
         "page_size": 12,
-        "container_type": "container-xl"
+        "container_type": "tarubi-container"
       }
     }
   },
