@@ -11,13 +11,17 @@
     {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
   </title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
   {% if page_description %}
     <meta name="description" content="{{- page_description | escape -}}">
   {% endif %}
-  {{ 'tarubi.css' | asset_url | stylesheet_tag }}
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  {{ 'tarubi.css' | asset_url | stylesheet_tag }}
+  {% style %}
+    .tarubi-container {
+      max-width: {{ settings.global_width }}px
+    }
+  {% endstyle %}
 
   {{ content_for_header }}
 
