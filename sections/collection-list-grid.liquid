@@ -1,12 +1,14 @@
 <section id="{{ section.id }}" class="section collection {{ section.settings.container_type }}">
   <div  class="product-grid grid">
     {% for collection in collections %}
-      <a class="product-card" href="{{ collection.url }}">
-        <div class="product-card__image">
-          <img src="{{ collection.featured_image | image_url }}" alt="{{ collection.title }}">
-        </div>
-        <div class="product-card__title">{{ collection.title }}</div>
-      </a>
+      {% comment %}<a class="product-card" href="{{ collection.url }}">{% endcomment %}
+        {% comment %}<div class="product-card__image">{% endcomment %}
+          {% comment %}<img src="{{ collection.featured_image | image_url }}" alt="{{ collection.title }}">{% endcomment %}
+        {% comment %}</div>{% endcomment %}
+        {% comment %}<div class="product-card__title">{{ collection.title }}</div>{% endcomment %}
+      {% comment %}</a>{% endcomment %}
+
+      {% render 'collection-card', collection: collection %}
 
     {% endfor %}
   </div>
