@@ -5,12 +5,7 @@
   }
 {% endstyle %}
 
-
-<section class="section header flex-row items-center
-{{ section.settings.container_type }}
-{{ section.settings.font_weight }}
-{{ section.settings.font_size }}"
-         id="{{ section.id }}">
+<section class="section header flex-row items-center{{ section.settings.container_type }} {{ section.settings.font_weight }} {{ section.settings.font_size }}" id="{{ section.id }}">
   <div class="nav flex-row items-center gap-10">
     {% for link in linklists[section.settings.menu].links %}
       <a class="nav-item" href="{{ link.url }}">{{ link.title }}</a>
