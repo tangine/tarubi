@@ -17,5 +17,7 @@
       <div class="regular-price">{{ product.compare_at_price | money }}</div>
     {% endif %}
   </div>
-  <div class="product-card__vendor">{{ product.vendor }}</div>
+  {% if show_vendor %}
+    <div class="product-card__vendor">{{ product.vendor }}</div>
+  {% endif %}
 </div>
