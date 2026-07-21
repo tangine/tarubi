@@ -1,7 +1,12 @@
 <section class="{{ section.settings.container_type }}" style="padding: 20px 0;">
-  <label>
-    <input />
-  </label>
+  <form action="/search" method="get" role="search">
+    <label>
+      <input type="search" name="q" id="q" autocomplete="off"/>
+    </label>
+    <label for="q">
+      <button>{{ 'content.search' | t }}</button>
+    </label>
+  </form>
   {% paginate search.results by 12 %}
     <ul style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
       {% for item in search.results %}
