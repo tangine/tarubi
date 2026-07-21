@@ -2,12 +2,17 @@
 {% enddoc %}
 
 <section id="{{ section.id }}" class="related-products">
-  {{ recommendations.performed }}
-  {{ recommendations.products_count }}
-  {% for recommendation in recommendations.products %}
-    <div>{{ recommendation.title }}</div>
-    {% render 'product-card', product: recommendation %}
-  {% endfor %}
+  <div class="section">
+    <div>{{ 'accessibility.loading_product_recommendations' | t }}</div>
+    {{ recommendations.performed }}
+    {{ recommendations.products_count }}
+    {% if recommendations.performed and recommendations.products_count > 0 %}
+      {% for recommendation in recommendations.products %}
+        <div>{{ recommendation.title }}</div>
+        {% render 'product-card', product: recommendation %}
+      {% endfor %}
+    {% endif %}
+  </div>
 </section>
 
 {% schema %}
