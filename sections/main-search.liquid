@@ -10,9 +10,8 @@
     </div>
   </form>
   {% paginate search.results by 12 %}
-    <ul style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
       {% for item in search.results %}
-        <li>
           {%- case item.object_type -%}
             {%- when 'product' -%}
               {% render 'product-card', product: item %}
@@ -21,9 +20,8 @@
             {%- when 'page' -%}
               {% render 'page-card', page: item %}
           {%- endcase -%}
-        </li>
       {% endfor %}
-    </ul>
+    </div>
     {%- if paginate.pages > 1 -%}
       {%- render 'pagination', paginate: paginate -%}
     {%- endif -%}
