@@ -746,6 +746,7 @@ video.fill {
   container-type: inline-size;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
 
 @container (max-width: 1000px) {
