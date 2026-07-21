@@ -1,0 +1,23 @@
+<section id="{{ section.id }}" class="section-wrapper">
+<div class="section">
+  <div class="product-media"></div>
+  <div class="product-info">
+    <div class="product-info__vendor">{{ product.vendor }}</div>
+    <div class="product-info__title">{{ product.title }}</div>
+    <div class="product-info__price">{{ product.price }}</div>
+    <div class="product-info__old-price">{{ product.compare_at_price }}</div>
+  </div>
+</div>
+</section>
+{% schema %}
+{
+  "name": "t:names.product",
+  "settings": [],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "t:names.product"
+    }
+  ]
+}
+{% endschema %}
