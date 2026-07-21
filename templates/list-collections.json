@@ -9,13 +9,15 @@
  */
 {
   "sections": {
-    "collection_list_grid_r9abLK": {
-      "type": "collection-list-grid",
-      "name": "Product List",
-      "settings": {}
+    "main_collection_list_G69xYY": {
+      "type": "main-collection-list",
+      "name": "t:names.collection_list",
+      "settings": {
+        "container_type": "tarubi-container"
+      }
     }
   },
   "order": [
-    "collection_list_grid_r9abLK"
+    "main_collection_list_G69xYY"
   ]
 }
