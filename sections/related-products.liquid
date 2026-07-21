@@ -2,7 +2,7 @@
 {% enddoc %}
 
 <section id="{{ section.id }}" class="related-products">
-  <div class="section">
+  <div class="section {{ section.settings.container_type }}">
     <div>{{ 'accessibility.loading_product_recommendations' | t }}</div>
     {{ recommendations.performed }}
     {{ recommendations.products_count }}
@@ -18,7 +18,24 @@
 {% schema %}
 {
   "name": "t:names.related_products",
-  "settings": [],
+  "settings": [
+    {
+      "type": "select",
+      "id": "container_type",
+      "label": "t:settings.section_width",
+      "default": "tarubi-container",
+      "options": [
+        {
+          "value": "w-full",
+          "label": "t:options.full"
+        },
+        {
+          "value": "tarubi-container",
+          "label": "t:options.default"
+        }
+      ]
+    }
+  ],
   "blocks": [],
   "presets": [
     {
