@@ -12,27 +12,6 @@
   {% endpaginate %}
 </section>
 
-{% stylesheet %}
-.product-list {
-container-type: inline-size;
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 10px;
-}
-
-@container (max-width: 1024px) {
-.product-list {
-grid-template-columns: repeat(3, 1fr);
-}
-}
-
-@container (max-width: 800px) {
-.product-list {
-grid-template-columns: repeat(2, 1fr);
-}
-}
-{% endstylesheet %}
-
 {% schema %}
 {
   "name": "t:names.collections",
