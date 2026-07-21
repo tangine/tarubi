@@ -1,11 +1,13 @@
 <section class="{{ section.settings.container_type }}" style="padding: 20px 0;">
   <form action="/search" method="get" role="search">
     <label>
-      <input type="search" name="q" id="q" autocomplete="off"/>
+      <input type="search" name="q" id="q" autocomplete="off" style="width: 100%;padding: 8px;" placeholder="Search"/>
     </label>
-    <label for="q">
-      <button class="bi bi-search" type="submit"></button>
-    </label>
+    <div style="position: absolute; right: 0; top: 0;">
+      <label for="q">
+        <button class="bi bi-search" type="submit"></button>
+      </label>
+    </div>
   </form>
   {% paginate search.results by 12 %}
     <ul style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
