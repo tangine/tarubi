@@ -12,7 +12,7 @@
     <div class="product-info__title">{{ product.title | escape }}</div>
     <div class="product-info__price">{{ product.price | money }}</div>
     <div class="product-info__old-price">{{ product.compare_at_price | money }}</div>
-    <div class="product-info__variants">{{ product | json }}</div>
+    <div class="product-info__variants">{{ product.options_with_values | json }}</div>
   </div>
 </div>
 </section>
