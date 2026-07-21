@@ -3,7 +3,7 @@
   <div class="product-media">
     {% for image in product.images %}
       <div class="product-media__image">
-        <img src="{{ image | asset_url }}" alt="{{ image.alt }}">
+        <img src="{{ image | image_url }}" alt="{{ image.alt }}">
       </div>
     {% endfor %}
   </div>
