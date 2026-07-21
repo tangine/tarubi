@@ -12,7 +12,18 @@
     <div class="product-info__title">{{ product.title | escape }}</div>
     <div class="product-info__price">{{ product.price | money }}</div>
     <div class="product-info__old-price">{{ product.compare_at_price | money }}</div>
-    <div class="product-info__variants">{{ product.options_with_values | json }}</div>
+    {% if product.options_with_values.size > 1 %}
+      <div class="product-info__variants">
+        {% for option in product.options_with_values %}
+          <fieldset class="product-info__option-{{ option.id }}">
+            <legend>{{ option.name }}</legend>
+            {% for value in option.values %}
+              <button>{{ value }}</button>
+            {% endfor %}
+          </fieldset>
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
 </div>
 </section>
