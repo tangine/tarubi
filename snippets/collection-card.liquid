@@ -5,8 +5,10 @@
   <a class="collection-card__image" href="{{ collection.url }}">
     <img src="{{ collection.featured_image |  image_url }}" alt="{{ collection.featured_image_alt }}">
   </a>
-  <div class="collection-card__title">{{ collection.title }}</div>
-  <div class="collection-card__description">{{ collection.description }}</div>
+  <div class="collection-card__content">
+    <div class="collection-card__title">{{ collection.title }}</div>
+    <div class="collection-card__description">{{ collection.description }}</div>
+  </div>
 </div>
 
 {% stylesheet %}
