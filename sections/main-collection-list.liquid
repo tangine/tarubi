@@ -1,5 +1,5 @@
 <section id="{{ section.id }}" class="section collection {{ section.settings.container_type }}">
-  <div  class="product-grid collection-grid grid">
+  <div  class="collection-grid">
     {% for collection in collections %}
       {% render 'collection-card', collection: collection %}
     {% endfor %}
@@ -37,5 +37,5 @@
 {% endschema %}
 
 {% stylesheet %}
-.collection-card{display:grid; gap:10px;}
+.collection-grid{display:grid;gap:10px;grid-template-column: repeat(4,1fr);}
 {% endstylesheet %}
