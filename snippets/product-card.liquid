@@ -1,20 +1,20 @@
 {% doc %}
 {% enddoc %}
 
-<a class="product-card relative" href="{{ product.url }}" data-available="{{ product.available }}" data-product-id="{{ product.id }}">
-  <div class="product-card__media">
+<div class="product-card relative" data-available="{{ product.available }}" data-product-id="{{ product.id }}">
+  <a class="product-card__media" href="{{ product.url }}">
     <img src="{{ product.featured_image |  image_url }}" alt="{{ product.featured_image_alt }}">
-  </div>
-  <div>{{ product.title }}</div>
+  </a>
+  <div class="product-card__title">{{ product.title }}</div>
   <div class="product-card__price">
     <div class="price-regular">{{ product.compare_at_price | money }}</div>
     <div class="price-sale">{{ product.price | money }}</div>
   </div>
-</a>
+</div>
 
 {% stylesheet %}
   .product-card{cursor:pointer;}
-  .product-card__media{width: 100%; aspect-ratio:1;overflow:hidden;}
+  .product-card__media{display:block;width: 100%; aspect-ratio:1;overflow:hidden;}
   .product-card__media img{width: 100%; height:100%;object-fit:contain;transition:all 0.3s ease-in-out}
   .product-card__media img:hover{transform:scale(1.1);}
   .product-card .product-card__price{display:flex;flex-direction:row;}
