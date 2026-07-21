@@ -1,7 +1,7 @@
 {% doc %}
 {% enddoc %}
 
-<div class="product-card" data-available="{{ product.available }}" data-product-id="{{ product.id }}">
+<a class="product-card relative" href="{{ product.url }}" data-available="{{ product.available }}" data-product-id="{{ product.id }}">
   <div class="product-card__media">
     <img src="{{ product.featured_image |  image_url }}" alt="{{ product.featured_image_alt }}">
   </div>
@@ -10,7 +10,7 @@
     <div class="price-regular">{{ product.compare_at_price | money }}</div>
     <div class="price-sale">{{ product.price | money }}</div>
   </div>
-</div>
+</a>
 
 {% stylesheet %}
   .product-card{cursor:pointer;}
