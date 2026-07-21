@@ -9,9 +9,9 @@
  */
 {
   "sections": {
-    "main-product-list_3xb8Gg": {
+    "main_product_list_4eLn48": {
       "type": "main-product-list",
-      "name": "Product Grid",
+      "name": "t:names.collections",
       "settings": {
         "page_size": 12,
         "container_type": "tarubi-container"
@@ -19,6 +19,6 @@
     }
   },
   "order": [
-    "main-product-list_3xb8Gg"
+    "main_product_list_4eLn48"
   ]
 }
