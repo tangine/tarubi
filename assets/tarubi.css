@@ -745,7 +745,7 @@ video.fill {
 .product-list {
   container-type: inline-size;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 @container (max-width: 1000px) {
