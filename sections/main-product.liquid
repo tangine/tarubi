@@ -15,7 +15,7 @@
     {% if product.options_with_values.size > 1 %}
       <div class="product-info__variants">
         {% for option in product.options_with_values %}
-          <fieldset class="product-info__option-{{ option.id }}">
+          <fieldset class="product-info__option">
             <legend>{{ option.name }}</legend>
             {% for value in option.values %}
               <button>{{ value }}</button>
