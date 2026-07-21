@@ -1,3 +1,7 @@
+:root {
+  --card-shadow: #0000003d 0 3px 8px;
+}
+
 .product-list {
   container-type: inline-size;
   display: grid;
@@ -23,6 +27,7 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--card-shadow);
 
   .product-card-image {
     display: block;
