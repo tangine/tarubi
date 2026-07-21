@@ -771,6 +771,7 @@ video.fill {
   display: block;
   width: 100%;
   aspect-ratio: 1;
+  overflow: hidden;
 }
 .product-card .product-card__image img {
   width: 100%;
@@ -780,6 +781,9 @@ video.fill {
 }
 .product-card .product-card__image img:hover {
   transform: scale(1.1);
+}
+.product-card:hover .product-card__title {
+  text-decoration: underline;
 }
 
 :root {
