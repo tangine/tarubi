@@ -1,6 +1,6 @@
 <section id="{{ section.id }}" class="section {{ section.settings.container_type }}">
   {% paginate collection.products by section.settings.page_size %}
-    <div class="product-grid grid">
+    <div class="product-list grid">
       {% for product in collection.products %}
         {% render 'product-card', product: product %}
       {% endfor %}
@@ -10,6 +10,25 @@
       {%- render 'pagination', paginate: paginate -%}
     {%- endif -%}
   {% endpaginate %}
+  <style>
+    .product-list {
+      container-type: inline-size;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    @container (max-width: 1024px) {
+      .product-list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @container (max-width: 800px) {
+      .product-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
 </section>
 
 {% schema %}
