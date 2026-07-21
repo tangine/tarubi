@@ -786,8 +786,11 @@ video.fill {
 .product-card .product-card__image img:hover {
   transform: scale(1.05);
 }
-.product-card .product-card__image:hover img + img {
+.product-card .product-card__image img + img {
   opacity: 0;
+}
+.product-card .product-card__image:hover img + img {
+  opacity: 1;
 }
 .product-card:hover .product-card__title {
   text-decoration: underline;

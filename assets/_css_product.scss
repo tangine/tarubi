@@ -48,11 +48,15 @@
       &:hover {
         transform: scale(1.05);
       }
+
+      + img {
+        opacity: 0;
+      }
     }
 
     &:hover {
       img + img {
-        opacity: 0;
+        opacity: 1;
       }
     }
   }
