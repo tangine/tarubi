@@ -1,7 +1,7 @@
 {% doc %}
 {% enddoc %}
 
-<div class="product-card relative" data-available="{{ product.available }}" data-product-id="{{ product.id }}">
+<div class="product-card relative card" data-available="{{ product.available }}" data-product-id="{{ product.id }}">
   <a class="product-card__media" href="{{ product.url }}">
     <img src="{{ product.featured_image |  image_url }}" alt="{{ product.featured_image_alt }}">
   </a>
