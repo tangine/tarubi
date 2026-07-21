@@ -2,12 +2,12 @@
 {% enddoc %}
 
 <section id="{{ section.id }}" class="related-products">
-  {{ recommendations.performed }}
-  {{ recommendations.products_count }}
-  {% comment %}{% for recommendation in recommendations.products %}{% endcomment %}
-    {% comment %}<div>{{ recommendation.title }}</div>{% endcomment %}
-    {% comment %}{% render 'product-card', product: recommendation %}{% endcomment %}
-  {% comment %}{% endfor %}{% endcomment %}
+  {% comment %}{{ recommendations.performed }}{% endcomment %}
+  {% comment %}{{ recommendations.products_count }}{% endcomment %}
+  {% for recommendation in recommendations.products %}
+    <div>{{ recommendation.title }}</div>
+    {% render 'product-card', product: recommendation %}
+  {% endfor %}
 </section>
 
 {% schema %}
