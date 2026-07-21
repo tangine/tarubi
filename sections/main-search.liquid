@@ -1,4 +1,7 @@
 <section class="{{ section.settings.container_type }}">
+  <label>
+    <input />
+  </label>
   {% paginate search.results by 12 %}
     <ul style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
       {% for item in search.results %}
