@@ -2,8 +2,8 @@
 {% enddoc %}
 
 <section id="{{ section.id }}" class="related-products">
-  {% comment %}{{ recommendations.performed }}{% endcomment %}
-  {% comment %}{{ recommendations.products_count }}{% endcomment %}
+  {{ recommendations.performed }}
+  {{ recommendations.products_count }}
   {% for recommendation in recommendations.products %}
     <div>{{ recommendation.title }}</div>
     {% render 'product-card', product: recommendation %}
