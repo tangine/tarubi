@@ -9,13 +9,13 @@
  */
 {
   "sections": {
-    "main_article_BYxDyf": {
-      "type": "main-article",
-      "name": "t:names.blog_post",
+    "main_404_byVPHp": {
+      "type": "main-404",
+      "name": "t:names.404",
       "settings": {}
     }
   },
   "order": [
-    "main_article_BYxDyf"
+    "main_404_byVPHp"
   ]
 }
