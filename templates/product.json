@@ -15,9 +15,15 @@
       "settings": {
         "container_type": "tarubi-container"
       }
+    },
+    "related_products_dNfwFb": {
+      "type": "related-products",
+      "name": "t:names.related_products",
+      "settings": {}
     }
   },
   "order": [
-    "main_product_AmDV8B"
+    "main_product_AmDV8B",
+    "related_products_dNfwFb"
   ]
 }
