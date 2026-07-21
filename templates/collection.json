@@ -9,8 +9,8 @@
  */
 {
   "sections": {
-    "main_collection_products_3xb8Gg": {
-      "type": "main-collection-products",
+    "main-product-list_3xb8Gg": {
+      "type": "main-product-list",
       "name": "Product Grid",
       "settings": {
         "page_size": 12,
@@ -19,6 +19,6 @@
     }
   },
   "order": [
-    "main_collection_products_3xb8Gg"
+    "main-product-list_3xb8Gg"
   ]
 }
