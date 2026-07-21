@@ -2,7 +2,7 @@
   {% paginate collection.products by section.settings.page_size %}
     <div class="product-grid grid">
       {% for product in collection.products %}
-        {% render 'collection-product-card', product: product %}
+        {% render 'product-card', product: product %}
       {% endfor %}
     </div>
 

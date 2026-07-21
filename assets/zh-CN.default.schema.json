@@ -1,0 +1,15 @@
+{
+  "categories": {
+  },
+  "sections": {
+    "carousel": "轮播",
+    "product": "产品",
+    "product_description": "产品描述"
+  },
+  "blocks": {
+    "title": "标题",
+    "price": "价格"
+  },
+  "info": {},
+  "placeholders": {}
+}
