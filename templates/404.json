@@ -1,0 +1,21 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main_article_BYxDyf": {
+      "type": "main-article",
+      "name": "t:names.blog_post",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main_article_BYxDyf"
+  ]
+}
