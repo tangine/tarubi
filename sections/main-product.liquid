@@ -1,6 +1,12 @@
 <section id="{{ section.id }}" class="section-wrapper">
 <div class="section section-product {{ section.settings.container_type }}">
-  <div class="product-media"></div>
+  <div class="product-media">
+    {% for image in product.images %}
+      <div class="product-media__image">
+        <img src="{{ image | asset_url }}" alt="{{ image.alt }}">
+      </div>
+    {% endfor %}
+  </div>
   <div class="product-info">
     <div class="product-info__vendor">{{ product.vendor }}</div>
     <div class="product-info__title">{{ product.title }}</div>
