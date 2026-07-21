@@ -9,19 +9,15 @@
  */
 {
   "sections": {
-    "related_products_M9eJFh": {
-      "type": "related-products",
-      "name": "t:names.related_products",
-      "settings": {}
-    },
     "main_product_AmDV8B": {
       "type": "main-product",
       "name": "t:names.product",
-      "settings": {}
+      "settings": {
+        "container_type": "tarubi-container"
+      }
     }
   },
   "order": [
-    "main_product_AmDV8B",
-    "related_products_M9eJFh"
+    "main_product_AmDV8B"
   ]
 }
