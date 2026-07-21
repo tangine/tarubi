@@ -12,10 +12,15 @@
       <div class="price-regular">{{ product.compare_at_price | money }}</div>
     {% endif %}
   </div>
+  <style>
+
+  </style>
 </div>
 
 {% stylesheet %}
   .product-card{cursor:pointer;}
+  .product-card .product-card__title{transition:all 0.3s ease-in-out;}
+  .product-card:hover .product-card__title{text-decoration:underline;}
   .product-card__media{display:block;width: 100%; aspect-ratio:1;overflow:hidden;}
   .product-card__media img{width: 100%; height:100%;object-fit:contain;transition:all 0.3s ease-in-out}
   .product-card__media img:hover{transform:scale(1.1);}
