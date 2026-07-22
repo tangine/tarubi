@@ -4,8 +4,8 @@
       <div>
         {%- for filter in collection.filters -%}
         <div>
+          <div>{{ filter.active_values.size }}</div>
           {%- for value in filter.active_values -%}
-            <div>{{ filter.active_values.size }}</div>
             <div>
               <span>{{ value.lable | escape }}</span>
               <span>,</span>
