@@ -2,17 +2,17 @@
   <div class="section {{ section.settings.container_type }}">
     {% paginate collection.products by section.settings.page_size %}
       <div>
-        {% for filter in collection.filters %}
+        {%- for filter in collection.filters -%}
         <div>
-          {% for value in filter.active_values %}
+          {%- for value in filter.active_values -%}
+            <div>{{ filter.active_values.size }}</div>
             <div>
-              <span>{{ filter.lable }}</span>
-              {% comment %}<span>{{ value.value }}</span>{% endcomment %}
+              <span>{{ value.lable | escape }}</span>
               <span>,</span>
             </div>
-          {% endfor %}
+          {%- endfor -%}
         </div>
-        {% endfor %}
+        {%- endfor -%}
       </div>
       <div class="product-list grid">
         {% for product in collection.products %}
