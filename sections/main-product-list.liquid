@@ -1,19 +1,21 @@
-<section id="{{ section.id }}" class="section {{ section.settings.container_type }}">
-  {% paginate collection.products by section.settings.page_size %}
-    <div class="product-list grid">
-      {% for product in collection.products %}
-        {% render 'product-card', product: product,
-          show_secondary_image: section.settings.show_secondary_image,
-          show_rating: section.settings.show_rating,
-          show_vendor: section.settings.show_vendor
-        %}
-      {% endfor %}
-    </div>
+<section id="{{ section.id }}" class="sectiion-wrapper" style="padding-top:{{ section.settings.padding_top | append: 'px' }};padding-bottom:{{ section.settings.padding_bottom | append: 'px' }};">
+  <div class="section {{ section.settings.container_type }}">
+    {% paginate collection.products by section.settings.page_size %}
+      <div class="product-list grid">
+        {% for product in collection.products %}
+          {% render 'product-card', product: product,
+            show_secondary_image: section.settings.show_secondary_image,
+            show_rating: section.settings.show_rating,
+            show_vendor: section.settings.show_vendor
+          %}
+        {% endfor %}
+      </div>
 
-    {%- if paginate.pages > 1 -%}
-      {%- render 'pagination', paginate: paginate -%}
-    {%- endif -%}
-  {% endpaginate %}
+      {%- if paginate.pages > 1 -%}
+        {%- render 'pagination', paginate: paginate -%}
+      {%- endif -%}
+    {% endpaginate %}
+  </div>
 </section>
 
 {% schema %}
@@ -70,6 +72,30 @@
       "id": "show_vendor",
       "label": "t:settings.show_vendor",
       "default": false
+    },
+    {
+      "type": "header",
+      "content": "填充"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "顶部",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "底部",
+      "default": 20
     }
   ],
   "blocks": [
