@@ -2,7 +2,11 @@
   {% paginate collection.products by section.settings.page_size %}
     <div class="product-list grid">
       {% for product in collection.products %}
-        {% render 'product-card', product: product %}
+        {% render 'product-card', product: product,
+          show_secondary_image: section.settings.show_secondary_image,
+          show_rating: section.settings.show_secondary_image,
+          show_vendor: section.settings.show_secondary_image
+        %}
       {% endfor %}
     </div>
 
@@ -58,13 +62,13 @@
     {
       "type": "checkbox",
       "id": "show_rating",
-      "label": "t:settings.show_second_image_on_hover",
+      "label": "t:settings.show_rating",
       "default": false
     },
     {
       "type": "checkbox",
       "id": "show_vendor",
-      "label": "t:settings.show_second_image_on_hover",
+      "label": "t:settings.show_vendor",
       "default": false
     }
   ],
