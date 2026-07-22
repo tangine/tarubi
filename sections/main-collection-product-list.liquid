@@ -6,8 +6,8 @@
         <div>
           {% for value in filter.active_values %}
             <div>
-              <span>{{ value.lable }}</span>
-              <span>{{ value.value }}</span>
+              <span>{{ filter.lable }}</span>
+              {% comment %}<span>{{ value.value }}</span>{% endcomment %}
               <span>,</span>
             </div>
           {% endfor %}
