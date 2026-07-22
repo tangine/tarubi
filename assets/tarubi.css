@@ -800,6 +800,7 @@ video.fill {
 }
 .product-card .product-card__price .regular-price {
   font-size: 0.9em;
+  text-decoration: line-through;
 }
 
 input {
