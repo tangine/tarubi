@@ -16,7 +16,7 @@
   <div class="product-card__title" title="{{ product.title | escape }}">{{ product.title | escape }}</div>
   <div class="product-card__price">
     <div class="sale-price">{{ product.price | money }}</div>
-    {% if product.compare_at_price != blank %}
+    {% if product.compare_at_price != null %}
       <div class="regular-price">{{ product.compare_at_price | money }}</div>
     {% endif %}
   </div>
