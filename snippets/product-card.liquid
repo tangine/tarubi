@@ -9,7 +9,7 @@
 <div class="product-card relative card" data-available="{{ product.available }}" data-product-id="{{ product.id }}">
   <a class="product-card__image" href="{{ product.url }}" title="{{ product.title | escape }}">
     <img src="{{ product.featured_image |  image_url }}" alt="{{ product.featured_image_alt }}">
-    {% if product.images[1] != null %}
+    {% if show_secondary_image and product.images[1] != null %}
       <img src="{{ product.images[1] | image_url }}" alt="">
     {% endif %}
   </a>
