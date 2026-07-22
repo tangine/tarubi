@@ -10,7 +10,7 @@
           {%- for value in filter.values -%}
             <div>
               <span>{{ value.label | escape }}</span>
-              <span>{{ value.value }}</span>
+              {% comment %}<span>{{ value.value }}</span>{% endcomment %}
               <span>,</span>
             </div>
           {%- endfor -%}
