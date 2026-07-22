@@ -3,7 +3,12 @@
     {% paginate collection.products by section.settings.page_size %}
       <div>
         {% for filter in collection.filters %}
-          <div>{{ filter.values }}</div>
+        {% for value in filter.active_values %}
+          <div>
+            <span>{{ value.lable }}</span>
+            <span>{{ value.value }}</span>
+            <span>,</span>
+          </div>
         {% endfor %}
       </div>
       <div class="product-list grid">
