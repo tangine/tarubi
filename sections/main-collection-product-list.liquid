@@ -9,6 +9,7 @@
           {%- for value in filter.values -%}
             <div>
               <span>{{ value.label | escape }}</span>
+              <span>{{ value.value }}</span>
               <span>,</span>
             </div>
           {%- endfor -%}
