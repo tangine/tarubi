@@ -524,6 +524,8 @@
     "blurred_reflection": "模糊反射",
     "reflection_opacity": "反射不透明度",
     "show_second_image_on_hover": "悬停时显示第二张图片",
+    "show_rating": "显示评分",
+    "show_vendor": "显示厂商",
     "media": "媒体文件",
     "product_card_carousel": "显示轮播",
     "media_fit": "媒体文件适应",
