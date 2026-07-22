@@ -1,4 +1,4 @@
-<section id="{{ section.id }}" class="section product-information">
+<section id="{{ section.id }}" class="section product-information" style="padding-top:{{ section.settings.padding_top | append: 'px' }};padding-bottom:{{ section.settings.padding_bottom | append: 'px' }};">
   <div class="product-preview">
     <ul class="product-thumbnails">
       {%- for image in product.images -%}

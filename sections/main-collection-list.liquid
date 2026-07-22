@@ -1,6 +1,6 @@
-<section id="{{ section.id }}" class="section collection {{ section.settings.container_type }}"
+<section id="{{ section.id }}" class="section collection"
          style="padding-top:{{ section.settings.padding_top | append: 'px' }};padding-bottom:{{ section.settings.padding_bottom | append: 'px' }};">
-  <div  class="collection-grid">
+  <div  class="collection-grid {{ section.settings.container_type }}">
     {% for collection in collections %}
       {% render 'collection-card', collection: collection %}
     {% endfor %}

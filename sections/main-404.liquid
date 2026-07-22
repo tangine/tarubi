@@ -1,11 +1,36 @@
-<section>
+<section style="padding-top:{{ section.settings.padding_top | append: 'px' }};padding-bottom:{{ section.settings.padding_bottom | append: 'px' }};">
   <div>未找到页面</div>
 </section>
 
 {% schema %}
 {
   "name": "t:names.404",
-  "settings": [],
+  "settings": [
+    {
+      "type": "header",
+      "content": "填充"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "顶部",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "底部",
+      "default": 20
+    }
+  ],
   "blocks": [],
   "presets": [
     {

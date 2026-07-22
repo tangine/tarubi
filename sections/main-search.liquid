@@ -1,17 +1,18 @@
-<section class="{{ section.settings.container_type }}" style="padding: 20px 0;">
-  <form action="/search" method="get" role="search" style="position: relative;margin-bottom: 20px;">
-    <label>
-      <input type="search" name="q" id="q" autocomplete="off" style="width: 100%;padding: 8px;" placeholder="Search"/>
-    </label>
-    <div style="position: absolute; right: 0; top: 0;bottom: 0;display: flex; align-items: center; padding-right: 10px;">
-      <label for="q">
-        <button class="bi bi-search" type="submit"></button>
+<section class="section-wrapper" style="padding-top:{{ section.settings.padding_top | append: 'px' }};padding-bottom:{{ section.settings.padding_bottom | append: 'px' }};">
+  <div class="{{ section.settings.container_type }}">
+    <form action="/search" method="get" role="search" style="position: relative;margin-bottom: 20px;">
+      <label>
+        <input type="search" name="q" id="q" autocomplete="off" style="width: 100%;padding: 8px;" placeholder="Search"/>
       </label>
-    </div>
-  </form>
-  {% paginate search.results by 12 %}
-    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
-      {% for item in search.results %}
+      <div style="position: absolute; right: 0; top: 0;bottom: 0;display: flex; align-items: center; padding-right: 10px;">
+        <label for="q">
+          <button class="bi bi-search" type="submit"></button>
+        </label>
+      </div>
+    </form>
+    {% paginate search.results by 12 %}
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+        {% for item in search.results %}
           {%- case item.object_type -%}
             {%- when 'product' -%}
               {% render 'product-card', product: item %}
@@ -20,12 +21,13 @@
             {%- when 'page' -%}
               {% render 'page-card', page: item %}
           {%- endcase -%}
-      {% endfor %}
-    </div>
-    {%- if paginate.pages > 1 -%}
-      {%- render 'pagination', paginate: paginate -%}
-    {%- endif -%}
-  {% endpaginate %}
+        {% endfor %}
+      </div>
+      {%- if paginate.pages > 1 -%}
+        {%- render 'pagination', paginate: paginate -%}
+      {%- endif -%}
+    {% endpaginate %}
+  </div>
 </section>
 
 {% schema %}
@@ -47,6 +49,30 @@
           "label": "t:options.default"
         }
       ]
+    },
+    {
+      "type": "header",
+      "content": "填充"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "顶部",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "底部",
+      "default": 20
     }
   ],
   "blocks": [],
