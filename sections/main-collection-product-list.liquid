@@ -5,6 +5,7 @@
         {%- for filter in collection.filters -%}
         <div>
           <div>{{ filter.type }}</div>
+          <div>{{ filter.label | escape }}</div>
           <div>{{ filter.active_values.size }}</div>
           {%- for value in filter.values -%}
             <div>
