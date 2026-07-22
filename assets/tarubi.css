@@ -795,6 +795,12 @@ video.fill {
 .product-card:hover .product-card__title {
   text-decoration: underline;
 }
+.product-card .product-card__price {
+  font-size: 1.1em;
+}
+.product-card .product-card__price .regular-price {
+  font-size: 0.9em;
+}
 
 input {
   outline-style: none;

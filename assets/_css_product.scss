@@ -66,6 +66,14 @@
       text-decoration: underline;
     }
   }
+
+  .product-card__price {
+    font-size: 1.1em;
+
+    .regular-price {
+      font-size: 0.9em;
+    }
+  }
 }
 
 input {
