@@ -1,7 +1,11 @@
 <section id="{{ section.id }}" class="sectiion-wrapper" style="padding-top:{{ section.settings.padding_top | append: 'px' }};padding-bottom:{{ section.settings.padding_bottom | append: 'px' }};">
   <div class="section {{ section.settings.container_type }}">
     {% paginate collection.products by section.settings.page_size %}
-      <div>{{ collection.tags | json }}</div>
+      <div>
+        {% for filter in collection.filters %}
+          <div>{{ filter | json }}</div>
+        {% endfor %}
+      </div>
       <div class="product-list grid">
         {% for product in collection.products %}
           {% render 'product-card', product: product,
