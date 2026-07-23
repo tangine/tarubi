@@ -91,12 +91,17 @@ input {
   }
 }
 
-input[name="quantity"] {
-  outline-style: none;
-  border: none;
-  font-size: inherit;
-  text-align: center;
-  appearance: textfield;
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
+quantity-selector{
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  input[name="quantity"] {
+    outline-style: none;
+    border: none;
+    font-size: inherit;
+    text-align: center;
+    appearance: textfield;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+  }
 }
