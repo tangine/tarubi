@@ -96,4 +96,7 @@ input[name="quantity"] {
   border: none;
   font-size: inherit;
   text-align: center;
+  appearance: textfield;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
 }
