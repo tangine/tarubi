@@ -5,6 +5,9 @@ class CartItem extends HTMLElement {
     this.addEventListener("click", () => {
       console.log("click", this.dataset);
     })
+    this.addEventListener("quantity-change", (e) => {
+      console.log("quantity-change", e);
+    })
   }
 
   connectedCallback() {

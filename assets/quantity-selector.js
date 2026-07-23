@@ -1,53 +1,41 @@
 class QuantitySelector extends HTMLElement {
-  static get ObservedAttributes() {
-    return ['value', 'min'];
-  }
-
-  #value
   constructor() {
     super();
+    this.classList.add("quantity-selector");
+
+    this.minusButton = this.querySelector("[name='minus']");
+    this.plusButton = this.querySelector("[name='plus']");
+    this.quantityInput = this.querySelector("input[name='quantity']");
   }
 
   connectedCallback() {
-    super.connectedCallback();
+    this.minusButton.addEventListener("click", this.#decrease.bind(this));
+    this.plusButton.addEventListener("click", this.#increase.bind(this));
+    this.quantityInput.addEventListener("change", this.#onInputChange.bind(this));
   }
-
-
-  disconnectedCallback() {
-    super.disconnectedCallback();
-  }
-
-  attributeChangedCallback(attrName, oldValue, newValue) {
-    if(attrName === 'value') {
-      this.#value = newValue;
-    }
-  }
-
-  #getValue() {}
-
-  #setValue(value) {}
 
   #increase() {
-    this.#value += 1;
-    this.#updateValue()
+    this.update()
   }
 
   #decrease() {
-    this.#value -= 1;
-    this.#updateValue();
+    this.update()
   }
 
-  #updateValue(event) {
-    this.dispatchEvent(new CustomEvent('change',{
+  #onInputChange() {
+
+  }
+
+  update() {
+    this.dispatchEvent(new CustomEvent("quantity-change", {
       bubbles: true,
       composed: true,
-      detail: {
-        value: this.#getValue(),
-      }
+      cancelable: true,
+      detail: { quantity: this.quantityInput.value }
     }));
   }
+}
 
-  #render() {
-    this.shadowRoot.innerHTML = '<div><button class="minus">-</button><input type="number" value="${this.#value}"><button class="plus">+</button></div>';
-  }
+if(!customElements.get("quantity-selector")) {
+  customElements.define("quantity-selector", QuantitySelector);
 }
