@@ -14,11 +14,13 @@ class QuantitySelector extends HTMLElement {
     this.quantityInput.addEventListener("change", this.#onInputChange.bind(this));
   }
 
-  #increase() {
+  #increase(e) {
+    e.preventDefault();
     this.update()
   }
 
   #decrease() {
+    e.preventDefault();
     this.update()
   }
 
