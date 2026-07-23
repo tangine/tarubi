@@ -1,6 +1,4 @@
-import {Component} from "./component";
-
-class QuantitySelector extends Component {
+class QuantitySelector extends HTMLElement {
   static get ObservedAttributes() {
     return ['value', 'min'];
   }

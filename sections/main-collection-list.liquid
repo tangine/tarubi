@@ -1,9 +1,14 @@
+<script type="module" src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
+
 <section id="{{ section.id }}" class="section-wrapper collection"
          style="padding-top:{{ section.settings.padding_top | append: 'px' }};padding-bottom:{{ section.settings.padding_bottom | append: 'px' }};">
   <div  class="section-inner collection-grid {{ section.settings.container_type }}">
     {% for collection in collections %}
       {% render 'collection-card', collection: collection %}
     {% endfor %}
+  </div>
+  <div>
+    <cart-item>测试</cart-item>
   </div>
 </section>
 

@@ -1,6 +1,4 @@
-import {Component} from "./component";
-
-class CartItem extends Component {
+class CartItem extends HTMLElement {
   constructor() {
     super();
     console.log("constructor");
@@ -18,5 +16,3 @@ if(!customElements.get("cart-item")) {
   console.log("Cart is missing");
   customElements.define("cart-item", CartItem);
 }
-
-console.log("Cart is loaded");
