@@ -45,7 +45,7 @@
       }
     },
     "collection_list_grid_CTfK3p": {
-      "type": "collection-list-grid",
+      "type": "main-collection-list",
       "name": "Product List",
       "settings": {
         "container_type": "tarubi-container"

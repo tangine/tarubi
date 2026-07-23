@@ -10,7 +10,7 @@
 {
   "sections": {
     "blog_jQW4i6": {
-      "type": "blog",
+      "type": "main-blog",
       "name": "t:names.blog",
       "settings": {
         "page_size": 10

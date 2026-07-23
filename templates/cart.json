@@ -10,7 +10,7 @@
 {
   "sections": {
     "cart_CmQDt8": {
-      "type": "cart",
+      "type": "main-cart",
       "blocks": {
         "cart_title_d84Vf6": {
           "type": "_cart_title",
