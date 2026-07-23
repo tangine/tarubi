@@ -3,7 +3,7 @@ class CartItem extends HTMLElement {
     super();
     console.log("constructor");
     this.addEventListener("click", () => {
-      console.log("click");
+      console.log("click", this.dataset);
     })
   }
 
