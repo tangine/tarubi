@@ -23,7 +23,7 @@ class QuantitySelector extends HTMLElement {
   }
 
   #onInputChange() {
-
+    this.update()
   }
 
   update() {
