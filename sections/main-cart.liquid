@@ -25,7 +25,9 @@
             <div class="cart-item__quantity">
               <quantity-selector>
                 <button class="bi bi-dash" name="minus" type="button"></button>
-                <input type="number" value="{{ item.quantity }}" min=0 name="quantity" step="1" />
+                <label>
+                  <input type="number" value="{{ item.quantity }}" min=0 name="quantity" step="1" />
+                </label>
                 <button class="bi bi-plus" name="plus" type="button"></button>
               </quantity-selector>
             </div>
