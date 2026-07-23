@@ -104,4 +104,9 @@ quantity-selector{
     -moz-appearance: textfield;
     -webkit-appearance: textfield;
   }
+
+  button {
+    border: none;
+    background: transparent;
+  }
 }

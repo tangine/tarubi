@@ -828,6 +828,10 @@ quantity-selector input[name=quantity] {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
 }
+quantity-selector button {
+  border: none;
+  background: transparent;
+}
 
 :root {
   font-family: "Source Han Sans", "Microsoft YaHei UI", Arial, sans-serif;
