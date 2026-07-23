@@ -827,6 +827,7 @@ quantity-selector input[name=quantity] {
   appearance: textfield;
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
+  box-shadow: none;
 }
 quantity-selector button {
   border: none;
