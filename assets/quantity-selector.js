@@ -1,3 +1,5 @@
+import {debounce} from "./utils";
+
 class QuantitySelector extends HTMLElement {
   constructor() {
     super();
@@ -9,9 +11,11 @@ class QuantitySelector extends HTMLElement {
   }
 
   connectedCallback() {
-    this.minusButton.addEventListener("click", this.#decrease.bind(this));
+    this.debounceIncrease = debounce(this.#increase, 200);
+    this.minusButton.addEventListener("click", this.debounceIncrease.bind(this));
     this.plusButton.addEventListener("click", this.#increase.bind(this));
     this.quantityInput.addEventListener("change", this.#onInputChange.bind(this));
+
   }
 
   #increase(event) {
@@ -21,10 +25,12 @@ class QuantitySelector extends HTMLElement {
     this.update()
   }
 
-  #decrease(event) {
-    event.preventDefault();
-    this.quantityInput.value = parseInt(this.quantityInput.value) - 1;
-    this.update()
+  #decrease() {
+    return (event) => {
+      event.preventDefault();
+      this.quantityInput.value = parseInt(this.quantityInput.value) - 1;
+      this.update()
+    }
   }
 
   #onInputChange() {
@@ -38,6 +44,10 @@ class QuantitySelector extends HTMLElement {
       cancelable: true,
       detail: { quantity: this.quantityInput.value }
     }));
+  }
+
+  disconnectedCallback() {
+    this.debounceIncrease.cancel()
   }
 }
 
