@@ -1,4 +1,4 @@
-import {debounce} from "./utils";
+import {debounce} from "@theme/utils";
 
 class QuantitySelector extends HTMLElement {
   constructor() {
