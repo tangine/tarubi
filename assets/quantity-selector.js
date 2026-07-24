@@ -12,6 +12,7 @@ class QuantitySelector extends HTMLElement {
 
   connectedCallback() {
     this.debounceIncrease = debounce(this.#increase, 2000);
+    console.log(this.debounceIncrease);
     this.plusButton.addEventListener("click", this.debounceIncrease.bind(this));
     this.minusButton.addEventListener("click", this.#decrease().bind(this));
     this.quantityInput.addEventListener("change", this.#onInputChange.bind(this));
