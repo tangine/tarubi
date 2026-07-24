@@ -1,11 +1,29 @@
 <section style="padding-top:{{ section.settings.padding_top | append: 'px' }};padding-bottom:{{ section.settings.padding_bottom | append: 'px' }};">
-  <div>未找到页面</div>
+  <div class="{{ section.settings.container_type }}">
+    <div>未找到页面</div>
+  </div>
 </section>
 
 {% schema %}
 {
   "name": "t:names.404",
   "settings": [
+    {
+      "type": "select",
+      "id": "container_type",
+      "label": "t:settings.section_width",
+      "default": "tarubi-container",
+      "options": [
+        {
+          "value": "w-full",
+          "label": "t:options.full"
+        },
+        {
+          "value": "tarubi-container",
+          "label": "t:options.default"
+        }
+      ]
+    },
     {
       "type": "header",
       "content": "填充"
