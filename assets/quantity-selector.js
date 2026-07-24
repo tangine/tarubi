@@ -16,11 +16,14 @@ class QuantitySelector extends HTMLElement {
 
   #increase(event) {
     event.preventDefault();
+    event.stopPropagation();
+    this.quantityInput.value = parseInt(this.quantityInput.value) + 1;
     this.update()
   }
 
   #decrease(event) {
     event.preventDefault();
+    this.quantityInput.value = parseInt(this.quantityInput.value) - 1;
     this.update()
   }
 
