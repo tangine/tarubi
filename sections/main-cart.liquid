@@ -1,5 +1,5 @@
 <script type="module" src="{{ 'cart.js' | asset_url }}" defer></script>
-<script src="{{ 'quantity-selector.js' | asset_url }}" defer></script>
+<script type="module" src="{{ 'quantity-selector.js' | asset_url }}" defer></script>
 
 <div class="cart" style="padding-top:{{ section.settings.padding_top | append: 'px' }};padding-bottom:{{ section.settings.padding_bottom | append: 'px' }};">
   {% content_for 'blocks' %}
