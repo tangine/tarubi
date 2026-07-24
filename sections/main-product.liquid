@@ -25,6 +25,11 @@
       </div>
     {% endif %}
     <button>{{ 'actions.add_to_cart' | t }}</button>
+    <div>
+      {% form 'product' %}
+        {{ form | payment_button }}
+      {% endform %}
+    </div>
   </div>
 </div>
 </section>
