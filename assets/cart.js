@@ -8,6 +8,13 @@ class CartItem extends HTMLElement {
     event.preventDefault();
     event.stopPropagation();
     console.log("onQuantityChange", event);
+    const data = {
+      id: this.dataset.cartId,
+      quantity: event.detail.value,
+    }
+    fetch("/cart/change", {
+      body: JSON.stringify(data),
+    }).then(res => res.json())
   }
 
   onItemRemove(event) {
