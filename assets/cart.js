@@ -5,7 +5,14 @@ class CartItem extends HTMLElement {
   }
 
   onQuantityChange(event) {
+    event.preventDefault();
+    event.stopPropagation();
     console.log("onQuantityChange", event);
+  }
+
+  onItemRemove(event) {
+    event.preventDefault();
+    event.stopPropagation();
   }
 }
 
