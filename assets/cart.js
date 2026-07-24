@@ -13,6 +13,7 @@ class CartItem extends HTMLElement {
       quantity: event.detail.value,
     }
     fetch("/cart/change", {
+      method: "POST",
       body: JSON.stringify(data),
     }).then(res => res.json())
   }
