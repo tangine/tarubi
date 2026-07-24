@@ -10,8 +10,9 @@ class CartItem extends HTMLElement {
     console.log("onQuantityChange", event);
     const data = {
       id: this.dataset.cartId,
-      quantity: event.detail.value,
+      quantity: event.detail.quantity
     }
+    console.log(data);
     fetch("/cart/change", {
       method: "POST",
       body: JSON.stringify(data),
