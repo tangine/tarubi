@@ -15,6 +15,10 @@ class CartItem extends HTMLElement {
     console.log(data);
     fetch("/cart/change", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "accept": "application/json"
+      },
       body: JSON.stringify(data),
     }).then(res => res.json())
   }
