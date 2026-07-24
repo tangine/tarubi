@@ -32,11 +32,11 @@
   {{ content_for_header }}
 
 </head>
-<body>
+<body style="min-height: 100vh;display: flex;flex-direction: column;">
 <header>
   {% sections 'header-group' %}
 </header>
-<main id="MainContent" data-template="{{ template }}">
+<main id="MainContent" data-template="{{ template }}" style="flex:1">
   {{ content_for_layout }}
 </main>
 <footer>
