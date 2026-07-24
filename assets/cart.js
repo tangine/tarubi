@@ -5,7 +5,7 @@ class CartItem extends HTMLElement {
   }
 
   onQuantityChange(event) {
-    console.log("handleQuantityChange", event);
+    console.log("onQuantityChange", event);
   }
 }
 
