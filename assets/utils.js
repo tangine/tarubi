@@ -9,7 +9,7 @@
  * @param {number} wait The time (in milliseconds) to wait before calling fn
  * @returns {T & { cancel(): void }} A debounced version of fn with a .cancel() method
  */
-export function debounce(fn, wait) {
+export function debounce(fn, wait = 200) {
   /** @type {number | undefined} */
   let timeout;
 
@@ -35,7 +35,7 @@ export function debounce(fn, wait) {
  * @param {number} delay The time (in milliseconds) to wait before calling fn
  * @returns {T & { cancel(): void }} A throttled version of fn with a .cancel() method
  */
-export function throttle(fn, delay) {
+export function throttle(fn, delay = 200) {
   let lastCall = 0;
 
   /** @param {...any} args */
