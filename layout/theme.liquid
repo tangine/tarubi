@@ -33,11 +33,14 @@
 
 </head>
 <body>
-{% sections 'header-group' %}
+<header>
+  {% sections 'header-group' %}
+</header>
 <main id="MainContent" data-template="{{ template }}">
   {{ content_for_layout }}
 </main>
-{% sections 'footer-group' %}
-  {% comment %}<script type="module" src="{{ 'gaussian-splats-module.js' | asset_url }}" defer="defer"></script>{% endcomment %}
+<footer>
+  {% sections 'footer-group' %}
+</footer>
 </body>
 </html>
