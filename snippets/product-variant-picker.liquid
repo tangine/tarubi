@@ -1,0 +1,10 @@
+<div class="product-variant-picker">
+  {%- for option in product.options_with_values -%}
+    <fieldset>
+      <legend>{{ option.name }}</legend>
+      {%- for value in option.values -%}
+        <button>{{ value | escape }}</button>
+      {%- endfor -%}
+    </fieldset>
+  {%- endfor -%}
+</div>
