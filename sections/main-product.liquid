@@ -14,14 +14,15 @@
     <div class="product-info__old-price">{{ product.compare_at_price | money }}</div>
     {% if product.options_with_values.size > 1 %}
       <div class="product-info__variants">
-        {% for option in product.options_with_values %}
-          <fieldset class="product-info__option">
-            <legend>{{ option.name }}</legend>
-            {% for value in option.values %}
-              <button>{{ value }}</button>
-            {% endfor %}
-          </fieldset>
-        {% endfor %}
+        {% comment %}{% for option in product.options_with_values %}{% endcomment %}
+          {% comment %}<fieldset class="product-info__option">{% endcomment %}
+            {% comment %}<legend>{{ option.name }}</legend>{% endcomment %}
+            {% comment %}{% for value in option.values %}{% endcomment %}
+              {% comment %}<button>{{ value }}</button>{% endcomment %}
+            {% comment %}{% endfor %}{% endcomment %}
+          {% comment %}</fieldset>{% endcomment %}
+        {% comment %}{% endfor %}{% endcomment %}
+        {% render 'product-variant-picker', product: product %}
       </div>
     {% endif %}
     <button>{{ 'actions.add_to_cart' | t }}</button>
