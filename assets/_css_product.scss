@@ -138,6 +138,7 @@ fieldset {
       right: 0;
       bottom: 0;
       transform: translateX(-100%);
+      transition: all .2s ease-in-out;
     }
 
     input {
