@@ -846,6 +846,8 @@ fieldset label {
   display: inline-block;
   border: 1px solid #cccccc;
   padding: 8px 16px;
+  border-radius: 8px;
+  overflow: hidden;
   cursor: pointer;
   transition-property: background-color, border-color, color;
   transition-duration: 0.125s;
