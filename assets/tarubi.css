@@ -845,7 +845,6 @@ fieldset label {
   position: relative;
   display: inline-block;
   border: 1px solid #cccccc;
-  padding: 8px 16px;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
@@ -862,6 +861,7 @@ fieldset label input {
   appearance: auto;
   display: block;
   opacity: 0;
+  cursor: pointer;
 }
 fieldset label .variant-option__button-label__text {
   padding: 8px 16px;
@@ -869,6 +869,10 @@ fieldset label .variant-option__button-label__text {
 }
 fieldset label:has(input:checked) {
   background-color: #66afe9;
+}
+
+.visually-hidden {
+  display: none;
 }
 
 :root {

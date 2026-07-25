@@ -123,7 +123,6 @@ fieldset {
     position: relative;
     display: inline-block;
     border: 1px solid #cccccc;
-    padding: 8px 16px;
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
@@ -140,6 +139,7 @@ fieldset {
       appearance: auto;
       display: block;
       opacity: 0;
+      cursor: pointer;
     }
 
     .variant-option__button-label__text {
@@ -151,4 +151,8 @@ fieldset {
       background-color: #66afe9;
     }
   }
+}
+
+.visually-hidden {
+  display: none;
 }
