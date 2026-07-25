@@ -834,6 +834,23 @@ quantity-selector button {
   background: transparent;
 }
 
+fieldset {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+fieldset label {
+  display: inline-block;
+  border: 1px solid #cccccc;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+fieldset label:has(input:checked) {
+  background-color: #66afe9;
+}
+
 :root {
   font-family: "Source Han Sans", "Microsoft YaHei UI", Arial, sans-serif;
 }
