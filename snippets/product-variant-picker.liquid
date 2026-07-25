@@ -1,15 +1,17 @@
+<script type="module" src="{{ 'variant-picker.js' | asset_url }}"></script>
+
 <div class="product-variant-picker">
-  {%- for option in product.options_with_values -%}
-    <fieldset>
-      <legend>{{ option.name }}</legend>
-      {%- for value in option.values -%}
-        {% comment %}<input id="" name="" type="text">{% endcomment %}
-        {% comment %}<button>{{ value | escape }}</button>{% endcomment %}
-        <label>
-          <input type="radio" name="{{ option.name }}" value="{{ value | escape }}" data-option-value-id="{{ value.id }}" />
-          <span>{{ value | escape }}</span>
-        </label>
-      {%- endfor -%}
-    </fieldset>
-  {%- endfor -%}
+  <variant-picker>
+    {%- for option in product.options_with_values -%}
+      <fieldset>
+        <legend>{{ option.name }}</legend>
+        {%- for value in option.values -%}
+          <label>
+            <input type="radio" name="{{ option.name }}" value="{{ value | escape }}" data-option-value-id="{{ value.id }}" />
+            <span>{{ value | escape }}</span>
+          </label>
+        {%- endfor -%}
+      </fieldset>
+    {%- endfor -%}
+  </variant-picker>
 </div>
