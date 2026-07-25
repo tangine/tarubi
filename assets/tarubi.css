@@ -850,6 +850,9 @@ fieldset label {
   transition-duration: 0.125s;
   transition-timing-function: ease-in-out;
 }
+fieldset label input {
+  display: none;
+}
 fieldset label:has(input:checked) {
   background-color: #66afe9;
 }
