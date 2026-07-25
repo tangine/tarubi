@@ -10,7 +10,7 @@ class VariantPicker extends Component{
   }
 
   onVariantChange(event){
-    console.log("VariantPicker", event);
+    console.log("VariantPicker", event.target.value);
   }
 }
 
