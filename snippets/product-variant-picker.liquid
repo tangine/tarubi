@@ -6,7 +6,7 @@
       <fieldset>
         <legend>{{ option.name }}</legend>
         {%- for value in option.values -%}
-          <label>
+          <label class="variant-option__button-label">
             <input type="radio" name="{{ option.name }}" value="{{ value | escape }}" data-option-value-id="{{ value.id }}" />
             <span class="variant-option__button-label__text">{{ value | escape }}</span>
           </label>
