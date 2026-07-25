@@ -3,7 +3,12 @@
     <fieldset>
       <legend>{{ option.name }}</legend>
       {%- for value in option.values -%}
-        <button>{{ value | escape }}</button>
+        {% comment %}<input id="" name="" type="text">{% endcomment %}
+        {% comment %}<button>{{ value | escape }}</button>{% endcomment %}
+        <label>
+          <input type="radio" name="{{ option.name }}" value="{{ value | escape }}" data-option-value-id="{{ value.id }}">
+          <span>{{ value | escape }}</span>
+        </label>
       {%- endfor -%}
     </fieldset>
   {%- endfor -%}
