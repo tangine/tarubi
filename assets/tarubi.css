@@ -846,6 +846,9 @@ fieldset label {
   padding: 8px 16px;
   border-radius: 8px;
   cursor: pointer;
+  transition-property: background-color, border-color, color;
+  transition-duration: 0.125s;
+  transition-timing-function: ease-in-out;
 }
 fieldset label:has(input:checked) {
   background-color: #66afe9;
