@@ -864,6 +864,7 @@ fieldset label input {
   cursor: pointer;
 }
 fieldset label .variant-option__button-label__text {
+  display: block;
   padding: 8px 16px;
   cursor: pointer;
 }
