@@ -126,18 +126,18 @@ fieldset {
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
-    transition-property: background-color, border-color, color;
+    transition-property: all;
     transition-duration: 0.125s;
     transition-timing-function: ease-in-out;
 
-    ::before,
-    ::after {
+    ::before{
       content: "";
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
+      transform: translateX(-100%);
     }
 
     input {
@@ -160,6 +160,10 @@ fieldset {
 
     &:has(input:checked) {
       background-color: #66afe9;
+
+      ::before {
+        transform: translateX(0);
+      }
     }
   }
 }
