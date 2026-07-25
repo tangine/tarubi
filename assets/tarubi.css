@@ -852,7 +852,7 @@ fieldset label {
   transition-duration: 0.125s;
   transition-timing-function: ease-in-out;
 }
-fieldset label ::before {
+fieldset label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -881,7 +881,7 @@ fieldset label .variant-option__button-label__text {
 fieldset label:has(input:checked) {
   background-color: #66afe9;
 }
-fieldset label:has(input:checked) ::before {
+fieldset label:has(input:checked)::before {
   transform: translateX(0);
 }
 
