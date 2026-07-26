@@ -869,9 +869,12 @@ fieldset label:has(input:checked) {
 
 quantity-input.quantity {
   border: 1px solid #ccc;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: inline-flex;
   overflow: hidden;
+}
+quantity-input.quantity .quantity__button {
+  width: 100%;
+  height: 100%;
 }
 quantity-input.quantity label {
   display: flex;
