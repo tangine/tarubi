@@ -166,6 +166,9 @@ quantity-input {
     border: none;
     outline: none;
     text-align: center;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
 
     &:focus {
       outline: none;
