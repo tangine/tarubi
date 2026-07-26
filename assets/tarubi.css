@@ -885,6 +885,10 @@ quantity-input .quantity__input {
   outline: none;
   text-align: center;
 }
+quantity-input .quantity__input:focus {
+  outline: none;
+  border: none;
+}
 
 :root {
   font-family: "Source Han Sans", "Microsoft YaHei UI", Arial, sans-serif;
