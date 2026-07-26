@@ -5,6 +5,7 @@ class QuantityInput extends HTMLElement{
 
     this.quantityInput = this.querySelector('input');
     this.querySelectorAll("button").forEach(button => {
+      console.log(button);
       button.addEventListener('click', this.#onButtonClick.bind(this));
     })
     this.quantityInput.addEventListener('change', this.#onInputChange.bind(this));
