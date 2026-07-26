@@ -12,8 +12,6 @@ class QuantityInput extends HTMLElement{
 
   connectedCallback(){
     this.classList.add('quantity');
-    this.quantityInput = this.querySelector('input');
-    this.plusButton = this.querySelector('button[name="plus"]');
   }
 
   #onButtonClick(event) {
