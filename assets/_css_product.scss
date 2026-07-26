@@ -161,6 +161,8 @@ fieldset {
 quantity-input {
   display: inline-block;
   border: 1px solid #ccc;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 
   .quantity__input {
     border: none;
@@ -169,6 +171,7 @@ quantity-input {
     -moz-appearance: textfield;
     -webkit-appearance: textfield;
     appearance: textfield;
+    width: 100%;
 
     &:focus {
       outline: none;
