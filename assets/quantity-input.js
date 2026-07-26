@@ -2,6 +2,7 @@ class QuantityInput extends HTMLElement{
   quantityInput = undefined;
   constructor() {
     super();
+    console.log("constructor")
 
     this.quantityInput = this.querySelector('input');
     this.querySelectorAll("button").forEach(button => {
@@ -12,6 +13,7 @@ class QuantityInput extends HTMLElement{
   }
 
   connectedCallback(){
+    console.log("connectedCallback")
     this.classList.add('quantity');
   }
 
