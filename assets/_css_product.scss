@@ -157,3 +157,13 @@ fieldset {
 .visually-hidden {
   display: none;
 }
+
+quantity-input {
+  display: inline-block;
+  border: 1px solid #ccc;
+
+  .quantity__input {
+    border: none;
+    outline: none;
+  }
+}
