@@ -8,11 +8,18 @@
         {%- for product_option_value in product_option.values -%}
           <label class="variant-option__button-label">
             <input type="radio"
-                   name="{{ product_option.name }}"
-                   value="{{ product_option_value | escape }}"
-                   aria-label="{{ product_option_value | escape }}"
-                   data-variant-id="{{ product_option_value | escape }}"
-                   data-option-value-id="{{ product_option_value.id }}" />
+              name="{{ product_option.name }}"
+              value="{{ product_option_value | escape }}"
+              aria-label="{{ product_option_value | escape }}"
+              data-variant-id="{{ product_option_value | escape }}"
+              data-option-value-id="{{ product_option_value.id }}"
+              {% if product_option_value.selected %}
+                data-current-checked="true"
+                checked
+              {% else %}
+                data-current-checked="false"
+              {% endif %}
+            />
             <span class="variant-option__button-label__text">{{ product_option_value | escape }}</span>
           </label>
         {%- endfor -%}
