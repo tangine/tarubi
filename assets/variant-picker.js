@@ -6,10 +6,10 @@ class VariantPicker extends Component{
   }
 
   connectedCallback(){
-    this.addEventListener("change", this.onVariantChange.bind(this));
+    this.addEventListener("change", this.#onVariantChange.bind(this));
   }
 
-  onVariantChange(event){
+  #onVariantChange(event){
     console.log(event.target.dataset);
   }
 }
