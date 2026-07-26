@@ -4,9 +4,9 @@
   <variant-picker>
     {%- for product_option in product.options_with_values -%}
       {% liquid
-        assign fieldset_index = forloop.index
+        assign fieldset_index = forloop.index0
       %}
-      <fieldset data-index="{{ forloop.index }}">
+      <fieldset data-index="{{ product_option.position }}">
         <legend>{{ product_option.name }}</legend>
         {%- for product_option_value in product_option.values -%}
           <label class="variant-option__button-label">
@@ -14,6 +14,9 @@
                    name="{{ product_option.name }}"
                    value="{{ product_option_value | escape }}"
                    aria-label="{{ product_option_value | escape }}"
+                   data-field-index="{{ fieldset_index }}"
+                   data-input-index="{{ forloop.index0 }}"
+                   data-position="{{ product_option.position }}-{{ forloop.index0 }}"
                    data-variant-id="{{ product_option_value | escape }}"
                    data-option-value-id="{{ product_option_value.id }}"
                    data-option-available="{{ product_option_value.available }}"
