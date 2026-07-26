@@ -883,6 +883,7 @@ quantity-input {
 quantity-input .quantity__input {
   border: none;
   outline: none;
+  text-align: center;
 }
 
 :root {
