@@ -3,7 +3,10 @@
 <div class="product-variant-picker">
   <variant-picker>
     {%- for product_option in product.options_with_values -%}
-      <fieldset>
+      {% liquid
+        assign fieldset_index = forloop.index
+      %}
+      <fieldset data-index="{{ forloop.index }}">
         <legend>{{ product_option.name }}</legend>
         {%- for product_option_value in product_option.values -%}
           <label class="variant-option__button-label">
