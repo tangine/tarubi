@@ -1,7 +1,7 @@
 <script type="module" src="{{ 'variant-picker.js' | asset_url }}"></script>
 
 <div class="product-variant-picker">
-  <variant-picker>
+  <variant-picker data-product-id="{{ product.id }}">
     {%- for product_option in product.options_with_values -%}
       <fieldset data-fieldset-index="{{ product_option.position | minus : 1 }}">
         <legend>{{ product_option.name | escape }}</legend>

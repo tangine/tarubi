@@ -25,6 +25,9 @@
         {% render 'product-variant-picker', product: product %}
       </div>
     {% endif %}
+    <div>
+      {% render 'product-quantity-input', quantity: 1 %}
+    </div>
     <button>{{ 'actions.add_to_cart' | t }}</button>
     <div>
       {% form 'product', product %}

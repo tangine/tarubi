@@ -1,0 +1,8 @@
+<script type="module" src="{{ 'quantity-input' | asset_url }}"></script>
+<quantity-input>
+  <button class="quantity__button quantity__minus" type="button" name="minus">-</button>
+  <label for="">
+    <input type="number" name="quantity" min="0" value="{{ quantity }}" />
+  </label>
+  <button class="quantity__button quantity__plus" type="button" name="plus">+</button>
+</quantity-input>
