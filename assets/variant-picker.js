@@ -10,7 +10,10 @@ class VariantPicker extends Component{
   }
 
   #onVariantChange(event){
-    console.log(event.target.dataset);
+    const checked = this.querySelectorAll('input:checked');
+    checked.forEach((el) => {
+      console.log(el.dataset);
+    })
   }
 }
 
