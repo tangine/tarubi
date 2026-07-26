@@ -13,7 +13,7 @@
                    aria-label="{{ product_option_value | escape }}"
                    data-fieldset-index="{{ product_option.position | minus: 1 }}"
                    data-input-index="{{ forloop.index0 }}"
-                   data-position="{{ product_option.position | minus : 1 }}-{{ forloop.index0 }}"
+                   data-location="{{ product_option.position | minus : 1 }}-{{ forloop.index0 }}"
                    data-option-value-id="{{ product_option_value.id }}"
                    data-option-name="{{ product_option.name | escape }}"
                    data-option-value="{{ product_option_value | escape }}"
