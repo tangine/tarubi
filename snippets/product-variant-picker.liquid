@@ -2,13 +2,18 @@
 
 <div class="product-variant-picker">
   <variant-picker>
-    {%- for option in product.options_with_values -%}
+    {%- for product_option in product.options_with_values -%}
       <fieldset>
-        <legend>{{ option.name }}</legend>
-        {%- for value in option.values -%}
+        <legend>{{ product_option.name }}</legend>
+        {%- for product_option_value in product_option.values -%}
           <label class="variant-option__button-label">
-            <input type="radio" name="{{ option.name }}" value="{{ value | escape }}" data-option-value-id="{{ value.id }}" />
-            <span class="variant-option__button-label__text">{{ value | escape }}</span>
+            <input type="radio"
+                   name="{{ product_option.name }}"
+                   value="{{ product_option_value | escape }}"
+                   aria-label="{{ product_option_value | escape }}"
+                   data-variant-id="{{ product_option_value | escape }}"
+                   data-option-value-id="{{ product_option_value.id }}" />
+            <span class="variant-option__button-label__text">{{ product_option_value | escape }}</span>
           </label>
         {%- endfor -%}
       </fieldset>
