@@ -4,7 +4,7 @@
   <variant-picker>
     {%- for product_option in product.options_with_values -%}
       <fieldset data-fieldset-index="{{ product_option.position | minus : 1 }}">
-        <legend>{{ product_option.name }}</legend>
+        <legend>{{ product_option.name | escape }}</legend>
         {%- for product_option_value in product_option.values -%}
           <label class="variant-option__button-label">
             <input type="radio"
@@ -14,6 +14,7 @@
                    data-fieldset-index="{{ product_option.position | minus: 1 }}"
                    data-input-index="{{ forloop.index0 }}"
                    data-position="{{ product_option.position | minus : 1 }}-{{ forloop.index0 }}"
+                   data-option-name="{{ product_option.name | escape }}"
                    data-option-value-id="{{ product_option_value.id }}"
                    data-option-available="{{ product_option_value.available }}"
                    data-product-url="{{ product_option_value.product_url }}"
