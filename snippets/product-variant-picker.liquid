@@ -3,7 +3,7 @@
 <div class="product-variant-picker">
   <variant-picker>
     {%- for product_option in product.options_with_values -%}
-      <fieldset data-index="{{ product_option.position | minus : 1 }}">
+      <fieldset data-fieldset-index="{{ product_option.position | minus : 1 }}">
         <legend>{{ product_option.name }}</legend>
         {%- for product_option_value in product_option.values -%}
           <label class="variant-option__button-label">
@@ -11,7 +11,7 @@
                    name="{{ product_option.name }}"
                    value="{{ product_option_value | escape }}"
                    aria-label="{{ product_option_value | escape }}"
-                   data-field-index="{{ product_option.position | minus: 1 }}"
+                   data-fieldset-index="{{ product_option.position | minus: 1 }}"
                    data-input-index="{{ forloop.index0 }}"
                    data-position="{{ product_option.position | minus : 1 }}-{{ forloop.index0 }}"
                    data-variant-id="{{ product_option_value | escape }}"
