@@ -46,3 +46,5 @@ class QuantityInput extends HTMLElement{
 if(!customElements.get("quantity-input")){
   customElements.define("quantity-input", QuantityInput);
 }
+
+console.log("QuantityInput");
