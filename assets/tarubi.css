@@ -882,7 +882,14 @@ quantity-input {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-quantity-input .quantity__input {
+quantity-input label {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+quantity-input label .quantity__input {
   border: none;
   outline: none;
   text-align: center;
@@ -891,7 +898,7 @@ quantity-input .quantity__input {
   appearance: textfield;
   width: 100%;
 }
-quantity-input .quantity__input:focus {
+quantity-input label .quantity__input:focus {
   outline: none;
   border: none;
   box-shadow: none;
