@@ -888,6 +888,7 @@ quantity-input .quantity__input {
 quantity-input .quantity__input:focus {
   outline: none;
   border: none;
+  box-shadow: none;
 }
 
 :root {
