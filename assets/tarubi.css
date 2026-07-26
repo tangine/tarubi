@@ -880,7 +880,7 @@ quantity-input {
   display: inline-block;
   border: 1px solid #ccc;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 quantity-input .quantity__input {
   border: none;
