@@ -867,20 +867,20 @@ fieldset label:has(input:checked) {
   display: none;
 }
 
-quantity-input {
-  display: inline-block;
+quantity-input.quantity {
   border: 1px solid #ccc;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
 }
-quantity-input label {
+quantity-input.quantity label {
   display: flex;
   flex-direction: row;
   height: 100%;
   width: 100%;
   align-items: center;
 }
-quantity-input label .quantity__input {
+quantity-input.quantity label .quantity__input {
   border: none;
   outline: none;
   text-align: center;
@@ -889,7 +889,7 @@ quantity-input label .quantity__input {
   appearance: textfield;
   width: 100%;
 }
-quantity-input label .quantity__input:focus {
+quantity-input.quantity label .quantity__input:focus {
   outline: none;
   border: none;
   box-shadow: none;

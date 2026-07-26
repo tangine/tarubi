@@ -158,11 +158,11 @@ fieldset {
   display: none;
 }
 
-quantity-input {
-  display: inline-block;
+quantity-input.quantity {
   border: 1px solid #ccc;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
 
   label {
     display: flex;
