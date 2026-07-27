@@ -3,6 +3,7 @@
 {% liquid
   assign selected_variant = product.selected_or_first_available_variant
   assign options = product.options_with_values
+  assign variants = product.variants
 %}
 
 {% liquid
@@ -46,7 +47,19 @@
               assign current_options = current_options | append: value
             endif
           endfor
+
+          assign current_options = current_options | split: ','
+
+          for variant in variants
+            for current_option in current_options
+              if variant[forloop.index0] != current_option
+                break
+              endif
+            endfor
+            
+          endfor
         %}
+
         <div class="test">{{ current_options }}</div>
         {% comment %} {%capture current_variant %}
           {% for index in (0..option_size) %}    
