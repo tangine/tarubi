@@ -11,15 +11,35 @@
   "sections": {
     "main_product_AmDV8B": {
       "type": "main-product",
+      "blocks": {
+        "title_qbReAB": {
+          "type": "title",
+          "settings": {}
+        },
+        "judge_me_reviews_preview_badge_Jz4mrK": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title_qbReAB",
+        "judge_me_reviews_preview_badge_Jz4mrK"
+      ],
       "name": "t:names.product",
       "settings": {
-        "container_type": "tarubi-container"
+        "container_type": "tarubi-container",
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "related_products_dNfwFb": {
       "type": "related-products",
       "name": "t:names.related_products",
-      "settings": {}
+      "settings": {
+        "container_type": "tarubi-container",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
