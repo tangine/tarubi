@@ -22,7 +22,7 @@
           </div>
         {% when 'price' %}
           <div class="product-info__price">
-            {{ product.price | money }}
+            {{ product.selected_or_first_available_variant.price | money }}
           </div>
       {% endcase %}
     {%- endfor -%}
