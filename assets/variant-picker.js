@@ -24,7 +24,8 @@ class VariantPicker extends Component{
     fetch(url)
       .then(response => response.text())
       .then((text) => {
-        console.log(text);
+        const newPage = new DOMParser().parseFromString(text, 'text/html');
+        document.getElementById(sectionId).innerHTML = newPage.getElementById(sectionId).innerHTML;
       })
   }
 
