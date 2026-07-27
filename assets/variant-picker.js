@@ -24,7 +24,7 @@ class VariantPicker extends Component{
     fetch(url)
       .then(response => response.text())
       .then((text) => {
-        console.log(json);
+        console.log(text);
       })
   }
 }
