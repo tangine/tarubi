@@ -12,21 +12,17 @@ class VariantPicker extends Component{
   #onVariantChange(event){
     const {sectionId, productUrl} = this.dataset;
     let url = `${productUrl}?sectionId=${sectionId}`;
-    let valueIds = []
-    const checked = this.querySelectorAll('input:checked');
-    checked.forEach((el) => {
-      valueIds.push(el.dataset.valueId);
-    })
-    if(valueIds.length !== 0){
-      url = `${url}&option_values=${valueIds.join(',')}`;
-    }
+    let options = this.#getAllSelectedOptions()
 
-    fetch(url)
-      .then(response => response.text())
-      .then((text) => {
-        const newPage = new DOMParser().parseFromString(text, 'text/html');
-        document.getElementById(sectionId).innerHTML = newPage.getElementById(sectionId).innerHTML;
-      })
+    console.log(options);
+
+
+    // fetch(url)
+    //   .then(response => response.text())
+    //   .then((text) => {
+    //     const newPage = new DOMParser().parseFromString(text, 'text/html');
+    //     document.getElementById(sectionId).innerHTML = newPage.getElementById(sectionId).innerHTML;
+    //   })
   }
 
   #getAllSelectedOptions() {
@@ -34,7 +30,7 @@ class VariantPicker extends Component{
     this.querySelectorAll('fieldset, .product-form__input--dropdown').forEach((group) => {
       const checked = group.querySelector('input:checked') || group.querySelector('select option[selected]');
       if (checked) {
-        options.push({ name: checked.dataset.optionName || '', value: checked.value });
+        options.push({...checked.dataset});
       }
     });
     return options;
