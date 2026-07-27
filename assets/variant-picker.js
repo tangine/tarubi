@@ -10,11 +10,20 @@ class VariantPicker extends Component{
   }
 
   #onVariantChange(event){
+    const {sectionId, productUrl} = this.dataset;
+    let url = `${productUrl}?sectionId=${sectionId}`;
+    let valueIds = []
     const checked = this.querySelectorAll('input:checked');
     checked.forEach((el) => {
-      console.log(el.dataset);
+      valueIds.push(el.dataset.valueId);
     })
+    if(valueIds.length !== 0){
+      url = `${url}&option_values=${valueIds.join(',')}`;
+    }
 
+    fetch(url).then(response => response.json()).then((json) => {
+      console.log(json);
+    })
   }
 }
 
