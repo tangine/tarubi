@@ -62,14 +62,11 @@
             %}
             {% comment %} <div class="test"><span>{{ variant.options[forloop.index0] }}</span><span>{{ current_option }}</span><span>{{ equal }}</span></div> {% endcomment %}
     
-            {% if variant.options[forloop.index0] == current_option and forloop.index == current_options.size %}
-              <span>{{ forloop.index0 }}</span>
-              {% comment %} <label> {% endcomment %}
-                {% comment %} <input data-available="{{ variant.available }}"> {% endcomment %}
-              {% comment %} </label> {% endcomment %}
-            {% else %}
-              {% break %}
-              {% endif %}
+            {% if variant.options[forloop.index0] != current_option %}
+              break
+            {% elsif forloop.last %}
+              <div class="test">相同</div>  
+            {% endif %}
           {% endfor %}
         {% endfor %}
 
