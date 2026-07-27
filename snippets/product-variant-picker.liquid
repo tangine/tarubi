@@ -10,6 +10,7 @@
   for option in options_with_values
     assign option_index = forloop.index0
     for option_value in option.values
+      assign selectedLocation = selectedLocation | push : option_value.name
       if option_value.name == selectedVariant.options[option_index]
         assign selectedLocation = selectedLocation | push : option_index
       endif
