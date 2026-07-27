@@ -8,10 +8,9 @@
   assign options_with_values = product.options_with_values
   assign location = ""
   for option in options_with_values
-    assign option_index = forloop.index0
     for option_value in option.values
       if option_value.name == selectedVariant.options[option_index]
-        assign location = location | append: ',' | append : option_index
+        assign location = location | append: ',' | append : forloop.index0
       endif
     endfor
   endfor
