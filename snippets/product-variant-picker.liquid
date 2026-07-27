@@ -40,7 +40,7 @@
             assign loc = location[index]
             assign opt = options[index]
             assign value = opt.values[loc]
-              assign current_options = current_options | append: opt.name
+              assign current_options = current_options | append: opt.values
             endif
           endfor
         %}
