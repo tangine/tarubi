@@ -148,6 +148,10 @@ fieldset {
       cursor: pointer;
     }
 
+    input[data-available="false"] {
+      cursor: not-allowed;
+    }
+
     .variant-option__button-label__text {
       display: block;
       padding: 8px 16px;
