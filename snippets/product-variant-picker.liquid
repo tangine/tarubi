@@ -29,7 +29,7 @@
       <legend>{{ product_option.name | escape }}</legend>
       {%- for product_option_value in product_option.values -%}
         {% for index in (0..options_size) %}
-          <div>{{ index }}</div>
+          <span>{{ index }}</span>
         {% endfor %}
         {% comment %} <label class="variant-option__button-label">
           <input type="radio"
