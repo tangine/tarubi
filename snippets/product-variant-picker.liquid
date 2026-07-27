@@ -38,9 +38,9 @@
               assign current_options = current_options | append: option_value.name
             else
             assign loc = location[index]
-            assign option = options[index]
-            assign value = option.values[loc]
-              assign current_options = current_options | append: option.name
+            assign opt = options[index]
+            assign value = opt.values[loc]
+              assign current_options = current_options | append: opt.name
             endif
           endfor
         %}
