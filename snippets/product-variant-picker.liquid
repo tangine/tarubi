@@ -49,15 +49,6 @@
           endfor
 
           assign current_options = current_options | split: ','
-
-          for variant in variants
-            for current_option in current_options
-              if variant[forloop.index0] != current_option
-                break
-              endif
-            endfor
-            
-          endfor
         %}
 
         {% for variant in variants %}
@@ -67,7 +58,7 @@
                 <input data-available="{{ variant.available }}">
               </label>
             {% else %}
-              break
+              {% break %}
               {% endif %}
           {% endfor %}
         {% endfor %}
