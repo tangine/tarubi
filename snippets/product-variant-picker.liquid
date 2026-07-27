@@ -53,6 +53,7 @@
 
         {% for variant in variants %}
           {% for current_option in current_options %}
+            <div>{{ forloop.index0 }}</div>
             {% comment %} <div class="test"><span>{{ current_options.size }}</span></div>
             {% if variant[forloop.index0] == current_option and forloop.index == current_options.size %}
               <label>
