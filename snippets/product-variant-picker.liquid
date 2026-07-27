@@ -6,14 +6,14 @@
 
 {% liquid
   assign options_with_values = product.options_with_values
-  assign selectedLocation = "" | split: ','
+  assign selected_location = "" | split: ','
   for option in options_with_values
-    assign selectedLocation = selectedLocation | push : option.name
+    assign selected_location = selected_location | append : ,option.name
     assign option_index = forloop.index0
     for option_value in option.values
-      assign selectedLocation = selectedLocation | push : option_value.name
+      assign selected_location = selected_location | append : option_value.name
       if option_value.name == selectedVariant.options[option_index]
-        assign selectedLocation = selectedLocation | push : option_index
+        assign selected_location = selected_location | append : option_index
       endif
     endfor
   endfor
