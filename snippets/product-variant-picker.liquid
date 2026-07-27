@@ -58,6 +58,7 @@
             {% elsif forloop.last %}
               <label class="variant-option__button-label">
                 <input type="radio" name="{{ option.name }}" data-available="{{ variant.available }}">
+                <span class="variant-option__button-label__text">{{ option_value.name | escape }}</span>
               </label>
             {% endif %}
           {% endfor %}
