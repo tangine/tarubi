@@ -16,6 +16,14 @@
           "type": "title",
           "settings": {}
         },
+        "price_VJYM6p": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_3hwa3n": {
+          "type": "variant_picker",
+          "settings": {}
+        },
         "judge_me_reviews_preview_badge_Jz4mrK": {
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
@@ -23,6 +31,8 @@
       },
       "block_order": [
         "title_qbReAB",
+        "price_VJYM6p",
+        "variant_picker_3hwa3n",
         "judge_me_reviews_preview_badge_Jz4mrK"
       ],
       "name": "t:names.product",
