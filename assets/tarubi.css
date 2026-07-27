@@ -750,6 +750,12 @@ video.fill {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .product-card {
   padding: 8px;
   border-radius: 4px;
