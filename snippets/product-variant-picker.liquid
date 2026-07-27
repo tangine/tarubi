@@ -9,13 +9,6 @@
   assign selected_location = ""
   for option in options_with_values
     assign selected_location = selected_location | append: ',' | append : option.name
-    assign option_index = forloop.index0
-    for option_value in option.values
-      assign selected_location = selected_location | append : option_value.name
-      if option_value.name == selectedVariant.options[option_index]
-        assign selected_location = selected_location | append : option_index
-      endif
-    endfor
   endfor
 %}
 
