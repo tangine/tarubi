@@ -21,7 +21,9 @@
 
 <variant-picker data-section-id="{{ section.id }}"  data-product-id="{{ product.id }}" data-product-url="{{ product.url }}">
   <div>{{ location }}</div>
-  assign options_size = product_option_value.size | minus : 1
+  {% liquid
+    assign options_size = product_option_value.size | minus : 1
+  %}
   {%- for product_option in product.options_with_values -%}
     <fieldset data-fieldset-index="{{ product_option.position | minus : 1 }}">
       <legend>{{ product_option.name | escape }}</legend>
