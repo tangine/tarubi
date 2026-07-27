@@ -28,12 +28,25 @@
     <fieldset data-fieldset-index="{{ option.position | minus : 1 }}">
       <legend>{{ option.name | escape }}</legend>
       {%- for option_value in option.values -%}
-        {% for index in (0..option_size) %}
-          {%capture current_variant %}
-            value
-          {% endcapture %}
-        {% endfor  %}
-        <div>{{ current_variant }}</div>
+        {% liquid
+          assign current_options = ''
+          for index in (0..option_size)
+            if index == option.position
+              assign current_options = current_options | append: option_value.name
+            else
+              assign current_options = current_options | append: product.options_with_values[index].value[location[index]]
+            endif
+          endfor
+        %}
+        <div>{{ current_options }}</div>
+        {% comment %} {%capture current_variant %}
+          {% for index in (0..option_size) %}    
+            {% if condition %}
+              
+            {% endif %}
+          {% endfor  %}
+        {% endcapture %}
+        <div>{{ current_variant }}</div> {% endcomment %}
         {% comment %} <label class="variant-option__button-label">
           <input type="radio"
                  name="{{ option.name }}"
