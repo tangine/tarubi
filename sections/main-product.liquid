@@ -8,22 +8,16 @@
     {% endfor %}
   </div>
   <div class="product-info">
-    <div class="product-info__vendor">{{ product.vendor | escape}}</div>
-    <div class="product-info__title">{{ product.title | escape }}</div>
-    <div class="product-info__price">{{ product.price | money }}</div>
-    <div class="product-info__old-price">{{ product.compare_at_price | money }}</div>
-    <div class="product-info__variants">
-      {% render 'product-variant-picker', product: product %}
-    </div>
-    <div>
-      {% render 'product-quantity-input', quantity: 1 %}
-    </div>
-    <button>{{ 'actions.add_to_cart' | t }}</button>
-    <div>
-      {% form 'product', product %}
-        {{ form | payment_button }}
-      {% endform %}
-    </div>
+    {%- for block in section.blocks -%}
+      {% case block.type %}
+        {% when '@app' %}
+          {% render block %}
+        {% when 'title' %}
+          <div class="product-card__title">
+            {{ product.title }}
+          </div>
+      {% endcase %}
+    {%- endfor -%}
   </div>
 </div>
 </section>
@@ -93,6 +87,26 @@ grid-template-columns: 1fr;
   "blocks": [
     {
       "type": "@app"
+    },
+    {
+      "type": "title",
+      "name": "t:names.title",
+      "limit": 1
+    },
+    {
+      "type": "price",
+      "name": "t:names.price",
+      "limit": 1
+    },
+    {
+      "type": "quantity",
+      "name": "t:names.quantity",
+      "limit": 1
+    },
+    {
+      "type": "vendor",
+      "name": "t:settings.vendor",
+      "limit": 1
     },
     {
       "type": "variant_picker",
