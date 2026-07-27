@@ -56,15 +56,25 @@
                 break
               endif
             endfor
-            
+
           endfor
         %}
 
+        {% for variant in variants %}
+          {% for current_option in current_options %}
+            {% if variant[forloop.index0] == current_option and forloop.index == current_options.size %}
+              <label>
+                <input data-available="{{ variant.available }}">
+              </label>
+            {% else %}
+              break
+              {% endif %}
+          {% endfor %}
         <div class="test">{{ current_options }}</div>
         {% comment %} {%capture current_variant %}
-          {% for index in (0..option_size) %}    
+          {% for index in (0..option_size) %}
             {% if condition %}
-              
+
             {% endif %}
           {% endfor  %}
         {% endcapture %}
