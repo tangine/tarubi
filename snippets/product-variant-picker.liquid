@@ -25,13 +25,16 @@
     assign options_size = options.size | minus : 1
   %}
   {%- for option in options -%}
+    {% liquid
+      assign option_index = forloop.index0
+    %}
     <fieldset data-fieldset-index="{{ option.position | minus : 1 }}">
       <legend>{{ option.name | escape }}</legend>
       {%- for option_value in option.values -%}
         {% liquid
           assign current_options = ''
           for index in (0..options_size)
-            assign current_options = current_options | append: index | append : ":" | append: option.position
+            assign current_options = current_options | append: index | append : ":" | append: option_index
             
           endfor
         %}
