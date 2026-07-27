@@ -15,14 +15,19 @@ class VariantPicker extends Component{
     let options = this.#getAllSelectedOptions()
 
     console.log(options);
+    const optionValues = []
+    options.forEach(option => {
+      optionValues.push(option.optionValueId);
+    })
 
+    url = `${url}&option_values=${optionValues.join(",")}`;
 
-    // fetch(url)
-    //   .then(response => response.text())
-    //   .then((text) => {
-    //     const newPage = new DOMParser().parseFromString(text, 'text/html');
-    //     document.getElementById(sectionId).innerHTML = newPage.getElementById(sectionId).innerHTML;
-    //   })
+    fetch(url)
+      .then(response => response.text())
+      .then((text) => {
+        const newPage = new DOMParser().parseFromString(text, 'text/html');
+        document.getElementById(sectionId).innerHTML = newPage.getElementById(sectionId).innerHTML;
+      })
   }
 
   #getAllSelectedOptions() {
