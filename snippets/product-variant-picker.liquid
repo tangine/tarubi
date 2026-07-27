@@ -58,8 +58,8 @@
               <label>
                 <input data-available="{{ variant.available }}">
               </label>
-            {% else %}
-              {% break %}
+            {% comment %} {% else %}
+              {% break %} {% endcomment %}
               {% endif %}
           {% endfor %}
         {% endfor %}
