@@ -13,8 +13,12 @@
         {% when '@app' %}
           {% render block %}
         {% when 'title' %}
-          <div class="product-card__title">
+          <div class="product-info__title">
             {{ product.title }}
+          </div>
+        {% when 'price' %}
+          <div class="product-info__price">
+            {{ product.price | money }}
           </div>
       {% endcase %}
     {%- endfor -%}
