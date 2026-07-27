@@ -12,19 +12,9 @@
     <div class="product-info__title">{{ product.title | escape }}</div>
     <div class="product-info__price">{{ product.price | money }}</div>
     <div class="product-info__old-price">{{ product.compare_at_price | money }}</div>
-    {% if product.options_with_values.size > 1 %}
-      <div class="product-info__variants">
-        {% comment %}{% for option in product.options_with_values %}{% endcomment %}
-          {% comment %}<fieldset class="product-info__option">{% endcomment %}
-            {% comment %}<legend>{{ option.name }}</legend>{% endcomment %}
-            {% comment %}{% for value in option.values %}{% endcomment %}
-              {% comment %}<button>{{ value }}</button>{% endcomment %}
-            {% comment %}{% endfor %}{% endcomment %}
-          {% comment %}</fieldset>{% endcomment %}
-        {% comment %}{% endfor %}{% endcomment %}
-        {% render 'product-variant-picker', product: product %}
-      </div>
-    {% endif %}
+    <div class="product-info__variants">
+      {% render 'product-variant-picker', product: product %}
+    </div>
     <div>
       {% render 'product-quantity-input', quantity: 1 %}
     </div>
