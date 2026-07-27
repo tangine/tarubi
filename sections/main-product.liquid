@@ -13,7 +13,9 @@
         {% when '@app' %}
           {% render block %}
         {% when 'variant_picker' %}
-          {% render 'product-variant-picker', product: product %}'
+          <div class="product-info__variants">
+            {% render 'product-variant-picker', product: product %}'
+          </div>
         {% when 'title' %}
           <div class="product-info__title">
             {{ product.title }}
