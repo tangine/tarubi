@@ -12,6 +12,8 @@
       {% case block.type %}
         {% when '@app' %}
           {% render block %}
+        {% when 'variant_picker' %}
+          {% render 'product-variant-picker', product: product %}'
         {% when 'title' %}
           <div class="product-info__title">
             {{ product.title }}
