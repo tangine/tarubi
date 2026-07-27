@@ -52,20 +52,13 @@
         %}
 
         {% for variant in variants %}
-          {% for current_option in current_options %}
-
-            {% liquid
-              assign equal = true
-              if variant.options[forloop.index0] == current_option
-                assign equal = false
-              endif
-            %}
-            {% comment %} <div class="test"><span>{{ variant.options[forloop.index0] }}</span><span>{{ current_option }}</span><span>{{ equal }}</span></div> {% endcomment %}
-    
+          {% for current_option in current_options %}    
             {% if variant.options[forloop.index0] != current_option %}
               {% break %}
             {% elsif forloop.last %}
-              <div class="test">相同</div>  
+              <label class="variant-option__button-label">
+                <input type="radio" name="{{ option.name }}" data-available="{{ variant.available }}">
+              </label>
             {% endif %}
           {% endfor %}
         {% endfor %}
