@@ -37,7 +37,7 @@
             if index == option_index
               assign current_options = current_options | append: option_value.name
             else
-              assign current_options = current_options | append: options[index].values[location[index]]
+              assign current_options = current_options | append: options[index].values[location[index]].name
             endif
           endfor
         %}
