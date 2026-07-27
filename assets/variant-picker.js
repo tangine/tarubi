@@ -21,9 +21,11 @@ class VariantPicker extends Component{
       url = `${url}&option_values=${valueIds.join(',')}`;
     }
 
-    fetch(url).then(response => response.json()).then((json) => {
-      console.log(json);
-    })
+    fetch(url)
+      .then(response => response.text())
+      .then((text) => {
+        console.log(json);
+      })
   }
 }
 
