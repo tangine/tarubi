@@ -34,6 +34,9 @@
         {% liquid
           assign current_options = ''
           for index in (0..options_size)
+          if index != 0
+            assign current_options = current_options | append: ','
+          endif
             if index == option_index
               assign current_options = current_options | append: option_value.name
             else
