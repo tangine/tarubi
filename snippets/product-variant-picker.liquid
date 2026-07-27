@@ -6,14 +6,21 @@
 
 {% liquid
   assign options_with_values = product.options_with_values
-  assign selected_location = ""
+  assign selected_location = "" | split: ','
   for option in options_with_values
     assign selected_location = selected_location | append : option.name
+    assign option_index = forloop.index0
+    for option_value in option.values
+      assign selected_location = selected_location | append : option_value.name
+      if option_value.name == selectedVariant.options[option_index]
+        assign selected_location = selected_location | append : option_index
+      endif
+    endfor
   endfor
 %}
 
 <variant-picker data-section-id="{{ section.id }}"  data-product-id="{{ product.id }}" data-product-url="{{ product.url }}">
-  <div>{{ selectedLocation | json }}</div>
+  <div>{{ selected_location | json }}</div>
   {%- for product_option in product.options_with_values -%}
     <fieldset data-fieldset-index="{{ product_option.position | minus : 1 }}">
       <legend>{{ product_option.name | escape }}</legend>
