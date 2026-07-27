@@ -27,6 +27,17 @@ class VariantPicker extends Component{
         console.log(text);
       })
   }
+
+  #getAllSelectedOptions() {
+    const options = [];
+    this.querySelectorAll('fieldset, .product-form__input--dropdown').forEach((group) => {
+      const checked = group.querySelector('input:checked') || group.querySelector('select option[selected]');
+      if (checked) {
+        options.push({ name: checked.dataset.optionName || '', value: checked.value });
+      }
+    });
+    return options;
+  }
 }
 
 if(!customElements.get("variant-picker")) {
