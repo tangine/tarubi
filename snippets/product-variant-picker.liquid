@@ -63,7 +63,7 @@
             {% comment %} <div class="test"><span>{{ variant.options[forloop.index0] }}</span><span>{{ current_option }}</span><span>{{ equal }}</span></div> {% endcomment %}
     
             {% if variant.options[forloop.index0] != current_option %}
-              break
+              {% break %}
             {% elsif forloop.last %}
               <div class="test">相同</div>  
             {% endif %}
