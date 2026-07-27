@@ -9,6 +9,7 @@
           <input type="radio"
                  name="{{ product_option.name }}"
                  value="{{ product_option_value | escape }}"
+                 data-available="{{ product_option_value.available }}"
                  aria-label="{{ product_option_value | escape }}"
                  data-fieldset-index="{{ product_option.position | minus: 1 }}"
                  data-input-index="{{ forloop.index0 }}"
