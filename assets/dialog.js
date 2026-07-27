@@ -1,0 +1,2 @@
+class DialogComponent extends HTMLElement{
+}

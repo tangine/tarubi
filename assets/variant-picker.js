@@ -14,6 +14,7 @@ class VariantPicker extends Component{
     checked.forEach((el) => {
       console.log(el.dataset);
     })
+
   }
 }
 
