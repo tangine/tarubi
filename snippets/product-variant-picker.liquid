@@ -28,10 +28,12 @@
     <fieldset data-fieldset-index="{{ option.position | minus : 1 }}">
       <legend>{{ option.name | escape }}</legend>
       {%- for option_value in option.values -%}
-        <div>{{ location[23] }}</div>
-        {% comment %} {% for index in (0..options_size) %}
-          {{ product.options_with_values[3].name }}
-        {% endfor %} {% endcomment %}
+        {% for index in (0..option_size) %}
+          {%capture current_variant %}
+            value
+          {% endcapture %}
+        {% endfor  %}
+        <div>{{ current_variant }}</div>
         {% comment %} <label class="variant-option__button-label">
           <input type="radio"
                  name="{{ option.name }}"
