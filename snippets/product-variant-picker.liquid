@@ -1,6 +1,24 @@
 <script type="module" src="{{ 'variant-picker.js' | asset_url }}"></script>
 
+{% liquid
+  assign selectedVariant = product.selected_or_first_available_variant
+%}
+
+{% liquid
+  assign options_with_values = product.options_with_values
+  assign selectedLocation = "" | split: ','
+  for option in options_with_values
+    assign option_index = forloop.index0
+    for option_value in option.values
+      if option_value.name == selectedVariant.options[option_index]
+        assign selectedLocation = selectedLocation | push : option_index
+      endif
+    endfor
+  endfor
+%}
+
 <variant-picker data-section-id="{{ section.id }}"  data-product-id="{{ product.id }}" data-product-url="{{ product.url }}">
+  <div>{{ selectedLocation | json }}</div>
   {%- for product_option in product.options_with_values -%}
     <fieldset data-fieldset-index="{{ product_option.position | minus : 1 }}">
       <legend>{{ product_option.name | escape }}</legend>
