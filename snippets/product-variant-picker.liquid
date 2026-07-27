@@ -54,13 +54,13 @@
         {% for variant in variants %}
           {% for current_option in current_options %}
             <div class="test"><span>{{ forloop.index }}</span></div>
-            {% if variant[forloop.index0] == current_option and forloop.index == current_options.size %}
-              <label>
-                <input data-available="{{ variant.available }}">
-              </label>
-            {% comment %} {% else %}
-              {% break %} {% endcomment %}
-              {% endif %}
+            {% comment %} {% if variant[forloop.index0] == current_option and forloop.index == current_options.size %} {% endcomment %}
+              {% comment %} <label> {% endcomment %}
+                {% comment %} <input data-available="{{ variant.available }}"> {% endcomment %}
+              {% comment %} </label> {% endcomment %}
+            {% comment %} {% else %} {% endcomment %}
+              {% comment %} {% break %} {% endcomment %}
+              {% comment %} {% endif %} {% endcomment %}
           {% endfor %}
         {% endfor %}
 
