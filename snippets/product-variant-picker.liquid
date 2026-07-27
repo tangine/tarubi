@@ -31,11 +31,8 @@
         {% liquid
           assign current_options = ''
           for index in (0..options_size)
-            if index == option.position
-              assign current_options = current_options | append: option_value.name
-            else
-              assign current_options = current_options | append: options[index].values[location[index]].name
-            endif
+            assign current_options = current_options | append: index | append : ":" | append: option.position
+            
           endfor
         %}
         <div class="test">{{ current_options }}</div>
