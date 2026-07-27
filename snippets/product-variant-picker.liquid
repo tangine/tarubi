@@ -52,12 +52,12 @@
         %}
 
         {% for variant in variants %}
-          {% for current_option in current_options %}    
+          {% for current_option in current_options %}
             {% if variant.options[forloop.index0] != current_option %}
               {% break %}
             {% elsif forloop.last %}
               <label class="variant-option__button-label">
-                <input type="radio" name="{{ option.name }}" data-available="{{ variant.available }}">
+                <input type="radio" name="{{ option.name }}" value="{{ option_value | escape }}" data-available="{{ variant.available }}">
                 <span class="variant-option__button-label__text">{{ option_value.name | escape }}</span>
               </label>
             {% endif %}
@@ -65,9 +65,9 @@
         {% endfor %}
 
         {% comment %} {%capture current_variant %}
-          {% for index in (0..option_size) %}    
+          {% for index in (0..option_size) %}
             {% if condition %}
-              
+
             {% endif %}
           {% endfor  %}
         {% endcapture %}
