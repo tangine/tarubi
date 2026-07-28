@@ -65,11 +65,13 @@
           {% endif %}
         {% endfor %}
 
-        <div>{{ current_options }}</div>
+        
 
         {% liquid
           assign current_options = current_options | split: '\\'
         %}
+
+        <div>{{ current_options }}</div>
 
         {% for variant in variants %}
           {% for current_option in current_options %}
