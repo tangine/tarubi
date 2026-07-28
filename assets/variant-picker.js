@@ -1,12 +1,17 @@
 import {Component} from "@theme/component";
 
 class VariantPicker extends Component{
+  #abortController = new AbortController();
   constructor() {
     super();
   }
 
   connectedCallback(){
     this.addEventListener("change", this.#onVariantChange.bind(this));
+  }
+
+  disconnectedCallback(){
+    this.#abortController?.abort()
   }
 
   #onVariantChange(event){
@@ -22,7 +27,10 @@ class VariantPicker extends Component{
 
     url = `${url}&option_values=${optionValues.join(",")}`;
 
-    fetch(url)
+
+    const {signal} = this.#abortController
+
+    fetch(url, {signal})
       .then(response => response.text())
       .then((text) => {
         const newPage = new DOMParser().parseFromString(text, 'text/html');
