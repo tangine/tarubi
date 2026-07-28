@@ -50,6 +50,7 @@
       <legend>{{ option.name | escape }}</legend>
 
       {%- for option_value in option.values -%}
+
         {% liquid assign current_options = "" %}
         {% for index in (0..options_size) %}
           {% if index != 0 %}
@@ -63,13 +64,7 @@
           {% endif %}
         {% endfor %}
 
-        
-
-        {% liquid
-          assign current_options = current_options | split: '\\'
-        %}
-
-        {% comment %} <div>{{ current_options }}</div> {% endcomment %}
+        {% liquid assign current_options = current_options | split: '\\' %}
 
         {% for variant in variants %}
           {% for current_option in current_options %}
@@ -108,7 +103,7 @@
             {% endif %}
           {% endfor %}
         {% endfor %}
-        
+
       {%- endfor -%}
     </fieldset>
   {%- endfor -%}
