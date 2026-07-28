@@ -1,7 +1,6 @@
 <script type="module" src="{{ 'variant-picker.js' | asset_url }}"></script>
 
 {% liquid
-  assign selected_variant = product.selected_or_first_available_variant
   assign options = product.options_with_values
   assign variants = product.variants
 %}
