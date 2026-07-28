@@ -1,25 +1,9 @@
 <script type="module" src="{{ 'variant-picker.js' | asset_url }}"></script>
 
 {% liquid
-  assign selected_variant = product.selected_or_first_available_variant
   assign options = product.options_with_values
   assign variants = product.variants
 %}
-{% comment %}
-{% liquid
-  assign location = ""
-  for option in options
-    assign option_index = forloop.index0
-    for option_value in option.values
-      assign value_index  = forloop.index0
-      if option_value.name == selected_variant.options[option_index]
-        assign location = location | append: ',' | append : value_index
-      endif
-    endfor
-  endfor
-  assign location = location | replace_first: ",", "" | split: ","
-%}
- {% endcomment %}
 
 {% liquid
   assign location = ""
@@ -38,14 +22,9 @@
 %}
 
 <variant-picker data-section-id="{{ section.id }}"  data-product-id="{{ product.id }}" data-product-url="{{ product.url }}">
-  <div>{{ location }}</div>
-  {% liquid
-    assign options_size = options.size | minus : 1
-  %}
+  {% liquid assign options_size = options.size | minus : 1 %}
   {%- for option in options -%}
-    {% liquid
-      assign option_index = forloop.index0
-    %}
+    {% liquid assign option_index = forloop.index0 %}
     <fieldset data-fieldset-index="{{ option.position | minus : 1 }}">
       <legend>{{ option.name | escape }}</legend>
 
