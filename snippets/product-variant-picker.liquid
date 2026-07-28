@@ -48,10 +48,9 @@
     %}
     <fieldset data-fieldset-index="{{ option.position | minus : 1 }}">
       <legend>{{ option.name | escape }}</legend>
-      {% liquid
-        assign current_options = ""
-      %}
+      
       {%- for option_value in option.values -%}
+        {% liquid assign current_options = "" %}
         {% for index in (0..options_size) %}
           {% if index != 0 %}
             {% liquid assign current_options = current_options | append: '\\' %}
