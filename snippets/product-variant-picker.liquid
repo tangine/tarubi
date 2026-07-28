@@ -26,13 +26,15 @@
   for option in options
     assign option_index = forloop.index0
     for option_value in option.values
-      if option_index != 0
-        assign location = location | append: ','
+      if option_value.selected
+        if option_index != 0
+          assign location = location | append: ','
+        endif
+        assign location = location | append: ',' | append : forloop.index0
       endif
-      assign location = location | append: ',' | append : forloop.index0
     endfor
   endfor
-  
+  assign location = location | split: ","
 %}
 
 
