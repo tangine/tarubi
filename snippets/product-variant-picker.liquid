@@ -5,21 +5,6 @@
   assign options = product.options_with_values
   assign variants = product.variants
 %}
-{% comment %}
-{% liquid
-  assign location = ""
-  for option in options
-    assign option_index = forloop.index0
-    for option_value in option.values
-      assign value_index  = forloop.index0
-      if option_value.name == selected_variant.options[option_index]
-        assign location = location | append: ',' | append : value_index
-      endif
-    endfor
-  endfor
-  assign location = location | replace_first: ",", "" | split: ","
-%}
- {% endcomment %}
 
 {% liquid
   assign location = ""
