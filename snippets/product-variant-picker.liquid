@@ -27,7 +27,7 @@
     assign option_index = forloop.index0
     for option_value in option.values
       if option_value.selected
-        if option_index != 0
+        if location.size != 0
           assign location = location | append: ','
         endif
         assign location = location | append: ',' | append : forloop.index0
