@@ -38,7 +38,7 @@
 %}
 
 <variant-picker data-section-id="{{ section.id }}"  data-product-id="{{ product.id }}" data-product-url="{{ product.url }}">
-  <div>{{ location }}</div>
+  <div>{{ location[0] }}</div>
   {% liquid
     assign options_size = options.size | minus : 1
   %}
