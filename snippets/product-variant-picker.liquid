@@ -74,10 +74,7 @@
               {% break %}
             {% elsif forloop.last %}
               {% liquid
-                assign disabled = 'disabled'
-                if variant.available
-                  assign disabled = ''
-                endif
+                assign disabled = variant.available | if '' : 'disabled'
               %}
               <label class="variant-option__button-label  {{ disabled }}">
                 <input type="radio" name="{{ option.name }}" value="{{ option_value | escape }}"
@@ -99,7 +96,7 @@
                   data-current-checked="false"
                   {% endif %}
                 >
-                <span class="variant-option__button-label__text">{{ option_value.name | escape }}</span>
+                <span class="variant-option__button-label__text {{ disabled }}">{{ option_value.name | escape }}</span>
               </label>
             {% endif %}
           {% endfor %}
