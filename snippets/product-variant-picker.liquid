@@ -79,7 +79,7 @@
                   assign disabled = ''
                 endif
               %}
-              <label class="variant-option__button-label  {{ disabled }}">
+              <label class="variant-option__button-label{{ disabled }}">
                 <input type="radio" name="{{ option.name }}" value="{{ option_value | escape }}"
                        data-available="{{ variant.available }}"
                        aria-label="{{ option_value | escape }}"
