@@ -61,7 +61,7 @@
             {% liquid
               assign selected_val_index = location[option_index] | plus : 0
             %}
-            {% liquid assign current_options = current_options | append: options[index].values[1].name %}
+            {% liquid assign current_options = current_options | append: options[index].values[selected_val_index].name %}
           {% endif %}
         {% endfor %}
 
