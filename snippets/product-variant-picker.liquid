@@ -71,47 +71,9 @@
           assign current_options = current_options | split: '\\'
         %}
 
-        {% comment %} <div>{{ current_options }}</div> {% endcomment %}
+        <div>{{ current_options }}</div>
 
-        {% for variant in variants %}
-          {% for current_option in current_options %}
-            {% if variant.options[forloop.index0] != current_option %}
-              {% break %}
-            {% elsif forloop.last %}
-              {% liquid
-                assign disabled = 'disabled'
-                if variant.available
-                  assign disabled = ''
-                endif
-              %}
-              <label class="variant-option__button {{ disabled }}">
-                <span>{{ variant.options }}</span>
-                <span>{{ current_options }}</span>
-                <input type="radio" name="{{ option.name }}" value="{{ option_value | escape }}"
-                       data-available="{{ variant.available }}"
-                       aria-label="{{ option_value | escape }}"
-                       data-fieldset-index="{{ option.position | minus: 1 }}"
-                       data-input-index="{{ forloop.index0 }}"
-                       data-location="{{ option.position | minus: 1 }}-{{ forloop.index0 }}"
-                       data-option-value-id="{{ option_value.id }}"
-                       data-option-name="{{ option.name | escape }}"
-                       data-option-value="{{ option_value | escape }}"
-                       data-option-available="{{ option_value.available }}"
-                       data-product-url="{{ option_value.product_url }}"
-                       data-variant-id="{{ option_value.variant.id }}"
-                  {% if option_value.selected %}
-                    data-current-checked="true"
-                    checked
-                  {% else %}
-                    data-current-checked="false"
-                  {% endif %}
-                >
-                <span
-                  class="variant-option__button-text {{ disabled }}">{{ option_value.name | escape }}</span>
-              </label>
-            {% endif %}
-          {% endfor %}
-        {% endfor %}
+        
       {%- endfor -%}
     </fieldset>
   {%- endfor -%}
