@@ -149,7 +149,10 @@ fieldset {
     }
 
     input[data-available="false"] {
-      cursor: not-allowed;
+      background: #666666;
+    }
+
+    &:has(input[data-available="false"]) {
       background: #666666;
     }
 
