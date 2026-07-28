@@ -10,9 +10,9 @@ class VariantPicker extends Component{
     this.addEventListener("change", this.#onVariantChange.bind(this));
   }
 
-  disconnectedCallback(){
-    this.#abortController?.abort()
-  }
+  // disconnectedCallback(){
+  //   this.#abortController?.abort()
+  // }
 
   #onVariantChange(event){
     const {sectionId, productUrl} = this.dataset;
