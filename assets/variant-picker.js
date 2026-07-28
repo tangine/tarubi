@@ -1,7 +1,7 @@
 import {Component} from "@theme/component";
 
 class VariantPicker extends Component{
-  #abortController = new AbortController();
+  #abortController = undefined;
   constructor() {
     super();
   }
@@ -28,6 +28,8 @@ class VariantPicker extends Component{
     url = `${url}&option_values=${optionValues.join(",")}`;
 
 
+    this.#abortController?.abort();
+    this.#abortController = new AbortController();
     const {signal} = this.#abortController
 
     fetch(url, {signal})
