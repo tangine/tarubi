@@ -155,12 +155,12 @@ fieldset {
     &:has(input[data-available="false"]) {
       background: #666666;
 
-      .variant-option__button-label__text {
+      .variant-option__button-text {
         background: #666666;
       }
     }
 
-    .variant-option__button-label__text {
+    .variant-option__button-text {
       display: block;
       padding: 8px 16px;
       cursor: pointer;

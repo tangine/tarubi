@@ -38,7 +38,6 @@
 %}
 
 <variant-picker data-section-id="{{ section.id }}"  data-product-id="{{ product.id }}" data-product-url="{{ product.url }}">
-  <div>{{ location }}</div>
   {% liquid
     assign options_size = options.size | minus : 1
   %}
@@ -46,7 +45,7 @@
     {% liquid
       assign option_index = forloop.index0
     %}
-    <fieldset data-fieldset-index="{{ option.position | minus : 1 }}">
+    <fieldset class="variant-options" data-fieldset-index="{{ option.position | minus : 1 }}">
       <legend>{{ option.name | escape }}</legend>
       {%- for option_value in option.values -%}
         {% liquid
@@ -73,8 +72,8 @@
             {% if variant.options[forloop.index0] != current_option %}
               {% break %}
             {% elsif forloop.last %}
-              <label class="variant-option__button-label">
-                <input type="radio" name="{{ option.name }}" value="{{ option_value | escape }}"
+              <label class="variant-option__button {% liquid variant.available == true ? '' : 'disabled' %}">
+                <input type="radio" class="variant-option__input" name="{{ option.name }}" value="{{ option_value | escape }}"
                        data-available="{{ variant.available }}"
                        aria-label="{{ option_value | escape }}"
                        data-fieldset-index="{{ option.position | minus: 1 }}"
@@ -93,7 +92,7 @@
                   data-current-checked="false"
                   {% endif %}
                 >
-                <span class="variant-option__button-label__text">{{ option_value.name | escape }}</span>
+                <span class="variant-option__button-text">{{ option_value.name | escape }}</span>
               </label>
             {% endif %}
           {% endfor %}

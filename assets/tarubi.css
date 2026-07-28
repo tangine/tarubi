@@ -866,10 +866,10 @@ fieldset label input[data-available=false] {
 fieldset label:has(input[data-available=false]) {
   background: #666666;
 }
-fieldset label:has(input[data-available=false]) .variant-option__button-label__text {
+fieldset label:has(input[data-available=false]) .variant-option__button-text {
   background: #666666;
 }
-fieldset label .variant-option__button-label__text {
+fieldset label .variant-option__button-text {
   display: block;
   padding: 8px 16px;
   cursor: pointer;
