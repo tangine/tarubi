@@ -74,7 +74,10 @@
               {% break %}
             {% elsif forloop.last %}
               {% liquid
-                assign disabled = variant.available | if '' : 'disabled'
+                assign disabled = 'disabled'
+                if variant.available
+                  assign disabled = ''
+                endif
               %}
               <label class="variant-option__button-label  {{ disabled }}">
                 <input type="radio" name="{{ option.name }}" value="{{ option_value | escape }}"
