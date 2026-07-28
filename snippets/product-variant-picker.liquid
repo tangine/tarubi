@@ -49,22 +49,22 @@
     <fieldset data-fieldset-index="{{ option.position | minus : 1 }}">
       <legend>{{ option.name | escape }}</legend>
       {%- for option_value in option.values -%}
-        {% liquid
-          assign current_options = ''
-          for index in (0..options_size)
-          if index != 0
-            assign current_options = current_options | append: '\\'
-          endif
-            if index == option_index
-              assign current_options = current_options | append: option_value.name
-            else
-            assign loc = location[index] | plus: 0
-            assign opt = options[index]
-            assign value = opt.values[loc]
-              assign current_options = current_options | append: value
-            endif
-          endfor
+        {% liquid assign value_index = forloop.index0 %}
 
+        {% for index in (0..options_size) %}
+          {% if index != 0 %}
+            {% liquid assign current_options = current_options | append: '\\' %}
+          {% endif %}
+          {% if index == option_index %}
+            {% liquid assign current_options = current_options | append: options[index] %}
+          {% else %}
+            {% liquid assign current_options = current_options | append: options[option_index].values[location[option_index]].name %}
+          {% endif %}
+        {% endfor %}
+
+        <div>{{ current_options }}</div>
+
+        {% liquid
           assign current_options = current_options | split: '\\'
         %}
 
@@ -87,21 +87,22 @@
                        aria-label="{{ option_value | escape }}"
                        data-fieldset-index="{{ option.position | minus: 1 }}"
                        data-input-index="{{ forloop.index0 }}"
-                       data-location="{{ option.position | minus : 1 }}-{{ forloop.index0 }}"
+                       data-location="{{ option.position | minus: 1 }}-{{ forloop.index0 }}"
                        data-option-value-id="{{ option_value.id }}"
                        data-option-name="{{ option.name | escape }}"
                        data-option-value="{{ option_value | escape }}"
                        data-option-available="{{ option_value.available }}"
                        data-product-url="{{ option_value.product_url }}"
                        data-variant-id="{{ option_value.variant.id }}"
-                {% if option_value.selected %}
-                  data-current-checked="true"
-                  checked
-                {% else %}
-                  data-current-checked="false"
+                  {% if option_value.selected %}
+                    data-current-checked="true"
+                    checked
+                  {% else %}
+                    data-current-checked="false"
                   {% endif %}
                 >
-                <span class="variant-option__button-text {{ disabled }}">{{ option_value.name | escape }}</span>
+                <span
+                  class="variant-option__button-text {{ disabled }}">{{ option_value.name | escape }}</span>
               </label>
             {% endif %}
           {% endfor %}
