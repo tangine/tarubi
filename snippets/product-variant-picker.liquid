@@ -5,7 +5,6 @@
   assign variants = product.variants
 %}
 
-
 <variant-picker data-section-id="{{ section.id }}"  data-product-id="{{ product.id }}" data-product-url="{{ product.url }}">
   {% unless product.has_only_default_variant %}
     {% liquid
@@ -56,7 +55,7 @@
                 {% liquid
                   assign disabled = ''
                   unless  variant.available
-                    disabled = 'disabled'
+                    assign disabled = 'disabled'
                   endunless
                 %}
                 <label class="variant-option__button {{ disabled }}">
