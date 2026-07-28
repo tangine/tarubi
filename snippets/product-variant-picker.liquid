@@ -5,7 +5,7 @@
   assign options = product.options_with_values
   assign variants = product.variants
 %}
-
+{% comment %} 
 {% liquid
   assign location = ""
   for option in options
@@ -19,6 +19,23 @@
   endfor
   assign location = location | replace_first: ",", "" | split: ","
 %}
+ {% endcomment %}
+
+{% liquid
+  assign location = ""
+  for option in options
+    assign option_index = forloop.index0
+    for option_value in option.values
+      assign value_index  = forloop.index0
+      if option_value.selected
+        assign location = location | append: ',' | append : value_index
+      endif
+    endfor
+  endfor
+  assign location = location | replace_first: ",", "" | split: ","
+%}
+
+
 
 <variant-picker data-section-id="{{ section.id }}"  data-product-id="{{ product.id }}" data-product-url="{{ product.url }}">
   {% liquid
@@ -80,39 +97,6 @@
             {% endif %}
           {% endfor %}
         {% endfor %}
-
-        {% comment %} {%capture current_variant %}
-          {% for index in (0..option_size) %}
-            {% if condition %}
-
-            {% endif %}
-          {% endfor  %}
-        {% endcapture %}
-        <div>{{ current_variant }}</div> {% endcomment %}
-        {% comment %} <label class="variant-option__button-label">
-          <input type="radio"
-                 name="{{ option.name }}"
-                 value="{{ option_value | escape }}"
-                 data-available="{{ option_value.available }}"
-                 aria-label="{{ option_value | escape }}"
-                 data-fieldset-index="{{ option.position | minus: 1 }}"
-                 data-input-index="{{ forloop.index0 }}"
-                 data-location="{{ option.position | minus : 1 }}-{{ forloop.index0 }}"
-                 data-option-value-id="{{ option_value.id }}"
-                 data-option-name="{{ option.name | escape }}"
-                 data-option-value="{{ option_value | escape }}"
-                 data-option-available="{{ option_value.available }}"
-                 data-product-url="{{ option_value.product_url }}"
-                 data-variant-id="{{ option_value.variant.id }}"
-            {% if option_value.selected %}
-              data-current-checked="true"
-              checked
-            {% else %}
-              data-current-checked="false"
-            {% endif %}
-          />
-          <span class="variant-option__button-label__text">{{ option_value | escape }}</span>
-        </label> {% endcomment %}
       {%- endfor -%}
     </fieldset>
   {%- endfor -%}
