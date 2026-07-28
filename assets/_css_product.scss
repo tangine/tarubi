@@ -155,9 +155,9 @@ fieldset {
     &:has(input[data-available="false"]) {
       background: #666666;
 
-      .variant-option__button-text {
-        background: #666666;
-      }
+      //.variant-option__button-text {
+      //  background: #666666;
+      //}
     }
 
     .variant-option__button-text {
