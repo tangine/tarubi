@@ -73,7 +73,10 @@
             {% if variant.options[forloop.index0] != current_option %}
               {% break %}
             {% elsif forloop.last %}
-              <label class="variant-option__button-label  {{ variant.available | if '' : 'disabled' }}">
+              {% liquid
+                assign disabled = variant.available | if '' : 'disabled'
+              %}
+              <label class="variant-option__button-label  {{ disabled }}">
                 <input type="radio" name="{{ option.name }}" value="{{ option_value | escape }}"
                        data-available="{{ variant.available }}"
                        aria-label="{{ option_value | escape }}"
