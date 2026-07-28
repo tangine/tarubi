@@ -56,7 +56,7 @@
             {% liquid assign current_options = current_options | append: '\\' %}
           {% endif %}
           {% if index == option_index %}
-            {% liquid assign current_options = current_options | append: options[index] %}
+            {% liquid assign current_options = current_options | append: option_value.name %}
           {% else %}
             {% liquid assign current_options = current_options | append: options[option_index].values[location[option_index]].name %}
           {% endif %}
