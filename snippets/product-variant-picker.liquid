@@ -71,7 +71,7 @@
           assign current_options = current_options | split: '\\'
         %}
 
-        <div>{{ current_options }}</div>
+        {% comment %} <div>{{ current_options }}</div> {% endcomment %}
 
         {% for variant in variants %}
           {% for current_option in current_options %}
