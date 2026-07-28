@@ -862,6 +862,7 @@ fieldset label input {
 }
 fieldset label input[data-available=false] {
   cursor: not-allowed;
+  background: #666666;
 }
 fieldset label .variant-option__button-label__text {
   display: block;
