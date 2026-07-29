@@ -8,6 +8,12 @@
  * ------------------------------------------------------------
  */
 {
+  "sections": {
+    "cart": "购物车",
+    "collections": "Collection",
+    "collection_list": "List Collection",
+    "template": "Template"
+  },
   "categories": {
     "banners": "Banners",
     // Category for fundamental content blocks (text, images, buttons)

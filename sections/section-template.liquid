@@ -1,0 +1,62 @@
+{% style %}
+  #{{ section.id }} {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+{% endstyle %}
+<div id="{{ section.id }}" class="isolate">
+  <div class=""></div>
+</div>
+{% schema %}
+{
+  "name": "t:sections.sections",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:settings.layout"
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "t:settings.section_width",
+      "default": "tarubi-container",
+      "options": [
+        {
+          "value": "w-full",
+          "label": "t:options.full"
+        },
+        {
+          "value": "tarubi-container",
+          "label": "t:options.default"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "填充"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "顶部",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "底部",
+      "default": 20
+    }
+  ],
+  "blocks": [],
+  "presets": []
+}
+{% endschema %}
