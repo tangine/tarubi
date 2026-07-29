@@ -11,7 +11,11 @@
       <ul>
         {% for product in collection.products %}
           <li>
-            {% render 'product-card', product: product %}
+            {% render 'product-card',
+              product: product,
+              show_secondary_image: show_secondary_image,
+              show_rating: show_rating,
+              show_vendor: show_vendor %}
           </li>
         {% endfor %}
       </ul>
