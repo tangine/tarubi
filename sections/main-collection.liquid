@@ -4,7 +4,7 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 {% endstyle %}
-<div id="{{ section.id }}" class="isolate">
+<div id="{{ section.id }}" class="section-wrapper isolate">
   <div class="section-inner {{ section.settings.container}}">
     <h1 class="collection-title">{{ collection.title }}</h1>
     {% paginate collection.products by section.settings.page_size %}
