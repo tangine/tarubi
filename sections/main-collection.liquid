@@ -8,7 +8,7 @@
   <div class="section-inner {{ section.settings.container}}">
     <div class="collection-title">{{ collection.title }}</div>
     {% paginate collection.products by section.settings.page_size %}
-      <ul>
+      <ul style="display: grid;grid-template-columns:repeat(4,1fr);gap:10px;">
         {% for product in collection.products %}
           <li>
             {% render 'product-card',
