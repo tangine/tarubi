@@ -9,23 +9,18 @@
  */
 {
   "sections": {
-    "main_collection_product_list_7gPEUT": {
-      "type": "main-collection-product-list",
-      "name": "t:names.collections",
+    "main_collection_8RkCqh": {
+      "type": "main-collection",
+      "name": "t:sections.collection",
       "settings": {
-        "container_type": "tarubi-container",
+        "container": "tarubi-container",
         "page_size": 12,
-        "enable_filtering": true,
-        "enable_sorting": true,
-        "show_secondary_image": true,
-        "show_rating": false,
-        "show_vendor": false,
         "padding_top": 20,
         "padding_bottom": 20
       }
     }
   },
   "order": [
-    "main_collection_product_list_7gPEUT"
+    "main_collection_8RkCqh"
   ]
 }
