@@ -6,6 +6,7 @@
 {% endstyle %}
 <div id="{{ section.id }}" class="isolate">
   <div class="section-inner {{ section.settings.container}}">
+    <div class="collection-title">{{ collection..title }}</div>
     {% paginate collection.products by section.settings.page_size %}
       <ul>
         {% for product in collection.products %}
