@@ -15,7 +15,13 @@
     "collection_list": "List Collection",
     "header": "Header",
     "footer": "Footer",
+    "carousel": "Carousel",
     "template": "Template"
+  },
+  "blocks": {
+    "product_card": "Product Card",
+    "title": "Title",
+    "price": "Price"
   },
   "categories": {
     "banners": "Banners",
