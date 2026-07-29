@@ -8,7 +8,7 @@
  * ------------------------------------------------------------
  */
 {
-  "name": "Footer",
+  "name": "t:sections.footer",
   "type": "header",
   "sections": {
     "default_footer": {

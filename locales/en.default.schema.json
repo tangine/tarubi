@@ -12,6 +12,8 @@
     "cart": "购物车",
     "collections": "Collection",
     "collection_list": "List Collection",
+    "header": "Header",
+    "footer": "Footer",
     "template": "Template"
   },
   "categories": {
