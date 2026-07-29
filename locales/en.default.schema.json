@@ -10,6 +10,7 @@
 {
   "sections": {
     "cart": "购物车",
+    "collection": "Collection",
     "collections": "Collection",
     "collection_list": "List Collection",
     "header": "Header",
