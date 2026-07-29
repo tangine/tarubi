@@ -1,0 +1,128 @@
+{% style %}
+  #{{ section.id }} {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+{% endstyle %}
+<div id="{{ section.id }}" class="section-wrapper isolate">
+  <div class="section-inner {{ section.settings.container}}">
+    {% paginate collections by section.settings.page_size %}
+      <ul style="display: grid;grid-template-columns:repeat(4,1fr);gap:10px;">
+        {% for collection in collections %}
+          <li>
+            {% render 'collection-card', collection: collection %}
+          </li>
+        {% endfor %}
+      </ul>
+
+      {%- if paginate.pages > 1 -%}
+        {%- render 'pagination', paginate: paginate -%}
+      {%- endif -%}
+    {% endpaginate %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "t:sections.collection",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:settings.layout"
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "t:settings.section_width",
+      "default": "tarubi-container",
+      "options": [
+        {
+          "value": "w-full",
+          "label": "t:options.full"
+        },
+        {
+          "value": "tarubi-container",
+          "label": "t:options.default"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "page_size",
+      "label": "Page Size",
+      "default": 12,
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    {
+      "type": "header",
+      "content": "t:names.filters"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_filtering",
+      "default": true,
+      "label": "t:settings.enable_filtering",
+      "info": "t:info.enable_filtering_info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting",
+      "default": true,
+      "label": "t:settings.enable_sorting"
+    },
+    {
+      "type": "header",
+      "content": "t:names.product_card_rendering"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "label": "t:settings.show_second_image_on_hover",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "t:settings.show_rating",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "t:settings.show_vendor",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "填充"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "顶部",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "底部",
+      "default": 20
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "t:sections.collection"
+    }
+  ]
+}
+{% endschema %}
