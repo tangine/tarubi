@@ -13,9 +13,9 @@
           <li>
             {% render 'product-card',
               product: product,
-              show_secondary_image: show_secondary_image,
-              show_rating: show_rating,
-              show_vendor: show_vendor %}
+              show_secondary_image: section.settings.show_secondary_image,
+              show_rating: section.settings.show_rating,
+              show_vendor: section.settings.show_vendor %}
           </li>
         {% endfor %}
       </ul>
